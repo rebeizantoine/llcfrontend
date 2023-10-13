@@ -1,0 +1,304 @@
+.firstrow {
+    display: flex;
+}
+
+.first {
+    width: 1017px;
+    height: 700px;
+    flex-shrink: 0;
+    background: #FAF4F1;
+    display: flex;
+}
+
+.llc {
+    margin-top: -38px;
+    width: 127px;
+    height: 65px;
+    flex-shrink: 0;
+    color: #5E443A;
+    font-family: roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.llc-header {
+    display: flex;
+    column-gap: 50px;
+    margin-left: 80px;
+    width: 726px;
+    height: 30px;
+    flex-shrink: 0;
+    color: #5E443A;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.llc-header p a {
+    text-decoration: none;
+    color: #5E443A;
+}
+
+a:hover {
+    color: #FFBF52;
+}
+
+.search-llc {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.login {
+    width: 150px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #5E443A;
+    background: #FFFEFE;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.login p {
+    font-size: 30px;
+    margin-top: 3px;
+    margin-left: 15px;
+    color: #5E443A;
+}
+
+.orange-line {
+    width: 149px;
+    height: 9px;
+    background: #FFBF52;
+    margin-left: 30px;
+    margin-top: 400px;
+}
+
+.modern {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 627px;
+    height: 158px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description {
+    margin-top: 100px;
+    margin-left: 30px;
+    width: 669px;
+    height: 146px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.enroll {
+
+    margin-left: 30px;
+    width: 200px;
+    height: 55px;
+    flex-shrink: 0;
+    background-color: #FFBF52;
+}
+
+.enroll p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 283px;
+    height: 46px;
+    flex-shrink: 0;
+    margin-left: -40px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hola {
+    margin-top: 400px;
+    width: 550px;
+    height: 550px;
+    position: relative;
+    border-radius: 8%;
+}
+
+.courses {
+    color: #000;
+
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -25px;
+    margin-left: 20px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    position: absolute;
+    margin-top: -1000px;
+}
+
+
+@media only screen and (max-width:600px) {
+    .main {
+        display: block;
+        position: absolute;
+        margin-top: -1080px;
+    }
+
+    .first {
+        width: 357px;
+        height: 750px;
+        flex-shrink: 0;
+        background: #FAF4F1;
+        display: flex;
+    }
+
+    .llc {
+        margin-top: -25px;
+        width: 57px;
+        height: 65px;
+        flex-shrink: 0;
+        color: #5E443A;
+        font-family: roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .llc-header {
+        display: flex;
+        column-gap: 10px;
+        margin-left: 20px;
+        width: 326px;
+        height: 30px;
+        flex-shrink: 0;
+        color: #5E443A;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .modern {
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 283px;
+        height: 127px;
+        flex-shrink: 0;
+        color: #000;
+        text-align: left;
+        font-family: Roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .description {
+        margin-top: -10px;
+        margin-left: 20px;
+        color: #000;
+        width: 300px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+
+    .orange-line {
+        width: 100px;
+        height: 5px;
+        background: #FFBF52;
+        margin-left: 30px;
+        margin-top: 400px;
+    }
+
+    .enroll {
+        margin-top: -30px;
+        margin-left: 30px;
+        width: 130px;
+        height: 30px;
+        flex-shrink: 0;
+        background-color: #FFBF52;
+    }
+
+    .enroll p {
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 283px;
+        height: 46px;
+        flex-shrink: 0;
+        margin-left: -80px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .courses {
+        display: none;
+    }
+
+    .hola {
+        margin-top: auto;
+        padding-top: 10px;
+        padding-left: 20px;
+        width: 330px;
+        height: 330px;
+        position: relative;
+        border-radius: 8%;
+    }
+
+    .search-llc {
+        display: none;
+    }
+
+    .login {
+        width: 130px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 0px;
+        border: 0px solid #7F00FF;
+        background: #7F00FF;
+        margin-top: 359px;
+        margin-left: -190px;
+    }
+
+    .login p {
+        font-size: 15px;
+        color: #ffffff;
+        margin-left: -1px;
+    }
+}

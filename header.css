@@ -114,7 +114,7 @@ a:hover {
 }
 
 .enroll {
-    margin-top: -35px;
+
     margin-left: 30px;
     width: 200px;
     height: 55px;
@@ -133,7 +133,8 @@ a:hover {
     height: 46px;
     flex-shrink: 0;
     padding-left: 10px;
-    padding-top: 16px;
+    padding-bottom: 10px;
+    margin-top: 10px;
 }
 
 .hola {
@@ -143,6 +144,22 @@ a:hover {
     height: 550px;
     position: relative;
     border-radius: 8%;
+}
+
+.courses {
+    color: #000;
+
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -25px;
+    margin-left: 20px;
+}
+
+.buttons {
+    display: flex;
 }
 
 .main {
