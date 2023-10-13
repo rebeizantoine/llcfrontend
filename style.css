@@ -1,0 +1,152 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 0%;
+}
+
+.aboutus {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.big1 {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 0;
+
+}
+
+.h3about {
+    width: 764px;
+    height: 178px;
+    text-align: left;
+    margin-top: 12%;
+}
+
+.h3about h3 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+.image-container {
+    justify-content: center;
+    order: 2;
+    margin-bottom: 20px;
+}
+
+.container12 {
+    order: 1;
+}
+
+.container1 {
+    display: flex;
+    margin-bottom: 6%;
+}
+
+.left {
+    order: 1;
+}
+
+
+.images img.image3 {
+    float: left;
+    margin-right: 20px;
+}
+
+
+.aboutustext .text {
+    text-align: left;
+}
+
+.aboutbutton {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    border-radius: 10px;
+    border: 1px solid #5E443A;
+    background: rgba(255, 255, 255, 0.00);
+    width: 310px;
+    height: 72px;
+    flex-shrink: 0;
+    margin-left: 139px;
+    margin-top: 3%;
+}
+
+.aboutbutton:hover {
+    background-color: #0056b3;
+}
+
+.image1 {
+    width: 800px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    margin-right: 4%;
+    margin-top: 3.5%;
+
+}
+
+.image2 {
+    width: 493px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    margin-left: 13%;
+    margin-top: 19%;
+    margin-left: 23%;
+}
+
+.section2 {
+    margin-left: 8%;
+    display: flex;
+}
+
+.text1 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4%;
+    width: 690px;
+}
+
+.text2 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text {
+    width: 610px;
+}
