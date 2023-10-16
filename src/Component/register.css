@@ -1,0 +1,129 @@
+.register-title {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 20px 0;
+    /* Add margin for spacing */
+}
+
+body {
+    background-image: url('../Component//images/loginimage.png');
+    /* Set the path to your background image */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-position: center;
+    /* Center the background image */
+    background-attachment: fixed;
+    /* Fixed background position */
+    background-repeat: no-repeat;
+    /* Don't repeat the image */
+    margin: 0;
+    /* Remove default body margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.field-label {
+    color: #9B6C1B;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
+    width: 100%;
+    /* Adjust to your preferred width */
+    max-width: 530px;
+    /* Maximum width as specified */
+    padding: 20px;
+    /* Add padding for spacing */
+    border: 3px solid #000;
+    background: rgba(255, 255, 255, 0.70);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+}
+
+.field-input {
+    width: 100%;
+    /* Make inputs expand to container width */
+    height: 32px;
+    border-radius: 7px;
+    border: 2px solid #000;
+    background: #FFF;
+    margin: 10px 0;
+    /* Add margin for spacing */
+}
+
+.dob-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dob-input {
+    width: 30%;
+    /* Adjust width as needed */
+    height: 32px;
+}
+
+.gender-dropdown {
+    width: 100%;
+    /* Make the dropdown expand to container width */
+    height: 32px;
+    margin: 10px 0;
+    /* Add margin for spacing */
+}
+
+.register-button {
+    width: 50%;
+    /* Make the button expand to container width */
+    height: 42px;
+    text-align: center;
+    margin: 10px 0;
+    /* Add margin for spacing */
+    font-size: 32px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-label {
+    width: 30%;
+    /* Adjust width as needed */
+    height: 32px;
+    border-radius: 8%;
+    margin-bottom: 5%;
+}
+
+.text-label {
+    color: #9B6C1B;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.register-button:hover {
+    background-color: #FFA500;
+    /* Change the background color on hover to orange */
+    color: #FFF;
+    /* Change the text color to white on hover */
+}
