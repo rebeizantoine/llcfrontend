@@ -49,7 +49,7 @@ const Aboutus2 = () => {
                                 etiam
                                 risus accumsan volutpat urna, eu semper enim,
                                 est aliquam laoreet urna fringilla viverra.”</p>
-                            <p className="text2">Julia Moore</p>
+                            <p className="text2">Olivia Holmes</p>
                         </div>
 
                     </div>

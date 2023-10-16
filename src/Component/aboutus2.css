@@ -2,6 +2,7 @@ body {
     width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+    background-color: #FAF4F1;
 }
 
 
@@ -106,6 +107,22 @@ body {
     height: 500px;
 }
 
+@media (max-width:864px) {
+    .student-about {
+        display: block;
+    }
+
+    .header {
+        margin-left: -8%;
+    }
+
+    .text1 {
+        font-size: 28px;
+    }
+
+    .imageround img {}
+}
+
 @media (min-width:1440px) {
     .right {
         margin-left: 40px;
@@ -120,7 +137,13 @@ body {
     }
 
     .header {
-        margin-left: 400px;
+        margin-left: 15%;
         margin-right: 320px;
+
     }
+
+    .student-about {
+        margin-left: -17%;
+    }
+
 }
