@@ -59,7 +59,7 @@ function Footer() {
             </div>
             <div className="final">
                 <p>Powered by LLC</p>
-                <p>© 2023 LLC</p>
+                <p id="dndn">© 2023 LLC</p>
             </div>
         </div>
     );

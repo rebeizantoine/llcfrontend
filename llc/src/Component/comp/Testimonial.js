@@ -15,7 +15,7 @@ const Testimonial = () => {
             </div>
             <div className="student-about">
                 <div className="left">
-                    <div className="all1">
+                    <div className="all1" id="first">
                         <img className="imageround" src={image21} alt="" />
                         <div className="text">
                             <p className="text1">“Justo vestibulum risus imperdiet consectetur consectetur pretium urna nibh
@@ -27,7 +27,7 @@ const Testimonial = () => {
                         </div>
 
                     </div>
-                    <div className="all1">
+                    <div className="all1" id="second">
                         <img className="imageround" src={image22} alt="" />
                         <div className="text">
                             <p className="text1">“Justo vestibulum risus imperdiet consectetur consectetur pretium urna nibh

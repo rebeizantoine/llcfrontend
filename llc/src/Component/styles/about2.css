@@ -126,5 +126,10 @@
 
     .student-about {
         display: block;
+        gap: 10px;
+    }
+
+    #second {
+        margin-top: -600px;
     }
 }

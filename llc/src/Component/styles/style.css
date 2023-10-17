@@ -148,9 +148,26 @@ hr {
 }
 
 
-@media(max-width: 600px) {
+@media(max-width: 860px) {
     .footer {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -550px;
+    }
+
+    .aboutme {
+        margin-left: -20px;
+    }
+
+    .offer {
+        margin-left: -20px;
     }
 
     #social-container {
@@ -159,4 +176,19 @@ hr {
         align-items: center;
     }
 
+    .final {
+        margin-left: 0px;
+    }
+
+    #dndn {
+        margin-left: -500px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -100px;
+    }
 }

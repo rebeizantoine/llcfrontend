@@ -158,18 +158,17 @@
     }
 
     .image2 {
-        width: 80%;
-        height: 95%;
-        margin-left: 110% !important;
+        width: 300px;
+        height: 500px;
+        margin-left: 25% !important;
         margin-top: 0%;
     }
 
     .image3 {
-        width: 100%;
-        height: 30%;
-
-        margin-top: -50%;
-
+        width: 273px;
+        height: 300px;
+        margin-top: -340px;
+        margin-left: -40px;
     }
 
     .section2 {
@@ -182,6 +181,7 @@
 
     .text2 {
         width: auto;
+        margin-left: -70px;
     }
 
     .body {
@@ -197,36 +197,32 @@
 
 
     .aboutbutton {
-        margin-left: 30% !important;
+        margin-left: 110px !important;
     }
 }
 
 @media (max-width:400px) {
     .about123 {
         margin-left: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 30px;
     }
 
-    .image1 {
-        width: 280px;
-        height: 100%;
-        margin-top: -30px;
-        margin-left: 20px;
+    .h3about h3 {
+        font-size: 28px;
     }
 
     .image2 {
-        width: 80%;
-        height: 95%;
-        margin-left: 110% !important;
-        margin-top: 0%;
+        width: 300px;
+        height: 500px;
+        margin-left: 320px !important;
+        margin-top: -100px;
     }
 
     .image3 {
-        width: 100%;
-        height: 30%;
-
-        margin-top: -50%;
-
+        width: 273px;
+        height: 300px;
+        margin-top: -320px;
+        margin-left: -10px;
     }
 
     .section2 {
@@ -235,10 +231,12 @@
 
     .text1 {
         width: auto;
+        margin-left: 20px;
     }
 
     .text2 {
         width: auto;
+        margin-left: 20px;
     }
 
     .body {

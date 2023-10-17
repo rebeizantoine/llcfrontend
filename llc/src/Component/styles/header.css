@@ -306,12 +306,12 @@ a {
     .main {
         display: block;
         position: absolute;
-        margin-top: -1080px;
+        margin-top: -1280px;
     }
 
     .first {
-        width: 357px;
-        height: 750px;
+        width: 600px;
+        height: 950px;
         flex-shrink: 0;
         background: #FAF4F1;
         display: flex;
@@ -324,7 +324,7 @@ a {
         flex-shrink: 0;
         color: #5E443A;
         font-family: roboto;
-        font-size: 30px;
+        font-size: 40px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -332,42 +332,41 @@ a {
 
     .llc-header {
         display: flex;
-        column-gap: 10px;
-        margin-left: 20px;
+        column-gap: 30px;
+        margin-left: 70px;
+        margin-top: -10px;
         width: 326px;
         height: 30px;
         flex-shrink: 0;
         color: #5E443A;
         font-family: Inter;
-        font-size: 15px;
+        font-size: 34px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin-top: 2px;
     }
 
     .modern {
         margin-top: 10px;
-        margin-left: 10px;
-        width: 283px;
+        margin-left: 20px;
+        width: 600px;
         height: 127px;
         flex-shrink: 0;
         color: #000;
         text-align: left;
         font-family: Roboto;
-        font-size: 40px;
+        font-size: 60px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
 
     .description {
-        margin-top: -10px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: #000;
-        width: 300px;
+        width: 500px;
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -383,25 +382,22 @@ a {
     }
 
     .enroll {
-        margin-top: -30px;
         margin-left: 30px;
-        width: 130px;
-        height: 30px;
-        flex-shrink: 0;
+        width: 210px;
+        height: 40px;
         background-color: #FFBF52;
     }
 
     .enroll p {
         color: #FFF;
         font-family: Roboto;
-        font-size: 14px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         width: 283px;
         height: 46px;
-        flex-shrink: 0;
-        margin-left: -80px;
+        margin-left: -40px;
         padding-bottom: 10px;
         margin-top: 10px;
     }
@@ -414,11 +410,10 @@ a {
         margin-top: auto;
         padding-top: 10px;
         padding-left: 20px;
-        width: 330px;
-        height: 330px;
+        width: 430px;
+        height: 430px;
         position: relative;
         border-radius: 8%;
-        margin-left: -20px;
     }
 
     .search-llc {
@@ -427,18 +422,18 @@ a {
 
     .login {
         width: 130px;
-        height: 30px;
+        height: 40px;
         flex-shrink: 0;
-        border-radius: 0px;
-        border: 0px solid #7F00FF;
+        border-radius: 1px;
+        border: 1px solid #7F00FF;
         background: #7F00FF;
-        margin-top: 359px;
-        margin-left: -190px;
+        margin-top: 459px;
+        margin-left: -315px;
     }
 
     .login p {
-        font-size: 20px;
+        font-size: 25px;
         color: #ffffff;
-        margin-left: 0px;
+        margin-left: -1px;
     }
 }
