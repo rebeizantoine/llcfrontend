@@ -1,0 +1,76 @@
+@media (max-width:700px){
+    
+    .medium{
+        width: 350px;
+height: 88px;
+flex-shrink: 0;
+color: #000;
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin:auto;
+    }
+   .view-all-courses{
+    width: 252px;
+height: 50px;
+flex-shrink: 0;
+color: #000;
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin:auto;
+margin-bottom:50px;
+   }
+   .courses-language{
+flex-direction: column;
+margin: 10px;
+margin-top: 70px;
+background-color:  #FAF4F1;
+}
+.language{
+    margin: 10px;
+    width:300px;
+    
+}
+.enroll{
+    margin:10px;
+    width:280px;
+    text-align: center;
+}
+.name-language{
+    font-size: 25px;
+    text-align: center;
+    margin:0px;
+    width: 320px;
+}
+.img-language-eng{
+    width: 290px;
+}
+.img-language-fr{
+    width: 290px;
+}
+.img-language-dut{
+    width: 300px;
+}
+.img-language-spa{
+    width: 300px;
+}
+.img-language-chi{
+    width: 300px;
+}
+.img-language-ita{
+    width: 300px;
+}
+.description{
+    width: 300px;
+}
+.all-courses-language{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+}
