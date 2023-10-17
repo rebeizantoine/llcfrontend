@@ -1,8 +1,17 @@
 import React from 'react';
-import './header.css';
-import Down from './download.png';
-import Main from './imagehero1.png';
+import { Link } from 'react-router-dom';
+import '../styles/header.css';
+
+
+import Down from '../images/download.png';
+import Main from '../images/imagehero1.png';
 function Header() {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div>
             <div>
@@ -12,28 +21,17 @@ function Header() {
                             <p>LLC</p>
                         </div>
                         <header className="llc-header">
-                            <p>
-                                <a href="header.html">Home</a>
-                            </p>
-                            <p>
-                                <a href="header.html">All Courses</a>
-                            </p>
-                            <p>
-                                <a href="header.html">About</a>
-                            </p>
-                            <p>
-                                <a href="header.html">Blog</a>
-                            </p>
-                            <p>
-                                <a href="header.html">Contact</a>
-                            </p>
+                            <p>Home</p>
+                            <p onClick={() => scrollToSection('About')}>About</p>
+                            <p onClick={() => scrollToSection('Blog')}>Blog</p>
+                            <p>Contact</p>
                         </header>
                     </div>
                     <img className="search-llc" src={Down} />
                     <div className="login">
-                        <a>
+                        <Link to="/login">
                             <p>Log in</p>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="main">
@@ -64,7 +62,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

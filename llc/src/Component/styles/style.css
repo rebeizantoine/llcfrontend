@@ -1,0 +1,162 @@
+.footer {
+    display: flex;
+    column-gap: 60px;
+    margin-left: 100px;
+}
+
+.form {
+    display: flex;
+    gap: 50%;
+    padding-bottom: 50px;
+}
+
+.final {
+    display: flex;
+    gap: 70%;
+    color: #5E443A;
+    margin-left: 100px;
+}
+
+.sub {
+    color: #5E443A;
+}
+
+.t1 {
+    margin-bottom: -10px;
+    margin-left: -120px;
+}
+
+.t2 {
+    font-size: 25px;
+}
+
+.t3 {
+    color: #5E443A;
+}
+
+.subscribe-button {
+    border: 1px solid;
+    border-color: var(--ast-border-color);
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: #fff;
+    color: #5E443A;
+}
+
+.subscribe-button:hover {
+    border: 1px solid;
+    border-color: var(--ast-border-color);
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    background: #5e443a;
+    color: #fff;
+}
+
+.email {
+    width: 250px;
+    height: 35px;
+    margin-left: 100px;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #5e443a;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rosybrown;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+hr {
+    background-color: #808285;
+    /* Set the color of the horizontal rule */
+}
+
+.c1 {
+    color: #5E443A;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.aboutme {
+    list-style-type: none;
+    text-align: left;
+}
+
+.offer {
+    list-style-type: none;
+    text-align: left;
+}
+
+.tezbeet {
+    text-align: left;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.c2 {
+    color: #5E443A;
+}
+
+.c3 {
+    color: #5E443A;
+}
+
+.c4 {
+    color: #5E443A;
+}
+
+
+@media(max-width: 600px) {
+    .footer {
+        display: grid;
+    }
+
+    #social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

@@ -11,7 +11,7 @@
 }
 
 .llc {
-    margin-top: -38px;
+    margin-top: -37px;
     width: 127px;
     height: 65px;
     flex-shrink: 0;
@@ -43,7 +43,8 @@
     color: #5E443A;
 }
 
-a:hover {
+a {
+    text-decoration: none;
     color: #FFBF52;
 }
 
@@ -52,7 +53,7 @@ a:hover {
     height: 46px;
     flex-shrink: 0;
     margin-left: 90px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .login {
@@ -63,13 +64,14 @@ a:hover {
     border: 2px solid #5E443A;
     background: #FFFEFE;
     margin-left: auto;
-    margin-top: 10px;
+    margin-top: 23px;
+    margin-left: 10px;
 }
 
 .login p {
     font-size: 30px;
     margin-top: 3px;
-    margin-left: 15px;
+    margin-left: 20px;
     color: #5E443A;
 }
 
@@ -164,7 +166,143 @@ a:hover {
 }
 
 
-@media only screen and (max-width:600px) {
+@media (max-width:860px) {
+    .main {
+        display: block;
+        position: absolute;
+        margin-top: -1280px;
+    }
+
+    .first {
+        width: 600px;
+        height: 950px;
+        flex-shrink: 0;
+        background: #FAF4F1;
+        display: flex;
+    }
+
+    .llc {
+        margin-top: -25px;
+        width: 57px;
+        height: 65px;
+        flex-shrink: 0;
+        color: #5E443A;
+        font-family: roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .llc-header {
+        display: flex;
+        column-gap: 30px;
+        margin-left: 70px;
+        margin-top: -10px;
+        width: 326px;
+        height: 30px;
+        flex-shrink: 0;
+        color: #5E443A;
+        font-family: Inter;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .modern {
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 600px;
+        height: 127px;
+        flex-shrink: 0;
+        color: #000;
+        text-align: left;
+        font-family: Roboto;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .description {
+        margin-left: 20px;
+        color: #000;
+        width: 500px;
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+    }
+
+    .orange-line {
+        width: 100px;
+        height: 5px;
+        background: #FFBF52;
+        margin-left: 30px;
+        margin-top: 400px;
+    }
+
+    .enroll {
+        margin-left: 30px;
+        width: 210px;
+        height: 40px;
+        background-color: #FFBF52;
+    }
+
+    .enroll p {
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 283px;
+        height: 46px;
+        margin-left: -40px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .courses {
+        display: none;
+    }
+
+    .hola {
+        margin-top: auto;
+        padding-top: 10px;
+        padding-left: 20px;
+        width: 430px;
+        height: 430px;
+        position: relative;
+        border-radius: 8%;
+    }
+
+    .search-llc {
+        display: none;
+    }
+
+    .login {
+        width: 130px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 1px;
+        border: 1px solid #7F00FF;
+        background: #7F00FF;
+        margin-top: 459px;
+        margin-left: -315px;
+    }
+
+    .login p {
+        font-size: 25px;
+        color: #ffffff;
+        margin-left: -1px;
+    }
+}
+
+@media (max-width:400px) {
     .main {
         display: block;
         position: absolute;
@@ -205,11 +343,12 @@ a:hover {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-top: 2px;
     }
 
     .modern {
         margin-top: 10px;
-        margin-left: 20px;
+        margin-left: 10px;
         width: 283px;
         height: 127px;
         flex-shrink: 0;
@@ -224,7 +363,7 @@ a:hover {
 
     .description {
         margin-top: -10px;
-        margin-left: 20px;
+        margin-left: 10px;
         color: #000;
         width: 300px;
         font-family: Roboto;
@@ -279,6 +418,7 @@ a:hover {
         height: 330px;
         position: relative;
         border-radius: 8%;
+        margin-left: -20px;
     }
 
     .search-llc {
@@ -297,8 +437,8 @@ a:hover {
     }
 
     .login p {
-        font-size: 15px;
+        font-size: 20px;
         color: #ffffff;
-        margin-left: -1px;
+        margin-left: 0px;
     }
 }
