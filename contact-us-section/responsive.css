@@ -56,6 +56,15 @@ background-color:  #FAF4F1;
 .img-language-dut{
     width: 300px;
 }
+
+.description{
+    width: 300px;
+}
+.all-courses-language{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
 .img-language-spa{
     width: 300px;
 }
@@ -65,12 +74,21 @@ background-color:  #FAF4F1;
 .img-language-ita{
     width: 300px;
 }
-.description{
-    width: 300px;
-}
-.all-courses-language{
+.contact-me{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
+    
 }
+}
+
+
+@media(max-width:400px){
+    .roboto{
+        padding-top:40px;
+    }
+    .view-all-courses{
+        margin:0;
+        padding:0;
+    margin-right:  60px;
+        margin-top: 10px;
+    }
 }
