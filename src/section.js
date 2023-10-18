@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css'
-import Book from'./book-open-reader-solid.svg';
-import Laptop from'./laptop-code-solid.svg';
-import Users from './user-graduate-solid.svg';
-import Person from'./person-chalkboard-solid.svg';
+import './stat.css'
+import Book from'./course.png';
+import Laptop from'./project.png';
+import Users from './graduated.png';
+import Person from'./teacher(1).png';
 
 function Section() {
   return (

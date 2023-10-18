@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './style.css';
+import './stat.css';
 import Section from './section';
 
 

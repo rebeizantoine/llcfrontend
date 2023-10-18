@@ -6,7 +6,7 @@ overflow-x: hidden;
 .counter-image {
     width: 100%;
   
-    background-image: url("./counter-bg.jpg");
+    background-image: url("./rosy\ brown.jpg");
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -52,7 +52,7 @@ overflow-x: hidden;
   
     border: none;
     color: white;
-    background-color: #5dcedc;
+    background-color: #5e443a;
     font-size: xx-large;
   }
   
