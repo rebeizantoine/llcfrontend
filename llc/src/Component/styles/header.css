@@ -66,6 +66,7 @@ a {
     margin-left: auto;
     margin-top: 23px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .login p {
@@ -386,6 +387,7 @@ a {
         width: 210px;
         height: 40px;
         background-color: #FFBF52;
+        margin-top: 70px;
     }
 
     .enroll p {
@@ -427,8 +429,9 @@ a {
         border-radius: 1px;
         border: 1px solid #7F00FF;
         background: #7F00FF;
-        margin-top: 459px;
+        margin-top: 529px;
         margin-left: -315px;
+        cursor: pointer;
     }
 
     .login p {

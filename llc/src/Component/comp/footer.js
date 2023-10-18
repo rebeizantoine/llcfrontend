@@ -9,8 +9,8 @@ function Footer() {
                 <div className="sub">
                     <h4 className="t1">Stay in the know</h4>
                     <h2 className="t2">Subscribe mailing list</h2>
-                    <label htmlFor="email"></label>
-                    <input type="email" className="email" name="email" placeholder="  Enter your email" required />
+                    <label htmlFor="emailff"></label>
+                    <input type="email" className="emailff" name="email" placeholder="  Enter your email" required />
                     <button className="subscribe-button">Subscribe</button>
                 </div>
                 <div className="Social">
