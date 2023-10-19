@@ -30,11 +30,11 @@ const About = () => {
                         </div>
                         <div className="aboutustext">
                             <div className="text">
-                                <p className="text1">
+                                <p className="text11">
                                     Vulputate egestas nullam volutpat diam nisi at venenatis adipiscing massa
                                     posuere massa nulla massa id integer.
                                 </p>
-                                <p className="text2">
+                                <p className="text21">
                                     Cras ullamcorper fermentum arcu in sed fermentum velit nulla scelerisque
                                     pharetra tristique lectus justo faucibus purus est purus gravida nibh odio ante.
                                 </p>

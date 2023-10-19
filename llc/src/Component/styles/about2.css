@@ -85,6 +85,8 @@
 .student-about {
     display: flex;
     width: 350px;
+    margin-left: 9%;
+
 }
 
 .right {
@@ -96,7 +98,7 @@
     height: 500px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 864px) {
     .right {
         margin-left: 40px;
     }
@@ -130,6 +132,124 @@
     }
 
     #second {
-        margin-top: -600px;
+        margin-top: -400px;
+    }
+
+    .right {
+        margin-bottom: 0;
+        height: 300px;
+        margin-top: -8%;
+    }
+
+    .left {
+        margin-bottom: 0;
+        height: 300px;
+    }
+}
+
+@media (max-width:400px) {
+    .header {
+        width: 390px;
+        font-size: 24px;
+        margin-top: -40px;
+    }
+
+    .all1 {
+        width: 390px;
+        margin-left: 0;
+    }
+
+    .right {
+        margin-left: 40px;
+        width: 390px;
+        height: 500px;
+    }
+
+    .left {
+        margin-left: 0%;
+        width: 390px;
+        height: 500px;
+    }
+
+    .container {
+        margin-left: 0%;
+    }
+
+    .student-about {
+        display: block;
+        gap: 10px;
+    }
+
+    #second {
+        margin-top: 0px;
+    }
+
+    .right {
+        margin-bottom: 0;
+        height: 300px;
+        margin-top: 0%;
+    }
+
+    .left {
+        margin-bottom: 0;
+        height: 300px;
+        margin-left: -40px;
+    }
+
+    #first p {
+        margin-left: -20px;
+        width: 290px;
+        margin-top: -100px;
+    }
+
+    #first .text2 {
+        margin-top: -10px;
+    }
+
+    .text2 p {
+        margin-top: 50px;
+    }
+
+    #second p {
+        margin-left: -20px;
+        width: 290px;
+        margin-top: -30px;
+    }
+
+    #third {
+        width: 370px;
+    }
+
+    #third p {
+        margin-left: 0px;
+        width: 290px;
+        margin-top: 0px;
+    }
+
+    #third img {
+        margin-top: 105px;
+        margin-left: -70px;
+    }
+
+    #fourth {
+        display: none;
+    }
+
+    #second p {
+        margin-left: 0px;
+        width: 290px;
+        margin-top: -120px !important;
+    }
+
+    #second img {
+        margin-top: 0px;
+    }
+
+    #second .text2 {
+        margin-top: -8px !important;
+    }
+
+    #third .text2 {
+        margin-top: -10px;
     }
 }

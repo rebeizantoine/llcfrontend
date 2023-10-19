@@ -148,7 +148,7 @@ hr {
 }
 
 
-@media(max-width: 860px) {
+@media(max-width: 864px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -183,6 +183,80 @@ hr {
     #dndn {
         margin-left: -500px;
     }
+
+    .t1 {
+        font-size: 32px;
+    }
+
+    .footer {
+        font-size: 32px;
+        ;
+
+    }
+
+    .c1 .c2 .c3 .c4 {
+        font-size: 28px;
+    }
+
+    .tezbeet {
+        margin-left: -280px;
+        width: auto;
+        text-align: center;
+    }
+
+    .aboutme {
+        display: flex;
+        justify-content: space-between;
+        /* Distribute items with equal space between them */
+        list-style: none;
+        /* Remove default list styling */
+        padding: 0;
+        width: 800px;
+        height: 30px;
+        margin-left: -280px;
+        justify-content: space-between !important;
+    }
+
+    .aboutme li {
+        height: 100px;
+        width: auto;
+        padding: 0;
+        flex: 1;
+        /* Make each list item grow equally to fill the available space */
+        text-align: center;
+    }
+
+    .offer {
+        display: flex;
+        /* Distribute items with equal space between them */
+        list-style: none;
+        /* Remove default list styling */
+        margin-left: -310px;
+        justify-content: space-between !important;
+        padding-left: 30px;
+
+    }
+
+    .offer li {
+        flex: 1;
+        /* Make each list item grow equally to fill the available space */
+        text-align: center;
+    }
+
+    .CI {
+        height: 500px;
+    }
+
+    .CI p {
+        white-space: nowrap;
+        margin-left: -280px;
+        width: auto;
+        text-align: center;
+    }
+
+
+
+
 }
 
 @media (max-width: 400px) {
@@ -309,6 +383,106 @@ hr {
     .sub-stat-container>div {
         margin: 20px;
         /* Adjust the margin as needed */
+    }
+
+    .form {
+        margin-left: 0%;
+    }
+
+    .footer {
+        margin-left: 35%
+    }
+
+    .CI p {
+        width: 300px;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: -250px;
+
+
+    }
+
+    .CI br {
+        display: block;
+    }
+
+    .final {
+        margin-left: 45%;
+    }
+}
+
+@media (max-width:400px) {
+
+    .t1 {
+        width: 380px;
+        margin-left: 100px;
+    }
+
+    .t3 {
+        margin-left: 80px;
+    }
+
+    .social-container {
+        margin-left: 80px;
+    }
+
+    .footer {
+        width: 390px;
+    }
+
+    .tezbeet {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .AM {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .aboutme {
+        width: 390px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .MO {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .offer {
+        width: 390px;
+        height: auto;
+        margin-left: -28px;
+    }
+
+    .CI {
+        width: 390px;
+        margin-left: 0;
+
+    }
+
+    .CI p {
+        width: 390px;
+        height: 400px;
+        margin-right: 10px;
+        white-space: normal;
+        margin-left: -6px;
+
+
+    }
+
+    .CI br {
+        display: block;
+    }
+
+    #text {
+        width: 390px;
+
     }
 
 }

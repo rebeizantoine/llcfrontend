@@ -36,18 +36,18 @@ function Footer() {
                     <h3 className="c2">About Me</h3>
                     <ul class="aboutme">
                         <li>My Story</li>
-                        <li>My Expertise</li>
-                        <li>Awards &amp; Honors</li>
-                        <li>News &amp; Blog</li>
+                        <li>My Expertise    </li>
+                        <li>Awards </li>
+                        <li>News</li>
                     </ul>
                 </div>
                 <div className="MO">
                     <h3 className="c3">My Offering</h3>
                     <ul class="offer">
-                        <li>Baking Course</li>
-                        <li>Virtual Classes</li>
+                        <li>Baking </li>
+                        <li>Virtual </li>
                         <li>Private Events</li>
-                        <li>Gift Certificates</li>
+                        <li>Gifts</li>
                     </ul>
                 </div>
                 <div className="CI">

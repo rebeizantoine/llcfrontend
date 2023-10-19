@@ -10,6 +10,7 @@ const viewAllCourses = () => {
     return (
         <div class="all-courses-language">
             <div class="all-courses-language1">
+
                 <div class="language">
                     <img src={English} alt="english" class="img-language-eng" />
                     <p class="name-language">ENGLISH LANGUAGE </p>

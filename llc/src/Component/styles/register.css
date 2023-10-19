@@ -1,3 +1,17 @@
+/* Style for the entire registration page */
+.page-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/loginimage.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 .register-title {
     color: #000;
     text-align: center;
@@ -7,26 +21,19 @@
     font-weight: 500;
     line-height: normal;
     margin: 20px 0;
-    /* Add margin for spacing */
 }
 
-body {
-    background-image: url('./Component//images/loginimage.png');
-    /* Set the path to your background image */
-    background-size: cover;
-    /* Cover the entire viewport */
-    background-position: center;
-    /* Center the background image */
-    background-attachment: fixed;
-    /* Fixed background position */
-    background-repeat: no-repeat;
-    /* Don't repeat the image */
-    margin: 0;
-    /* Remove default body margin */
+.register-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    width: 100%;
+    max-width: 530px;
+    padding: 20px;
+    border: 3px solid orange;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
 }
 
 .field-label {
@@ -36,34 +43,17 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-}
-
-.register-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center horizontally */
-    width: 100%;
-    /* Adjust to your preferred width */
-    max-width: 530px;
-    /* Maximum width as specified */
-    padding: 20px;
-    /* Add padding for spacing */
-    border: 3px solid #000;
-    background: rgba(255, 255, 255, 0.70);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
+    text-align: left;
+    /* Align label text to the left */
 }
 
 .field-input {
     width: 100%;
-    /* Make inputs expand to container width */
     height: 32px;
     border-radius: 7px;
     border: 2px solid #000;
     background: #FFF;
     margin: 10px 0;
-    /* Add margin for spacing */
 }
 
 .dob-container {
@@ -73,31 +63,14 @@ body {
 
 .dob-input {
     width: 30%;
-    /* Adjust width as needed */
     height: 32px;
 }
 
 .gender-dropdown {
     width: 100%;
-    /* Make the dropdown expand to container width */
     height: 32px;
     margin: 10px 0;
-    /* Add margin for spacing */
 }
-
-.register-button {
-    width: 50%;
-    /* Make the button expand to container width */
-    height: 42px;
-    text-align: center;
-    margin: 10px 0;
-    /* Add margin for spacing */
-    font-size: 32px;
-    text-align: center;
-    justify-content: center;
-}
-
-
 
 .name-container {
     display: flex;
@@ -106,24 +79,90 @@ body {
 
 .name-label {
     width: 30%;
-    /* Adjust width as needed */
     height: 32px;
     border-radius: 8%;
     margin-bottom: 5%;
 }
 
-.text-label {
-    color: #9B6C1B;
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+.register-button {
+    width: 50%;
+    height: 42px;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 32px;
+    text-align: center;
+    justify-content: center;
+    background-color: orange;
+    color: #FFF;
+    /* Initial orange background with white text */
 }
 
 .register-button:hover {
-    background-color: #FFA500;
-    /* Change the background color on hover to orange */
+    background-color: blue;
+    /* Change the background color to blue on hover */
     color: #FFF;
     /* Change the text color to white on hover */
+}
+
+/* Media query for a maximum width of 844px */
+@media (min-width:401)and(max-width: 844px) {
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    /* Increase font size for all elements */
+    .register-title {
+        font-size: 36px;
+    }
+
+    .field-label {
+        font-size: 20px;
+    }
+
+    .field-input {
+        font-size: 18px;
+    }
+
+    .dob-input,
+    .gender-dropdown {
+        font-size: 18px;
+    }
+
+    .name-label {
+        font-size: 20px;
+    }
+
+    .register-button {
+        font-size: 28px;
+    }
+
+    .text-label {
+        font-size: 20px;
+    }
+
+    .register-container {
+        margin-left: -35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .register-container {
+        width: 320px !important;
+        margin-left: -40px !important;
+    }
+
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .register-button {
+        width: 180px;
+    }
 }

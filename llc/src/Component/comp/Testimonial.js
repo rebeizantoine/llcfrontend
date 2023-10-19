@@ -40,8 +40,9 @@ const Testimonial = () => {
 
                     </div>
                 </div>
-                <div className="right">
+                <div className="right" id="third">
                     <div className="all1">
+
                         <img className="imageround" src={image23} alt="" />
                         <div className="text">
                             <p className="text1">“Justo vestibulum risus imperdiet consectetur consectetur pretium urna nibh
@@ -49,11 +50,11 @@ const Testimonial = () => {
                                 etiam
                                 risus accumsan volutpat urna, eu semper enim,
                                 est aliquam laoreet urna fringilla viverra.”</p>
-                            <p className="text2">Julia Moore</p>
+                            <p className="text2">Roberto Lopez</p>
                         </div>
 
                     </div>
-                    <div className="all1">
+                    <div className="all1" id="fourth">
                         <img className="imageround" src={image24} alt="" />
                         <div className="text">
                             <p className="text1">“Justo vestibulum risus imperdiet consectetur consectetur pretium urna nibh
@@ -68,7 +69,7 @@ const Testimonial = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 

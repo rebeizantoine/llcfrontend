@@ -144,7 +144,7 @@
     width: 610px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 864px) {
     .about123 {
         margin-left: 20px;
         padding-bottom: 10px;
@@ -175,13 +175,17 @@
         display: block;
     }
 
-    .text1 {
+    .text11 {
         width: auto;
+        font-size: 26px !important;
+        text-align: center;
     }
 
-    .text2 {
+    .text21 {
         width: auto;
-        margin-left: -70px;
+        margin-left: 0px;
+        font-size: 26px !important;
+        text-align: center;
     }
 
     .body {
@@ -197,7 +201,7 @@
 
 
     .aboutbutton {
-        margin-left: 110px !important;
+        margin-left: 140px !important;
     }
 }
 
@@ -207,15 +211,18 @@
         padding-bottom: 30px;
     }
 
+    .h3about {
+        width: 380px;
+    }
+
     .h3about h3 {
-        font-size: 28px;
+        font-size: 30px;
+        text-align: center;
+        margin-left: -30px;
     }
 
     .image2 {
-        width: 300px;
-        height: 500px;
-        margin-left: 320px !important;
-        margin-top: -100px;
+        display: none;
     }
 
     .image3 {
@@ -223,6 +230,21 @@
         height: 300px;
         margin-top: -320px;
         margin-left: -10px;
+        display: none;
+    }
+
+    .text {
+        margin-top: 120px;
+    }
+
+    .text11 {
+        width: 390px;
+        margin-left: -50px;
+    }
+
+    .text21 {
+        width: 380px;
+        margin-left: -50px;
     }
 
     .section2 {
@@ -252,6 +274,6 @@
 
 
     .aboutbutton {
-        margin-left: 30% !important;
+        margin-left: -15px !important;
     }
 }

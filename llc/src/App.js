@@ -10,6 +10,8 @@ import Footer from './Component/comp/footer';
 import Courses from './Component/comp/popular';
 import Contact from './Component/comp/Contactus';
 import AllCourses from './Component/comp/view-all-courses';
+import Dashboard from './Component/comp/Dashboard';
+import Register from './Component/comp/Register';
 function App() {
   return (
     <div className="App">
@@ -26,6 +28,14 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/\Register">
+            <Register />
+          </Route>
+
+          <Route path="/Dashboard">
+            <Dashboard />
+          </Route>
+
           <Route path="/AllCourses">
             <AllCourses />
           </Route>
