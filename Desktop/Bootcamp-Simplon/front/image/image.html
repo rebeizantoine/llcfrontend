@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+
+<body>
+    <h1>Upload an Image</h1>
+    <form id="imageUploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <div id="uploadedImageUrl" style="display: none;">
+        Image URL: <a id="imageUrlLink" href="" target="_blank"></a>
+    </div>
+
+    <script>
+        const imageUploadForm = document.getElementById('imageUploadForm');
+        const fileInput = document.getElementById('fileInput');
+        const uploadedImageUrl = document.getElementById('uploadedImageUrl');
+        const imageUrlLink = document.getElementById('imageUrlLink');
+
+        imageUploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(imageUploadForm);
+
+            try {
+                const response = await fetch('http://localhost:8000/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const imageUrl = data.imageUrl;
+
+                    // Display the uploaded image URL
+                    imageUrlLink.href = imageUrl;
+                    imageUrlLink.textContent = imageUrl;
+                    uploadedImageUrl.style.display = 'block';
+                } else {
+                    console.error('Error uploading the file.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>
