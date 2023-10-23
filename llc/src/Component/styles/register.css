@@ -9,9 +9,8 @@
     margin: 20px 0;
     /* Add margin for spacing */
 }
-
-body {
-    background-image: url('./Component//images/loginimage.png');
+.page-container{
+    background-image: url('../images/loginimage.png');
     /* Set the path to your background image */
     background-size: cover;
     /* Cover the entire viewport */
