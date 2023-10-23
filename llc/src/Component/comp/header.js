@@ -1,17 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/header.css';
-
-
 import Down from '../images/download.png';
 import Main from '../images/imagehero1.png';
+
 function Header() {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
     return (
         <div>
             <div>
@@ -21,10 +14,10 @@ function Header() {
                             <p>LLC</p>
                         </div>
                         <header className="llc-header">
-                            <p>Home</p>
-                            <p onClick={() => scrollToSection('About')}>About</p>
-                            <p onClick={() => scrollToSection('Blog')}>Blog</p>
-                            <p>Contact</p>
+                            <a className="nav-link" href="#Home">Home</a>
+                            <a className="nav-link" href="#About">About</a>
+                            <a className="nav-link" href="#Courses">Courses</a>
+                            <a className="nav-link" href="#Contact">Contact</a>
                         </header>
                     </div>
                     <img className="search-llc" src={Down} />
@@ -48,7 +41,7 @@ function Header() {
                         </div>
                         <div className="buttons">
                             <div className="enroll">
-                                <a>
+                                <a href="/enroll">
                                     <p>ENROLL TODAY</p>
                                 </a>
                             </div>
@@ -62,7 +55,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

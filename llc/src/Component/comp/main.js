@@ -31,6 +31,8 @@ function Mainn() {
                 <div className="left-content">
                     <img className="hola" src={Hero} />
                 </div>
+
+
             </div>
         </div>
     );

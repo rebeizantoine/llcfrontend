@@ -2,6 +2,10 @@
     background-color: #faf4f1;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .roboto {
     width: 454.219px;
     height: 61px;
@@ -205,4 +209,17 @@
     .description {
         width: 300px;
     }
+}
+
+@media (max-width:400px) {
+    .courses-language {
+        height: 1700px;
+        margin-left: 0px !important;
+    }
+
+    .language1 {
+        margin-left: 0px;
+
+    }
+
 }

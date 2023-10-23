@@ -5,6 +5,11 @@
     margin-bottom: -100px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 .aboutus {
     background-color: #ffffff;
     padding: 0px;

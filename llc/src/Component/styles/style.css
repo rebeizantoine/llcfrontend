@@ -283,6 +283,11 @@ hr {
 
 }
 
+.subscribe-button {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
 .statics-container {
 
     width: 100%;

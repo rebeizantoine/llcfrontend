@@ -12,13 +12,18 @@ import Contact from './Component/comp/Contactus';
 import AllCourses from './Component/comp/view-all-courses';
 import Dashboard from './Component/comp/Dashboard';
 import Register from './Component/comp/Register';
+import Section from './Component/comp/section';
+
+
 function App() {
+
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route exact path="/">
             <Header />
+            <Section />
             <About />
             <Courses />
             <Testimonial />

@@ -346,10 +346,12 @@ a {
         flex-shrink: 0;
         color: #5E443A;
         font-family: Inter;
-        font-size: 34px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-top: 80px;
+
     }
 
     .modern {
