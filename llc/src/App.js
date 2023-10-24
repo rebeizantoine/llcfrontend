@@ -39,9 +39,18 @@ function App() {
           <Route path="/Dashboard">
             <Dashboard />
           </Route>
-
+          <Route path="/AdminComponent">
+            <Dashboard />
+          </Route>
           <Route path="/AllCourses">
             <AllCourses />
+          </Route>
+          <Route path="/StudentComponent">
+            <AllCourses />
+          </Route>
+          
+          <Route path="/TeacherComponent">
+            <Contact />
           </Route>
           <Route path="/Contact">
             <Contact />
