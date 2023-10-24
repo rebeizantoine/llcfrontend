@@ -1,0 +1,58 @@
+.container{background: #FAF4F1; width: 60%;
+    display: flex; column-gap: 200px;
+
+}
+.sh1{background: #FAF4F1; width: 60%}
+.Imaged{width: 300px;
+    height: 240px}
+.week{width: 70%;  background-color: #FAF4F1;}
+.week td{text-align:center ;}
+.Engf{width: 230px; background-color: white; margin-top:-25px;} 
+
+.Spaf{width: 300px; background-color: white; margin-top:-25px;} 
+.Engf h1{font-size: 20px}
+.Spaf h1{font-size: 20px}
+
+
+/* Adjust the container styles for smaller screens */
+.container {
+    background: #FAF4F1;
+    width: 100%; /* Use full width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements horizontally */
+    row-gap: 20px; /* Reduce the gap between elements */
+  }
+  
+  .sh1 {
+    background: #FAF4F1;
+    width: 100%; /* Use full width */
+  }
+  
+  .Imaged {
+    width: 100%; /* Use full width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit the maximum width */
+  }
+  
+  .week {
+    width: 100%; /* Use full width */
+    background-color: #FAF4F1;
+  }
+  
+  .week td {
+    text-align: center;
+  }
+  
+  .Engf,
+  .Spaf {
+    width: 100%; /* Use full width */
+    background-color: white;
+    margin-top: -15px; /* Adjust the margin */
+    padding: 10px; /* Add padding to the content */
+  }
+  
+  .Engf h1,
+  .Spaf h1 {
+    font-size: 16px; /* Reduce the font size */
+  }
