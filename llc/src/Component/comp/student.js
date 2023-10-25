@@ -112,7 +112,7 @@ class Teacher extends Component {
     render() {
         return (
             <div id='student'>
-                <h1>Student Data</h1>
+                <h1 className='teacher-data'>Student Data</h1>
                 <table>
                     <thead>
                         <tr>
@@ -177,16 +177,16 @@ class Teacher extends Component {
                                 </td>
                                 <td>
                                     {teacher.editable ? (
-                                        <button onClick={() => this.handleSaveClick(teacher.user_id)}>Save</button>
+                                        <button className='button-edit' onClick={() => this.handleSaveClick(teacher.user_id)}>Save</button>
                                     ) : (
-                                        <button onClick={() => this.handleEditClick(teacher.user_id)}>Edit</button>
+                                        <button className='button-edit' onClick={() => this.handleEditClick(teacher.user_id)}>Edit</button>
                                     )}
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-                <h2>Add New Student</h2>
+                <h2 className='teacher-data'>Add New Student</h2>
                 <div>
                     <label>Email:</label>
                     <input

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../styles/teacher.css'
 
 class Teacher extends Component {
     constructor(props) {
@@ -112,7 +113,7 @@ class Teacher extends Component {
     render() {
         return (
             <div id='teacher'>
-                <h1>Teacher Data</h1>
+                <h1 className='teacher-data'>Teacher Data</h1>
                 <table>
                     <thead>
                         <tr>
@@ -177,16 +178,16 @@ class Teacher extends Component {
                                 </td>
                                 <td>
                                     {teacher.editable ? (
-                                        <button onClick={() => this.handleSaveClick(teacher.user_id)}>Save</button>
+                                        <button className='button-edit' onClick={() => this.handleSaveClick(teacher.user_id)}>Save</button>
                                     ) : (
-                                        <button onClick={() => this.handleEditClick(teacher.user_id)}>Edit</button>
+                                        <button className='button-edit' onClick={() => this.handleEditClick(teacher.user_id)}>Edit</button>
                                     )}
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-                <h2>Add New Teacher</h2>
+                <h2 className='teacher-data'>Add New Teacher</h2>
                 <div>
                     <label>Email:</label>
                     <input

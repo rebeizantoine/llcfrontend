@@ -14,7 +14,7 @@ import Register from './Component/comp/Register';
 import Section from './Component/comp/section';
 import Hero from './Component/comp/hero';
 import DashboardStudent from './Component/comp/Dashboardstudent';
-import DashboardTeacher from './Component/comp/dashoardteacher';
+import DashboardTeacher from './Component/comp/Dashoardteacher';
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           <Route path="/AllCourses">
             <AllCourses />
           </Route>
-          <Route path="/DashbaordTeacher">
+          <Route path="/dashboardTeacher">
             <DashboardTeacher />
           </Route>
           <Route path="/DashboardStudent">
