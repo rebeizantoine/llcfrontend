@@ -160,7 +160,7 @@ a {
     display: flex;
 }
 
-.main {
+.main1 {
     display: flex;
     position: absolute;
     margin-top: -1000px;
@@ -168,7 +168,7 @@ a {
 
 
 @media (max-width:864px) {
-    .main {
+    .main1 {
         display: block;
         position: absolute;
         margin-top: -1280px;
@@ -309,7 +309,7 @@ a {
 }
 
 @media (max-width:400px) {
-    .main {
+    .main1 {
         display: block;
         position: absolute;
         margin-top: -1280px;

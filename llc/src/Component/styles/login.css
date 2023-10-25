@@ -8,6 +8,12 @@
     background-size: cover;
 }
 
+.home-link {
+    width: 110px;
+    margin-bottom: -60px;
+
+}
+
 .login-box {
     background-color: #f7f7f7;
     padding: 20px;

@@ -6,6 +6,7 @@ import French from '../images/french.png'
 import Dutch from '../images/dutch.png';
 const Popular = () => {
     return (
+        <div id="Courses">
         <div class="popular-courses">
             <p class="roboto">Popular courses</p>
             <p class="medium">Mi mattis tortor dolor vitae congue purus mi imperdiet<br />
@@ -35,6 +36,7 @@ const Popular = () => {
                 </div>
             </div>
 
+        </div>
         </div>
     )
 }

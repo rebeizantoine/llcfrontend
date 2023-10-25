@@ -214,7 +214,7 @@ hr {
         width: 800px;
         height: 30px;
         margin-left: -280px;
-        justify-content: space-between !important;
+        justify-content: space-between;
     }
 
     .aboutme li {
@@ -232,7 +232,7 @@ hr {
         list-style: none;
         /* Remove default list styling */
         margin-left: -310px;
-        justify-content: space-between !important;
+        justify-content: space-between;
         padding-left: 30px;
 
     }
@@ -264,6 +264,10 @@ hr {
         display: flex;
         flex-direction: column;
         margin-left: -100px;
+    }
+
+    .emailff {
+        width: 380px !important;
     }
 }
 

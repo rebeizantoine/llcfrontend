@@ -5,7 +5,6 @@ import Header from './Component/comp/header';
 import Testimonial from './Component/comp/Testimonial';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './Component/comp/login';
-import Mainn from './Component/comp/main';
 import Footer from './Component/comp/footer';
 import Courses from './Component/comp/popular';
 import Contact from './Component/comp/Contactus';
@@ -13,6 +12,9 @@ import AllCourses from './Component/comp/view-all-courses';
 import Dashboard from './Component/comp/Dashboard';
 import Register from './Component/comp/Register';
 import Section from './Component/comp/section';
+import Hero from './Component/comp/hero';
+import DashboardStudent from './Component/comp/Dashboardstudent';
+import DashboardTeacher from './Component/comp/dashoardteacher';
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header />
+            <Hero />
             <Section />
             <About />
             <Courses />
@@ -43,6 +46,12 @@ function App() {
 
           <Route path="/AllCourses">
             <AllCourses />
+          </Route>
+          <Route path="/DashbaordTeacher">
+            <DashboardTeacher />
+          </Route>
+          <Route path="/DashboardStudent">
+            <DashboardStudent />
           </Route>
           <Route path="/Contact">
             <Contact />

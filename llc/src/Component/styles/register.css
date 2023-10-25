@@ -12,6 +12,11 @@
     background-repeat: no-repeat;
 }
 
+.image-goback {
+    margin-left: -40px;
+    margin-bottom: -28px;
+}
+
 .register-title {
     color: #000;
     text-align: center;

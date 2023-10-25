@@ -1,0 +1,207 @@
+.afterLoginPageTeacher {
+    background-color: #FAF4F1;
+    padding-bottom: 50px;
+}
+
+.profileTeacher {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cercle {
+    width: 150px;
+    height: 150px;
+}
+
+.portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(145, 135, 135);
+    margin-top: 50px;
+}
+
+.teacherInfos {
+    margin-right: 800px;
+    width: 300px;
+    margin-top: 40px;
+}
+
+.teacherName {
+    color: #5c5454;
+    font-size: xx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.manageProfileTeacher {
+    background-color: #5c5454;
+    color: #FAF4F1;
+    border: none;
+    width: 150px;
+    height: 30px;
+}
+
+.manageProfileTeacher:hover {
+    color: #5c5454;
+    background-color: #FAF4F1;
+    cursor: pointer;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    /*border: 2px solid #5c5454;*/
+    background-color: white;
+}
+
+th,
+td {
+    padding: 8px;
+    border: none;
+    height: 20px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 2px solid #5c5454;
+}
+
+.fonctionsTeachers {
+    margin-top: 100px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.assignments {
+    margin-top: -35px;
+}
+
+.ass {
+    display: flex;
+    font-size: 25px;
+}
+
+.createAssignments {
+    margin-left: 170px;
+    margin-top: 25px;
+    width: 100px;
+    height: 30px;
+    background-color: #5c5454;
+    color: #FAF4F1;
+    border: none;
+    cursor: pointer;
+}
+
+.createAssignments:hover {
+    color: #5c5454;
+    background-color: #FAF4F1;
+}
+
+.premier-row {
+    text-align: center;
+    border-bottom: 2px solid #5c5454;
+    background-color: #5c5454;
+    color: #FAF4F1;
+
+}
+
+.img-languge-education {
+    width: 400px;
+    background-color: #5c5454;
+    height: 190px;
+}
+
+.liveClass {
+    margin-top: 50px;
+}
+
+.students-education {
+    margin-top: 35px;
+    font-size: 25px;
+    color: #5c5454;
+}
+
+#std {
+    width: 200px;
+    height: 160px;
+    background-color: #5c5454;
+}
+
+#std option {
+    padding: 20px;
+    line-height: 20px;
+    color: #FAF4F1;
+}
+
+#std option:checked {
+    background-color: #FAF4F1;
+    color: #5c5454;
+}
+
+#std option:hover {
+    background-color: #FAF4F1;
+    color: #5c5454;
+}
+
+@media(max-width:800px) {
+    .afterLoginPageTeacher {
+        margin: 0px;
+    }
+
+    .profileTeacher {
+        margin-left: 10px;
+    }
+
+    .portrait {
+        width: 120px;
+        height: 120px;
+    }
+
+    .teacherInfos {
+        margin-left: 10px;
+        font-size: 30px;
+        margin-top: 15px;
+    }
+
+    .manageProfileTeacher {
+        padding-bottom: -30px;
+    }
+
+    .fonctionsTeachers {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0px;
+    }
+
+    .img-languge-education {
+        margin-bottom: 100px;
+        width: 320px;
+        margin-left: 10px;
+    }
+
+    #table {
+        width: 300px;
+        margin-left: -2px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .createAssignments {
+        margin-left: 60px;
+    }
+
+    .assignments {
+        margin-left: 20px;
+    }
+
+    .liveClass {
+        margin-left: 20px;
+    }
+
+    .students-education {
+        margin-left: Â 20px;
+    }
+}
