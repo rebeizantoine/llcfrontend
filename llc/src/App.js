@@ -15,9 +15,15 @@ import Section from './Component/comp/section';
 import Hero from './Component/comp/hero';
 import DashboardStudent from './Component/comp/Dashboardstudent';
 import DashboardTeacher from './Component/comp/Dashoardteacher';
-
+import ProtectedRoute from './Component/ProtectedRoute';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const userId = localStorage.getItem('userId');
+    setIsAuthenticated(!!userId);
+  }, []);
 
   return (
     <div className="App">
