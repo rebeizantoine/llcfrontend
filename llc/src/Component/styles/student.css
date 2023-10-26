@@ -9,15 +9,6 @@
     margin-bottom: 10px;
 }
 
-.edit-email {
-    width: 180px !important;
-}
-
-.edit-password {
-    width: 90px !important;
-}
-
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -44,11 +35,19 @@ input[type="text"] {
     border: 1px solid #ccc;
 }
 
-.table1 {
+.edit-email {
+    width: 180px !important;
+}
+
+.edit-password {
+    width: 90px !important;
+}
+
+.table2 {
     width: 100%;
 }
 
-.teacher-data {
+.student-data {
     color: #FFBF52;
     text-align: center;
     font-family: Roboto;
@@ -56,32 +55,13 @@ input[type="text"] {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-}
-
-.teacher-data2 {
-
-    color: #FFBF52;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-
 }
 
 input[type="radio"] {
     margin-right: 5px;
 }
 
-button {
-    padding: 6px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-}
+
 
 .button-edit {
     padding: 6px 12px;
@@ -92,11 +72,11 @@ button {
     margin-top: 0 !important;
 }
 
-button:hover {
+.button-edit button:hover {
     background-color: #0056b3;
 }
 
-.teacher-data2 {
+.student-data {
     font-size: 20px;
     margin-top: 20px;
 }

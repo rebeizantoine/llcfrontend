@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../styles/student.css'
 
 class Teacher extends Component {
     constructor(props) {
@@ -114,7 +115,7 @@ class Teacher extends Component {
             <div id='student'>
                 <h1 className='teacher-data'>Student Data</h1>
                 <table>
-                    <thead>
+                    <thead className='table2'>
                         <tr>
                             <th>ID</th>
                             <th>Email</th>
@@ -129,7 +130,7 @@ class Teacher extends Component {
                                 <td>{teacher.user_id}</td>
                                 <td>
                                     {teacher.editable ? (
-                                        <input
+                                        <input className='edit-email'
                                             type="text"
                                             value={teacher.email}
                                             onChange={(e) => this.handleEmailChange(teacher.user_id, e.target.value)}
@@ -140,7 +141,7 @@ class Teacher extends Component {
                                 </td>
                                 <td>
                                     {teacher.editable ? (
-                                        <input
+                                        <input className='edit-password'
                                             type="text"
                                             value={teacher.password}
                                             onChange={(e) => this.handlePasswordChange(teacher.user_id, e.target.value)}
@@ -186,7 +187,7 @@ class Teacher extends Component {
                         ))}
                     </tbody>
                 </table>
-                <h2 className='teacher-data'>Add New Student</h2>
+                <h2 className='student-data'>Add New Student</h2>
                 <div>
                     <label>Email:</label>
                     <input

@@ -29,7 +29,7 @@
     margin-bottom: -30px !important;
 }
 
-a {
+.menu-content a {
     text-decoration: none;
     color: orange;
     margin-top: 200px;

@@ -22,13 +22,13 @@ const Login = () => {
                 if (user) {
                     if (user.role === 'teacher') {
                         // Redirect to the teacher component
-                        history.push('/TeacherComponent');
+                        history.push('/DashboardTeacher');
                     } else if (user.role === 'student') {
                         // Redirect to the student component
-                        history.push('/StudentComponent');
+                        history.push('/DashboardStudent');
                     } else if (user.role === 'admin') {
                         // Redirect to the admin component
-                        history.push('/AdminComponent');
+                        history.push('/Dashboard');
                     } else {
                         alert('Invalid role. Please try again.');
                     }

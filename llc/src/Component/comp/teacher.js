@@ -114,8 +114,9 @@ class Teacher extends Component {
         return (
             <div id='teacher'>
                 <h1 className='teacher-data'>Teacher Data</h1>
-                <table>
+                <table className='table1'>
                     <thead>
+
                         <tr>
                             <th>ID</th>
                             <th>Email</th>
@@ -130,7 +131,7 @@ class Teacher extends Component {
                                 <td>{teacher.user_id}</td>
                                 <td>
                                     {teacher.editable ? (
-                                        <input
+                                        <input className='edit-email'
                                             type="text"
                                             value={teacher.email}
                                             onChange={(e) => this.handleEmailChange(teacher.user_id, e.target.value)}
@@ -141,7 +142,7 @@ class Teacher extends Component {
                                 </td>
                                 <td>
                                     {teacher.editable ? (
-                                        <input
+                                        <input className='edit-password'
                                             type="text"
                                             value={teacher.password}
                                             onChange={(e) => this.handlePasswordChange(teacher.user_id, e.target.value)}
@@ -187,7 +188,7 @@ class Teacher extends Component {
                         ))}
                     </tbody>
                 </table>
-                <h2 className='teacher-data'>Add New Teacher</h2>
+                <h2 className='teacher-data2'>Add New Teacher</h2>
                 <div>
                     <label>Email:</label>
                     <input
