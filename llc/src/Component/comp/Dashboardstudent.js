@@ -1,12 +1,35 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../styles/dashboardstudent.css'; // Import the CSS file
 import english from '../images/english.jpg'
 import spanish from '../images/spanish123.png'
+import logoutIcon from '../images/exit1.png';
 
 function DashboardStudent() {
+    const [activePage, setActivePage] = useState('teacher');
+    const history = useHistory();
+
+    const handleMenuClick = (page) => {
+        setActivePage(page);
+    };
+
+    const handleLogout = () => {
+        const userId = localStorage.getItem('userId');
+        if (userId !== null) {
+            localStorage.removeItem('userId');
+            history.push('/'); // Redirect to the homepage
+        } else {
+            console.log('userId not found in local storage');
+        }
+    };
     return (
         <div className="sh1">
+            <div className='logout-button'>
+                <a href="/" className="logout-button" onClick={handleLogout}>
+                    <img src={logoutIcon} alt="Logout" />
+                </a>
+            </div>
             <h1>LLC</h1>
             <h2>My courses</h2>
             <div className="container">

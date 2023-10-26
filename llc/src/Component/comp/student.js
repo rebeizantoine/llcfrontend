@@ -114,7 +114,7 @@ class Teacher extends Component {
         return (
             <div id='student'>
                 <h1 className='teacher-data'>Student Data</h1>
-                <table>
+                <table className='table21'>
                     <thead className='table2'>
                         <tr>
                             <th>ID</th>

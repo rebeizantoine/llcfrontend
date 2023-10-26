@@ -8,9 +8,10 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_1bovbim', 'template_xh6rihf', form.current, 'xVLCCoH8RY-hM68S4')
+        emailjs.sendForm('service_6xtx3zu', 'template_ugq8rdb', form.current, 'xVLCCoH8RY-hM68S4')
             .then((result) => {
                 console.log(result.text);
+                console.log("message sent")
             }, (error) => {
                 console.log(error.text);
             });
@@ -24,15 +25,15 @@ const Contact = () => {
                     <div class="name">
                         <label class="labelf" id='namef'>NAME</label>
                         <div>
-                            <input className='inputf' type="text" id="first-name" name="first-name" required placeholder='first' />
-                            <input className='inputf' type="text" id="last-name" name="last-name" required placeholder='last' />
+                            <input className='inputf' type="text" id="first-name" name="user_name" required placeholder='first' />
+                            <input className='inputf' type="text" id="last-name" name="user_lastname" required placeholder='last' />
                         </div>
                     </div>
 
 
                     <div class="email">
                         <label class="labelf">EMAIL</label>
-                        <input className='inputf' type="text" id="emailf" name="email" required />
+                        <input className='inputf' type="text" id="emailf" name="user_email" required />
                     </div>
 
 

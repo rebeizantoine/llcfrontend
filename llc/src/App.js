@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Component/styles/App.css';
 import About from './Component/comp/About';
 import Header from './Component/comp/header';
@@ -15,7 +15,7 @@ import Section from './Component/comp/section';
 import Hero from './Component/comp/hero';
 import DashboardStudent from './Component/comp/Dashboardstudent';
 import DashboardTeacher from './Component/comp/Dashoardteacher';
-import ProtectedRoute from './Component/ProtectedRoute';
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

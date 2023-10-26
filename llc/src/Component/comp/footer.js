@@ -1,7 +1,22 @@
 import React from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/style.css';
 
 function Footer() {
+    const form = useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_6xtx3zu', 'template_iz77l0n', form.current, 'xVLCCoH8RY-hM68S4')
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent")
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <div>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"></link>
@@ -9,10 +24,13 @@ function Footer() {
                 <div className="sub">
                     <h4 className="t1">Stay in the know</h4>
                     <h2 className="t2">Subscribe mailing list</h2>
-                    <label htmlFor="emailff"></label>
-                    <input type="email" className="emailff" name="email" placeholder="  Enter your email" required />
-                    <button className="subscribe-button">Subscribe</button>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <label htmlFor="emailff"></label>
+                        <input type="email" className="emailff" name="mailing_email" placeholder="  Enter your email" required />
+                        <button type="submit" className="subscribe-button">Subscribe</button> {/* Changed onClick to type="submit" */}
+                    </form>
                 </div>
+
                 <div className="Social">
                     <h4 className="t3">Follow Us on Social media</h4>
                     <div className="social-container">

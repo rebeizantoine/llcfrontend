@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Teacher from './teacher';
 import '../styles/teacher.css'
 import Student from './student';
 import '../styles/dashboard2.css';
 import hdlang2 from '../images/hdlang42.png'
 import horizontal from '../images/Rectangle20.png'
-function MenuAndContent() {
+import logoutIcon from '../images/exit1.png';
+function Dashboard() {
     const [activePage, setActivePage] = useState('teacher');
+    const history = useHistory(); // Initialize the history object
 
     const handleMenuClick = (page) => {
         setActivePage(page);
     };
 
+
     return (
         <div className="menu-and-content">
+            <a href="/" className="logout-button">
+                <img src={logoutIcon} alt="Logout" />
+            </a>
             <div className="menu">
                 <h1 className='h1-top'>LLC</h1>
                 <div className="menu-content">
@@ -40,4 +47,4 @@ function MenuAndContent() {
     );
 }
 
-export default MenuAndContent;
+export default Dashboard;

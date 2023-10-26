@@ -6,6 +6,10 @@
 
 }
 
+.logout-button a {
+    margin-left: -700px !important;
+}
+
 .sh1 {
     background: #FAF4F1;
     width: 60%

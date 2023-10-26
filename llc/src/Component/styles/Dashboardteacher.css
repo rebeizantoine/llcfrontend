@@ -9,6 +9,12 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.logout-button-teacher {
+    margin-left: 0px;
+    position: absolute;
+
+}
+
 .cercle {
     width: 150px;
     height: 150px;

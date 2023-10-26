@@ -1,10 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import logoutIcon from '../images/exit1.png';
 import '../styles/Dashboardteacher.css';
-const dashboardTeacher = () => {
+
+const DashboardTeacher = () => {
+    const [activePage, setActivePage] = useState('teacher');
+    const history = useHistory();
+
+    const handleMenuClick = (page) => {
+        setActivePage(page);
+    };
+
+    const handleLogout = () => {
+        const userId = localStorage.getItem('userId');
+        if (userId !== null) {
+            localStorage.removeItem('userId');
+            history.push('/'); // Redirect to the homepage
+        } else {
+            console.log('userId not found in local storage');
+        }
+    };
     return (
         <div className='dashboard-teacher1'>
+
             <div className='afterLoginPageTeacher'>
+                <div className="logout-button-teacher">
+                    <a href="/" onClick={handleLogout}>
+                        <img src={logoutIcon} alt="Logout" />
+                    </a>
+                </div>
                 <div className='backToHomepage'>
                     <Link to="/"><h1>LLC</h1></Link>
                 </div>
@@ -113,4 +138,4 @@ const dashboardTeacher = () => {
         </div>
     )
 }
-export default dashboardTeacher;
+export default DashboardTeacher;
