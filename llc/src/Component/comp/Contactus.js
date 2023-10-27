@@ -1,35 +1,54 @@
 import React from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contact-us.css';
 const Contact = () => {
+    const form = useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_1bovbim', 'template_xh6rihf', form.current, 'xVLCCoH8RY-hM68S4')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    };
     return (
         <div class="contact-me">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"></link>
-            <div class="contact-information">
-                <div class="name">
-                    <label class="labelf" id='namef'>NAME</label>
-                    <div>First<input className='inputf' type="text" id="first-name" name="first-name" required />
-                        Last<input className='inputf' type="text" id="last-name" name="last-name" required /></div>
+            <form ref={form} onSubmit={sendEmail}>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"></link>
+                <div class="contact-information">
+                    <div class="name">
+                        <label class="labelf" id='namef'>NAME</label>
+                        <div>
+                            <input className='inputf' type="text" id="first-name" name="first-name" required placeholder='first' />
+                            <input className='inputf' type="text" id="last-name" name="last-name" required placeholder='last' />
+                        </div>
+                    </div>
+
+
+                    <div class="email">
+                        <label class="labelf">EMAIL</label>
+                        <input className='inputf' type="text" id="emailf" name="email" required />
+                    </div>
+
+
+                    <div class="subject">
+                        <label class="labelf">SUBJECT</label>
+                        <input className='inputf' type="text" id="subjectf" name="subject" required />
+                    </div>
+
+
+                    <div class="message">
+                        <label class="labelf">MESSAGE</label>
+                        <textarea id="message" name="message" className='inputf' required></textarea>
+                    </div>
+                    <button class="submit">Submit</button>
                 </div>
-
-
-                <div class="email">
-                    <label class="labelf">EMAIL</label>
-                    <input className='inputf' type="text" id="emailf" name="email" required />
-                </div>
-
-
-                <div class="subject">
-                    <label class="labelf">SUBJECT</label>
-                    <input className='inputf' type="text" id="subject" name="subject" required />
-                </div>
-
-
-                <div class="message">
-                    <label class="labelf">MESSAGE</label>
-                    <textarea id="message" className='inputf' required></textarea>
-                </div>
-                <button class="submit">Submit</button>
-            </div>
+            </form>
             <div class="textf">
                 <h2 class="contain1">Feel free to contact
                     me for any questions

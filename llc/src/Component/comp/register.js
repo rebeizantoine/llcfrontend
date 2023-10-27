@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/register.css';
+import Imagesmall from '../images/goback.png'
 
 const Register = () => {
     const [successMessage, setSuccessMessage] = useState('');
@@ -42,7 +44,10 @@ const Register = () => {
         <div className="page-container">
             <div className="register-container">
                 <div className="register-box">
-                    <h1 className="register-title">REGISTRATION FORM</h1>
+                    <h1 className="register-title">
+                        <Link to="/">
+                            <img class="image-goback" src={Imagesmall} alt="Home" />
+                        </Link> REGISTRATION FORM</h1>
                     <form className="register-form" onSubmit={handleSubmit}>
                         <div className="name-container">
                             <label htmlFor="name" className="text-label">

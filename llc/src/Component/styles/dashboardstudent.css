@@ -1,0 +1,46 @@
+.container {
+    background: #FAF4F1;
+    width: 60%;
+    display: flex;
+    column-gap: 200px;
+
+}
+
+.sh1 {
+    background: #FAF4F1;
+    width: 60%
+}
+
+.Imaged {
+    width: 300px;
+    height: 240px
+}
+
+.week {
+    width: 70%;
+    background-color: #FAF4F1;
+}
+
+.week td {
+    text-align: center;
+}
+
+.Engf {
+    width: 230px;
+    background-color: white;
+    margin-top: -25px;
+}
+
+.Spaf {
+    width: 300px;
+    background-color: white;
+    margin-top: -25px;
+}
+
+.Engf h1 {
+    font-size: 20px
+}
+
+.Spaf h1 {
+    font-size: 20px
+}
