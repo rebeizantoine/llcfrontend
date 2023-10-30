@@ -8,8 +8,8 @@ function ScheduleTable() {
   const [day, setDay] = useState('');
 
   useEffect(() => {
-    fetchScheduleData(); // Fetch schedule data when the page loads
-    fetchCourses(); // Fetch course data when the page loads
+    fetchScheduleData(); 
+    fetchCourses(); 
   }, []);
 
   const fetchScheduleData = () => {
@@ -54,7 +54,7 @@ function ScheduleTable() {
         .then(() => {
           setHours('');
           setDay('');
-          // After successfully posting data, re-fetch the schedule data
+         
           fetchScheduleData();
         })
         .catch((error) => console.error("Error posting schedule data: ", error));
