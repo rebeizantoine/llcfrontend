@@ -121,7 +121,10 @@
     cursor: pointer;
     border: #000;
 }
-
+.language1 img{
+    width:350px;
+    height:350px;
+}
 @media (max-width: 800px) {
     .medium {
         width: 350px;
