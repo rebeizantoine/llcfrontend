@@ -26,8 +26,10 @@ function Footer() {
                     <h2 className="t2">Subscribe mailing list</h2>
                     <form ref={form} onSubmit={sendEmail}>
                         <label htmlFor="emailff"></label>
-                        <input type="email" className="emailff" name="mailing_email" placeholder="  Enter your email" required />
-                        <button type="submit" className="subscribe-button">Subscribe</button> {/* Changed onClick to type="submit" */}
+                        <div className='subscribe123'>
+                            <input type="email" className="emailff" name="mailing_email" placeholder="  Enter your email" required />
+                            <button type="submit" className="subscribe-button123" >Subscribe</button> {/* Changed onClick to type="submit" */}
+                        </div>
                     </form>
                 </div>
 
@@ -74,11 +76,13 @@ function Footer() {
                         mail@example.com<br />
                         +01 – 123 456 78 90</p>
                 </div>
+
             </div>
             <div className="final">
-                <p>Powered by LLC</p>
-                <p id="dndn">© 2023 LLC</p>
+                <p>Powered by LLC-© 2023 LLC</p>
+
             </div>
+
         </div>
     );
 }

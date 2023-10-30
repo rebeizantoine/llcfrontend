@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/header.css';
 import image1 from '../images/imagehero1.png';
 
 function Main() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
     return (
         <div className="main1">
             <div className="right-content">
@@ -30,6 +35,7 @@ function Main() {
             <div className="left-content">
                 <img className="hola" src={image1} />
             </div>
+
         </div>
     );
 }

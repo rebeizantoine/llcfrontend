@@ -4,6 +4,12 @@ import image1 from '../images/image-hero1.png';
 import image2 from '../images/image-hero2.png';
 import image3 from '../images/image-hero3.png';
 const About = () => {
+    const scrollToTestimonials = () => {
+        const testimonialsSection = document.getElementById('testimonial');
+        if (testimonialsSection) {
+            testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div id="About" >
             <div className="about123">
@@ -38,7 +44,7 @@ const About = () => {
                                     Cras ullamcorper fermentum arcu in sed fermentum velit nulla scelerisque
                                     pharetra tristique lectus justo faucibus purus est purus gravida nibh odio ante.
                                 </p>
-                                <button className="aboutbutton">MORE ABOUT US</button>
+                                <button className="aboutbutton" onClick={scrollToTestimonials}>MORE ABOUT US</button>
                             </div>
                         </div>
                     </div>

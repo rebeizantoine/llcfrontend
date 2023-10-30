@@ -54,7 +54,7 @@
     border: 1px solid #000;
     background: #FAF4F1;
     float: right;
-    margin-top: -200px;
+    margin-top: -225px;
     cursor: pointer;
     color: #000;
     font-family: Kokoro;
@@ -147,6 +147,8 @@
     border: #000;
     border-radius: 8%;
 }
+
+
 
 
 @media (min-width:401)and(max-width:864px) {

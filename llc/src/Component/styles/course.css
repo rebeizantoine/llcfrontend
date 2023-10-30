@@ -1,0 +1,110 @@
+/* course.css */
+
+.course-container {
+    text-align: center;
+}
+
+.course-title {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+.search-label {
+    display: block;
+    font-weight: bold;
+}
+
+.search-select {
+    width: 20%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.search-input {
+    width: 20%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px !important;
+
+}
+
+.add-course-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}   
+
+
+.search-button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.reset-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+
+}
+
+.search-button:hover {
+    background-color: #005F7D;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.zoom-a a {
+    text-decoration: none;
+    color: #008CBA;
+    margin-top: 5px;
+
+}
+
+.zoom-a:hover {
+    text-decoration: underline;
+}
+
+.loading {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #008CBA;
+}
+
+.error {
+    color: red;
+}
+
+/* Additional customizations can be added as needed. */

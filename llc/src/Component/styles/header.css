@@ -1,12 +1,15 @@
 .firstrow {
     display: flex;
+    z-index: 2 !important;
+    position: relative;
 }
 
 .first {
     width: 1017px;
     height: 700px;
     flex-shrink: 0;
-    background: #FAF4F1;
+    background: rgba(250, 244, 241, 0.1);
+    /* Adjust the alpha (0.5) for opacity */
     display: flex;
 }
 
@@ -21,6 +24,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.main1 {
+    margin-top: 10px;
 }
 
 .llc-header {
@@ -71,8 +78,9 @@ a {
 
 .login p {
     font-size: 30px;
-    margin-top: 3px;
-    margin-left: 20px;
+    font-weight: 700px;
+    margin-top: 5px;
+    margin-left: 0px;
     color: #5E443A;
 }
 
@@ -142,6 +150,7 @@ a {
     height: 550px;
     position: relative;
     border-radius: 8%;
+    z-index: 3;
 }
 
 .courses {
@@ -164,10 +173,42 @@ a {
     display: flex;
     position: absolute;
     margin-top: -1000px;
+    z-index: 1 !important;
+}
+
+.burger-menu-button {
+
+    display: block;
+    /* Add this line to hide it initially */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.burger-menu-button .bar {
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: black;
+    margin: 4px 0;
+    border-radius: 2px;
+    z-index: 5;
 }
 
 
-@media (max-width:864px) {
+.mobile-menu {
+    display: none;
+}
+
+
+
+@media (max-width:864px) and (min-width:400px) {
     .main1 {
         display: block;
         position: absolute;
@@ -175,10 +216,10 @@ a {
     }
 
     .first {
-        width: 700px;
+        width: 400px;
         height: 950px;
         flex-shrink: 0;
-        background: #FAF4F1;
+        background: rgba(250, 244, 241, 0.1);
         display: flex;
     }
 
@@ -197,24 +238,26 @@ a {
 
     .llc-header {
         display: flex;
-        column-gap: 90px;
-        margin-left: 70px;
-        margin-top: -10px;
+        column-gap: 10px;
+        margin-left: -60px;
+        margin-top: 40px;
         width: 326px;
         height: 30px;
         flex-shrink: 0;
         color: #5E443A;
         font-family: Inter;
-        font-size: 34px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-top: 80px;
+
     }
 
     .modern {
-        margin-top: 10px;
+        margin-top: 40px;
         margin-left: 20px;
-        width: 600px;
+        width: 400px;
         height: 127px;
         flex-shrink: 0;
         color: #000;
@@ -227,20 +270,29 @@ a {
     }
 
     .description {
-        margin-left: 20px;
+
         color: #000;
-        width: 500px;
+        width: 390px;
+        height: 150px;
         font-family: Roboto;
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-align: left;
+        margin-top: 150px;
     }
 
     .description p {
-        width: 500px;
-        height: 150px;
+        width: 350px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+
+    .buttons {
+        display: flex;
     }
 
     .orange-line {
@@ -248,14 +300,18 @@ a {
         height: 5px;
         background: #FFBF52;
         margin-top: 400px;
-        margin-left: 0;
+    }
+
+    .login {
+        display: none;
     }
 
     .enroll {
-        margin-left: 30px;
+        margin-left: 90px;
         width: 210px;
         height: 40px;
         background-color: #FFBF52;
+        margin-top: 300px;
     }
 
     .enroll p {
@@ -277,11 +333,11 @@ a {
     }
 
     .hola {
-        margin-top: auto;
+        margin-top: -750px;
         padding-top: 10px;
-        padding-left: 20px;
-        width: 430px;
-        height: 430px;
+        width: 390px;
+        height: 790px;
+        margin-left: 380px;
         position: relative;
         border-radius: 8%;
     }
@@ -297,8 +353,9 @@ a {
         border-radius: 1px;
         border: 1px solid #7F00FF;
         background: #7F00FF;
-        margin-top: 459px;
+        margin-top: 529px;
         margin-left: -315px;
+        cursor: pointer;
     }
 
     .login p {
@@ -306,6 +363,12 @@ a {
         color: #ffffff;
         margin-left: -1px;
     }
+
+    .burger-menu-button {
+        display: block;
+
+    }
+
 }
 
 @media (max-width:400px) {
@@ -319,7 +382,7 @@ a {
         width: 400px;
         height: 950px;
         flex-shrink: 0;
-        background: #FAF4F1;
+        background: rgba(250, 244, 241, 0.1);
         display: flex;
     }
 
@@ -459,6 +522,11 @@ a {
         font-size: 25px;
         color: #ffffff;
         margin-left: -1px;
+    }
+
+    .burger-menu-button {
+        display: block;
+
     }
 
 }

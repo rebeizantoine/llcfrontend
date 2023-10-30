@@ -1,4 +1,4 @@
-.header {
+.header1 {
     color: #000;
     text-align: center;
     font-family: Fraunces;
@@ -9,11 +9,13 @@
     letter-spacing: 3.84px;
     width: 776px;
     justify-content: center;
-    margin-left: 300px;
-
-
-
+    margin-left: 270px;
 }
+
+.header1 h2 {
+    width: 800px;
+}
+
 
 .container {
     justify-content: center;
@@ -21,6 +23,7 @@
     height: auto;
     justify-content: space-between;
     margin-left: -6px;
+    flex-wrap: wrap;
 }
 
 
@@ -79,13 +82,13 @@
     margin-top: 10%;
     justify-content: space-between;
     height: 500px;
-    margin-left: -80px;
+    margin-left: -50px;
 }
 
 .student-about {
     display: flex;
     width: 350px;
-    margin-left: 9%;
+    margin-left: 7%;
 
 }
 
@@ -111,7 +114,7 @@
         margin-left: 0%;
     }
 
-    .header {
+    .header1 {
         margin-left: -20px;
         margin-right: 320px;
         color: #000;
@@ -148,10 +151,19 @@
 }
 
 @media (max-width:400px) {
-    .header {
+    .header1 {
         width: 390px;
         font-size: 24px;
         margin-top: -40px;
+    }
+
+    .header1 h2 {
+        width: 280px;
+        margin-left: 40px;
+    }
+
+    .student-about {
+        margin-top: -50px;
     }
 
     .all1 {

@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 import Teacher from './teacher';
 import '../styles/teacher.css'
 import Student from './student';
+import LanguageTaken from './takenlanguage';
+import Course from './course';
+import ScheduleTable from './schedule';
+import Attendance from './attendance';
 import '../styles/dashboard2.css';
 import hdlang2 from '../images/hdlang42.png'
 import horizontal from '../images/Rectangle20.png'
@@ -18,7 +22,7 @@ function Dashboard() {
 
     return (
         <div className="menu-and-content">
-            <a href="/" className="logout-button">
+            <a href="/" className="logout-button-dashboard">
                 <img src={logoutIcon} alt="Logout" />
             </a>
             <div className="menu">
@@ -34,6 +38,18 @@ function Dashboard() {
                     <div className="menu-item">
                         <a href="#student" onClick={() => handleMenuClick('student')}>Student</a>
                     </div>
+                    <div className="menu-item">
+                        <a href="#language" onClick={() => handleMenuClick('language')}>Language</a>
+                    </div>
+                    <div className="menu-item">
+                        <a href="#course" onClick={() => handleMenuClick('course')}>Course</a>
+                    </div>
+                    <div className="menu-item">
+                        <a href="#schedule" onClick={() => handleMenuClick('schedule')}>Schedule</a>
+                    </div>
+                    <div className="menu-item">
+                        <a href="#attendance" onClick={() => handleMenuClick('attendance')}>Attendance</a>
+                    </div>
                 </div>
             </div>
             <div id="content" style={{ flex: 1, paddingLeft: '20px' }}>
@@ -42,6 +58,10 @@ function Dashboard() {
                 </div>
                 {activePage === 'teacher' && <Teacher />}
                 {activePage === 'student' && <Student />}
+                {activePage === 'language' && <LanguageTaken />}
+                {activePage === 'course' && <Course />}
+                {activePage === 'schedule' && <ScheduleTable />}
+                {activePage === 'attendance' && <Attendance />}
             </div>
         </div>
     );

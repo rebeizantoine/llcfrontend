@@ -16,7 +16,7 @@ function Header() {
                             <a className="nav-link" href="#Home">Home</a>
                             <a className="nav-link" href="#About">About</a>
                             <a className="nav-link" href="#Courses">Courses</a>
-                            <a className="nav-link" href="#Contact">Contact</a>
+                            <Link to="/contact#contact-me" className="nav-link">Contact</Link>
                         </header>
                     </div>
                     <img className="search-llc" src={Down} />

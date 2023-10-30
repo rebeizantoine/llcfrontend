@@ -1,0 +1,96 @@
+/* takenlanguage.css */
+
+.language-taken-container {
+    text-align: center;
+}
+
+.add-language-section {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 27%;
+}
+
+.add-language-section label {
+    font-weight: bold;
+    display: block;
+
+}
+
+.input-title-lang {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 20%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.upload-image-input {
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+.add-language-button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-language-button:hover {
+    background-color: #005F7D;
+}
+
+.all-languages-section {
+    margin-top: 20px;
+}
+
+.all-languages-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.all-languages-section li {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.all-languages-section h3 {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.all-languages-section img {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.all-languages-section button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.all-languages-section button:hover {
+    background-color: #D84343;
+}

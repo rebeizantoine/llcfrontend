@@ -1,0 +1,64 @@
+/* Add this CSS to your 'schedule.css' or another appropriate CSS file */
+
+.schedule-title {
+    text-align: center;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.schedule-table,
+.schedule-th,
+.schedule-td {
+    border: 1px solid #ddd;
+}
+
+.schedule-th,
+.schedule-td {
+    padding: 8px;
+    text-align: left;
+}
+
+.schedule-th {
+    background-color: #f2f2f2;
+}
+
+.schedule-table p {
+    margin: 0;
+}
+
+.add-schedule-heading {
+    margin-top: 20px;
+}
+
+.schedule-label {
+    display: block;
+    margin-top: 10px;
+}
+
+.schedule-select,
+.schedule-input {
+    width: 32%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.schedule-select {
+    height: 40px;
+}
+
+.schedule-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.schedule-button {
+    margin-left: 44%;
+    margin-top: 30px;
+}

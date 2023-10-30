@@ -85,7 +85,7 @@ html {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.56px;
-    border-radius: 10px;
+    border-radius: 0px;
     border: 1px solid #5E443A;
     background: rgba(255, 255, 255, 0.00);
     width: 310px;
@@ -96,7 +96,8 @@ html {
 }
 
 .aboutbutton:hover {
-    background-color: #0056b3;
+    background-color: #5e443a !important;
+    color: white;
 }
 
 .image1 {
@@ -147,6 +148,14 @@ html {
 
 .text {
     width: 610px;
+}
+
+.text11 {
+    font-size: 30px;
+}
+
+.text21 {
+    font-size: 30px;
 }
 
 @media (max-width: 864px) {
@@ -221,6 +230,7 @@ html {
     }
 
     .h3about h3 {
+        width: 380px;
         font-size: 30px;
         text-align: center;
         margin-left: -30px;

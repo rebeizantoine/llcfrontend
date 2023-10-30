@@ -15,7 +15,7 @@ import Section from './Component/comp/section';
 import Hero from './Component/comp/hero';
 import DashboardStudent from './Component/comp/Dashboardstudent';
 import DashboardTeacher from './Component/comp/Dashoardteacher';
-
+import ProtectedRoute from './Component/comp/ProtectedRoute';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -37,34 +37,35 @@ function App() {
             <Courses />
             <Testimonial />
             <Footer />
-
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
           <Route path="/Register">
             <Register />
           </Route>
 
-          <Route path="/Dashboard">
-            <Dashboard />
-          </Route>
-
           <Route path="/AllCourses">
             <AllCourses />
           </Route>
-          <Route path="/dashboardTeacher">
-            <DashboardTeacher />
-          </Route>
-          <Route path="/DashboardStudent">
-            <DashboardStudent />
-          </Route>
+          <ProtectedRoute
+            path="/dashboardTeacher"
+            component={DashboardTeacher}
+            isAuthenticated={isAuthenticated}
+          />
+          <ProtectedRoute
+            path="/DashboardStudent"
+            component={DashboardStudent}
+            isAuthenticated={isAuthenticated}
+          />
           <Route path="/Contact">
             <Contact />
           </Route>
         </Switch>
       </Router>
-
     </div>
   );
 }

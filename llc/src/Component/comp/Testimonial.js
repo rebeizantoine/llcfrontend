@@ -7,8 +7,8 @@ import image24 from '../images/image-round4.png'
 
 const Testimonial = () => {
     return (
-        <div className="container">
-            <div className="header">
+        <div className="container" id="testimonial">
+            <div className="header1">
                 <h2>What our students say about
                     the courses
                 </h2>

@@ -126,6 +126,10 @@ html {
     border: #000;
 }
 
+.enrollf button:hover {
+    background-color: #5c5454 !important;
+}
+
 @media (max-width: 864px) {
     .medium {
         width: 350px;

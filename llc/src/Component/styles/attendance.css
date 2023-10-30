@@ -1,0 +1,39 @@
+/* Attendance.css */
+
+.attendance-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.attendance-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+.attendance-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.attendance-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}

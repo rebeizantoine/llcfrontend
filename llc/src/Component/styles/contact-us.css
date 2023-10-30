@@ -1,6 +1,9 @@
 .contact-me {
     display: flex;
-    margin: 0px;
+    margin-left: 100px;
+    margin-top: -550px;
+    position: absolute;
+    z-index: 5;
 }
 
 .textf {
@@ -47,7 +50,7 @@
 
 .name {
     margin: 0px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 15px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -57,15 +60,32 @@
     margin-right: 50px;
 }
 
-.inputf {
-    width: 150px;
+.inputf12 {
+    width: 160px !important;
     height: 30px;
     background-color: #fafafa;
     border: 1px solid #dddddd;
     float: left;
 }
 
-.inputf:hover {
+#emailf {
+    width: 250px !important;
+    margin-left: 0px;
+}
+
+#subjectf {
+    width: 250px !important;
+}
+
+#messagef {
+    width: 400px !important;
+}
+
+#last-name {
+    margin-left: 40px !important;
+}
+
+.inputf12:hover {
     border: solid 2px #5e3a3a;
 }
 
@@ -75,6 +95,7 @@
     font-weight: bold;
     margin: 20px;
     margin-left: -400px;
+    margin-top: -0px;
 }
 
 .email {
@@ -86,6 +107,10 @@
 
 .email input {
     width: 350px;
+}
+
+.social-icons {
+    margin-left: 250px;
 }
 
 .subject {
@@ -119,18 +144,19 @@
 
 }
 
-.submit {
-    background-color: #faf4f1;
-    color: #5e3a3a;
+.submitf {
+    background-color: #5e3a3a;
+    color: #faf4f1;
     /* margin-left: 30px;*/
     margin-top: 20px;
-    width: 90px;
-    height: 30px;
+    width: 130px;
+    height: 50px;
     font-size: 20px;
     float: left;
+    margin-left: 150px;
 }
 
-.submit:hover {
+.submitf:hover {
     background-color: #5e3a3a;
     color: #faf4f1;
 }
@@ -145,7 +171,8 @@
 
 @media(max-width:800px) {
     .contact-me {
-        margin: 0px;
+        margin-top: -800px;
+        margin-left: 0px;
         padding: 0px;
         display: grid;
         grid-template-rows: repeat(1, 1fr);
@@ -159,10 +186,31 @@
         width: 300px;
     }
 
+    #first-name {
+        margin-top: -10px;
+    }
+
+    #last-name {
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+    }
+
+    #messagef {
+        width: 350px !important;
+    }
+
+    .submitf {
+        margin-left: 35%;
+    }
+
     .textf {
         margin: 0px;
         padding: 0px;
         width: 780px;
+    }
+
+    .contain1 {
+        margin-left: -20px !important;
     }
 
     .contain1 {
@@ -183,7 +231,7 @@
         margin-left: -250px;
     }
 
-    .inputf {
+    .inputf12 {
         width: 250px;
         margin-left: -15px;
     }
@@ -207,6 +255,99 @@
     }
 
     .social-container {
-        margin-left: -370px;
+        margin-left: -650px;
+    }
+}
+
+
+@media (min-width:800px)and (max-width:1000px) {
+    .contact-me {
+        margin-top: -850px;
+        margin-left: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .contact-information {
+        margin: 0px;
+        padding-left: 20px;
+        text-align: center;
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    #first-name {
+        margin-top: -10px;
+    }
+
+    #last-name {
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+    }
+
+    #messagef {
+        width: 350px !important;
+    }
+
+    .submitf {
+        margin-left: 35%;
+    }
+
+    .textf {
+        margin: 0px;
+        padding: 0px;
+        width: 780px;
+        margin-top: -670px;
+        margin-left: 350px;
+    }
+
+    .contain1 {
+        margin-left: -20px !important;
+    }
+
+    .contain1 {
+        font-size: x-large;
+    }
+
+    .contain2 {
+        margin-left: -400px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contain3 {
+        margin-left: -400px;
+    }
+
+    .labelf {
+        margin-left: -250px;
+    }
+
+    .inputf12 {
+        width: 250px;
+        margin-left: -15px;
+    }
+
+    #first-name {
+        width: 300px !important;
+    }
+
+    #last-name {
+        width: 300px !important;
+    }
+
+    #last-name {
+        margin-left: 160px;
+        margin-top: -35px;
+    }
+
+    .linef {
+        width: 380px;
+        margin-left: -8px;
+    }
+
+    .social-container {
+        margin-left: -650px;
     }
 }

@@ -226,7 +226,7 @@ class Teacher extends Component {
                     />
                     <label>Inactive</label>
                 </div>
-                <button onClick={this.handleAddNewTeacher}>Add Teacher</button>
+                <button className='button-add' onClick={this.handleAddNewTeacher}>Add Teacher</button>
             </div>
         );
     }
