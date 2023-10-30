@@ -6,6 +6,7 @@ import spanish from '../images/spanish123.png';
 function DashboardStudent() {
     const [courses, setCourses] = useState([]);
     const [courseDetails, setCourseDetails] = useState([]);
+    const [courseSchedules, setCourseSchedules] = useState([]);
 
     useEffect(() => {
         const fetchEnrolledCourses = async () => {
@@ -48,6 +49,26 @@ function DashboardStudent() {
         fetchCourseDetails();
     }, [courses]);
 
+    useEffect(() => {
+        const fetchCourseSchedules = async () => {
+            let fetchedCourseSchedules = [];
+            try {
+                for (const course of courseDetails) {
+                    const response = await fetch(`http://localhost:8000/user/getscheduleWhere/${course.course_id}`);
+                    const data = await response.json();
+                    if (data.success) {
+                        fetchedCourseSchedules = [...fetchedCourseSchedules, ...data.data.map(schedule => ({...schedule, title: course.title}))];
+                    }
+                }
+                setCourseSchedules(fetchedCourseSchedules);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchCourseSchedules();
+    }, [courseDetails]);
+
     return (
         <div className="sh1">
             <h1>LLC</h1>
@@ -55,17 +76,24 @@ function DashboardStudent() {
             <div className="container">
                 {courseDetails.map(course => (
                     <div className="container1" key={course.course_id}>
-                        <img className="Imaged"src={course.languageimage} alt="Image Description" />
+                        <img src={course.languageimage} alt="Image Description" />
                         <div className="Engf">
                             <h1>{course.title}</h1>
                             <p>{course.description}</p>
                         </div>
                     </div>
                 ))}
-                {/* Rest of the component */}
-            </div>
-        </div>
-    );
-}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Day</th>
+                            <th>Hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {courseSchedules.map((schedule, index) => (
+                            <tr key={index}>
+                                <td>{schedule.title}</td> <td>{schedule.day}</td> <td>{schedule.hours}</td> </tr> ))} </tbody> </table> {/* Rest of the component */} </div> </div> ); }
 
 export default DashboardStudent;
