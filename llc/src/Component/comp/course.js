@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/course.css';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const Course = () => {
+const CourseManagement = () => {
+  const [modal, setModal] = useState(false);
   const [courses, setCourses] = useState([]);
+  const [teachers, setTeachers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [languages, setLanguages] = useState([]);
   const [formData, setFormData] = useState({
@@ -17,13 +19,15 @@ const Course = () => {
     searchBy: 'level',
     searchTerm: '',
   });
+  const [selectedCourse, setSelectedCourse] = useState('');
+  const [selectedTeacher, setSelectedTeacher] = useState('');
 
   useEffect(() => {
-    // Fetch courses from the "http://localhost:8000/user/getCourseLan" API
     axios
       .get('http://localhost:8000/user/getCourseLan')
       .then((response) => {
         const courseData = response.data.data;
+
         if (Array.isArray(courseData)) {
           const extractedCourses = courseData.map((course) => ({
             duration: course.duration,
@@ -31,11 +35,14 @@ const Course = () => {
             nbofsession: course.nbofsession,
             zoom_link: course.zoom_link,
             title: course.title,
+            course_id: course.course_id,
+            taken_language_id: course.taken_language_id,
           }));
           setCourses(extractedCourses);
         } else {
           setCourses([]);
         }
+
         setLoading(false);
       })
       .catch((error) => {
@@ -43,7 +50,25 @@ const Course = () => {
         setLoading(false);
       });
 
-    // Fetch languages from the "http://localhost:8000/user/getAllLanguage" API
+    axios
+      .get('http://localhost:8000/user/getActiveTeacher')
+      .then((response) => {
+        const teacherData = response.data.data;
+
+        if (Array.isArray(teacherData)) {
+          const extractedTeachers = teacherData.map((teacher) => ({
+            user_id: teacher.user_id,
+            email: teacher.email,
+          }));
+          setTeachers(extractedTeachers);
+        } else {
+          setTeachers([]);
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching teachers:', error);
+      });
+
     axios
       .get('http://localhost:8000/user/getAllLanguage')
       .then((response) => {
@@ -54,12 +79,26 @@ const Course = () => {
       });
   }, []);
 
+  const toggle = () => {
+    setModal(!modal);
+    setSelectedCourse('');
+    setSelectedTeacher('');
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleCourseChange = (e) => {
+    setSelectedCourse(e.target.value);
+  };
+
+  const handleTeacherChange = (e) => {
+    setSelectedTeacher(e.target.value);
   };
 
   const handleSearchChange = (e) => {
@@ -73,28 +112,25 @@ const Course = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const selectedLanguage = languages.find((language) => language.title === formData.languageTitle);
+
     if (!selectedLanguage) {
       alert('The selected language is not available.');
       return;
     }
+
     const newCourse = {
       taken_language_id: selectedLanguage.taken_language_id,
       level: formData.level,
       nbofsession: formData.nbofsession,
       duration: formData.duration,
       zoom_link: formData.zoomLink,
+      teacher_id: selectedTeacher,
     };
+
     axios
       .post('http://localhost:8000/user/postCourse', newCourse)
-      .then(() => {
+      .then((response) => {
         alert('New course added successfully');
-        setFormData({
-          languageTitle: '',
-          level: 'A1',
-          nbofsession: '10',
-          duration: '8',
-          zoomLink: 'WERFGDTHJKUYTRES',
-        });
       })
       .catch((error) => {
         console.error('Error adding the course:', error);
@@ -116,6 +152,7 @@ const Course = () => {
       searchBy: 'level',
       searchTerm: '',
     });
+
     axios
       .get('http://localhost:8000/user/getCourseLan')
       .then((response) => {
@@ -127,6 +164,8 @@ const Course = () => {
             nbofsession: course.nbofsession,
             zoom_link: course.zoom_link,
             title: course.title,
+            course_id: course.course_id,
+            taken_language_id: course.taken_language_id,
           }));
           setCourses(extractedCourses);
         } else {
@@ -139,45 +178,37 @@ const Course = () => {
   };
 
   return (
-    <div className="course-container">
-      <h1 className="course-title">Course Data</h1>
-      <div className="search-container">
-        <label className="search-label">Search by:</label>
-        <select
-          className="search-select"
-          name="searchBy"
-          onChange={handleSearchChange}
-          value={search.searchBy}
-        >
+    <div>
+      <h1>Course List</h1>
+      <Button color="primary" onClick={toggle}>
+        Assign the Course To a Teacher
+      </Button>
+      <div>
+        <label>Search by:</label>
+        <select name="searchBy" onChange={handleSearchChange} value={search.searchBy}>
           <option value="level">Level</option>
           <option value="title">Language</option>
         </select>
         <input
-          className="search-input"
           type="text"
-          placeholder='input language/level'
           name="searchTerm"
           value={search.searchTerm}
           onChange={handleSearchChange}
         />
-        <button className="search-button" onClick={handleSearch}>
-          Search
-        </button>
-        <button className="reset-button" onClick={resetSearch}>
-          Reset
-        </button>
+        <button onClick={handleSearch}>Search</button>
+        <button onClick={resetSearch}>Reset</button>
       </div>
       {loading ? (
-        <p className="loading">Loading...</p>
+        <p>Loading...</p>
       ) : (
         <ul>
           {courses.length > 0 ? (
             courses.map((course, index) => (
-              <li key={index} className="course-item">
+              <li key={index}>
                 <strong>Duration:</strong> {course.duration} weeks<br />
                 <strong>Level:</strong> {course.level}<br />
                 <strong>Number of Sessions:</strong> {course.nbofsession}<br />
-                <a className='zoom-a' href={course.zoom_link} target="_blank" rel="noopener noreferrer">
+                <a href={course.zoom_link} target="_blank" rel="noopener noreferrer">
                   Zoom Link
                 </a>
                 <br />
@@ -185,75 +216,80 @@ const Course = () => {
               </li>
             ))
           ) : (
-            <p className="error">No courses available.</p>
+            <p>No courses available.</p>
           )}
         </ul>
       )}
-      <div className="add-course-container">
-        <h1 className="course-title">Add a New Course</h1>
-        <form onSubmit={handleSubmit} className="add-course-form">
-          <div>
-            <label className="form-label">Select a Language:</label>
-            <select
-              className="form-select"
-              name="languageTitle"
-              onChange={handleInputChange}
-              value={formData.languageTitle}
-            >
-              <option value="">Select a language</option>
-              {languages.map((language) => (
-                <option key={language.taken_language_id} value={language.title}>
-                  {language.title}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label className="form-label">Level:</label>
-            <input
-              className="form-input"
-              type="text"
-              name="level"
-              onChange={handleInputChange}
-              value={formData.level}
-            />
-          </div>
-          <div>
-            <label className="form-label">Number of Sessions:</label>
-            <input
-              className="form-input"
-              type="text"
-              name="nbofsession"
-              onChange={handleInputChange}
-              value={formData.nbofsession}
-            />
-          </div>
-          <div>
-            <label className="form-label">Duration (in weeks):</label>
-            <input
-              className="form-input"
-              type="text"
-              name="duration"
-              onChange={handleInputChange}
-              value={formData.duration}
-            />
-          </div>
-          <div>
-            <label className="form-label">Zoom Link:</label>
-            <input
-              className="form-input"
-              type="text"
-              name="zoomLink"
-              onChange={handleInputChange}
-              value={formData.zoomLink}
-            />
-          </div>
-          <button type="submit" className="form-button">Add Course</button>
-        </form>
-      </div>
-    </div>
 
+      <h1>Add a New Course</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Select a Language:</label>
+          <select name="languageTitle" onChange={handleInputChange} value={formData.languageTitle}>
+            <option value="">Select a language</option>
+            {languages.map((language) => (
+              <option key={language.taken_language_id} value={language.taken_language_id}>
+                {language.title}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label>Level:</label>
+          <input type="text" name="level" onChange={handleInputChange} value={formData.level} />
+        </div>
+        <div>
+          <label>Number of Sessions:</label>
+          <input
+            type="text"
+            name="nbofsession"
+            onChange={handleInputChange}
+            value={formData.nbofsession}
+          />
+        </div>
+        <div>
+          <label>Duration (in weeks):</label>
+          <input type="text" name="duration" onChange={handleInputChange} value={formData.duration} />
+        </div>
+        <div>
+          <label>Zoom Link:</label>
+          <input type="text" name="zoomLink" onChange={handleInputChange} value={formData.zoomLink} />
+        </div>
+        <button type="submit">Add Course</button>
+      </form>
+      <Modal isOpen={modal} toggle={toggle}>
+        <ModalHeader toggle={toggle}>Assign the Course To a Teacher</ModalHeader>
+        <ModalBody>
+          <p>Select a course:</p>
+          <select value={selectedCourse} onChange={handleCourseChange}>
+            <option value="">Select a course</option>
+            {courses.map((course) => (
+              <option key={course.course_id} value={course.course_id}>
+                {`${course.level} - ${course.title}`}
+              </option>
+            ))}
+          </select>
+          <p>Select a teacher:</p>
+          <select value={selectedTeacher} onChange={handleTeacherChange}>
+            <option value="">Select a teacher</option>
+            {teachers.map((teacher) => (
+              <option key={teacher.user_id} value={teacher.user_id}>
+                {teacher.email}
+              </option>
+            ))}
+          </select>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={toggle}>
+            Cancel
+          </Button>
+          <Button color="primary" onClick={handleSubmit}>
+            Save
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </div>
   );
 };
 
-export default Course;
+export default CourseManagement;

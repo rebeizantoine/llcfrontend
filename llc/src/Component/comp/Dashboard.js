@@ -6,7 +6,7 @@ import Student from './student';
 import LanguageTaken from './takenlanguage';
 import Course from './course';
 import ScheduleTable from './schedule';
-import Attendance from './attendance';
+import TeacherAttendance from './attendance';
 import '../styles/dashboard2.css';
 import hdlang2 from '../images/hdlang42.png'
 import horizontal from '../images/Rectangle20.png'
@@ -61,7 +61,7 @@ function Dashboard() {
                 {activePage === 'language' && <LanguageTaken />}
                 {activePage === 'course' && <Course />}
                 {activePage === 'schedule' && <ScheduleTable />}
-                {activePage === 'attendance' && <Attendance />}
+                {activePage === 'attendance' && <TeacherAttendance />}
             </div>
         </div>
     );

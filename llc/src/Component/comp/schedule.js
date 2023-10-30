@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/scheduleTable.css';
 
 function ScheduleTable() {
   const [scheduleData, setScheduleData] = useState([]);
@@ -9,8 +8,8 @@ function ScheduleTable() {
   const [day, setDay] = useState('');
 
   useEffect(() => {
-    fetchScheduleData();
-    fetchCourses();
+    fetchScheduleData(); // Fetch schedule data when the page loads
+    fetchCourses(); // Fetch course data when the page loads
   }, []);
 
   const fetchScheduleData = () => {
@@ -55,6 +54,7 @@ function ScheduleTable() {
         .then(() => {
           setHours('');
           setDay('');
+          // After successfully posting data, re-fetch the schedule data
           fetchScheduleData();
         })
         .catch((error) => console.error("Error posting schedule data: ", error));
@@ -62,52 +62,52 @@ function ScheduleTable() {
   };
 
   return (
-    <div className="schedule-container">
-      <h1 className="schedule-title">Schedule</h1>
-      <table className="schedule-table">
+    <div>
+      <h1>Schedule</h1>
+      <table>
         <thead>
           <tr>
-            <th className="schedule-th">Time</th>
-            <th className="schedule-th">Monday</th>
-            <th className="schedule-th">Tuesday</th>
-            <th className="schedule-th">Wednesday</th>
-            <th className="schedule-th">Thursday</th>
-            <th className="schedule-th">Friday</th>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
           </tr>
         </thead>
         <tbody>
           {scheduleData.map((item) => (
             <tr key={item.course_id}>
-              <td className="schedule-td">{item.hours}</td>
-              <td className="schedule-td">
+              <td>{item.hours}</td>
+              <td>
                 {item.day === "Monday" && (
                   <p>
                     Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
                   </p>
                 )}
               </td>
-              <td className="schedule-td">
+              <td>
                 {item.day === "Tuesday" && (
                   <p>
                     Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
                   </p>
                 )}
               </td>
-              <td className="schedule-td">
+              <td>
                 {item.day === "Wednesday" && (
                   <p>
                     Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
                   </p>
                 )}
               </td>
-              <td className="schedule-td">
+              <td>
                 {item.day === "Thursday" && (
                   <p>
                     Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
                   </p>
                 )}
               </td>
-              <td className="schedule-td">
+              <td>
                 {item.day === "Friday" && (
                   <p>
                     Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
@@ -118,17 +118,14 @@ function ScheduleTable() {
           ))}
         </tbody>
       </table>
-      <div className="add-schedule-section">
-        <h2 className="add-schedule-heading">Add to Schedule</h2>
+      <div>
+        <h2>Add to Schedule</h2>
         <div>
-          <label className="schedule-label" htmlFor="course">
-            Course:
-          </label>
+          <label htmlFor="course">Course:</label>
           <select
             id="course"
             value={JSON.stringify(selectedCourse)}
             onChange={(e) => setSelectedCourse(JSON.parse(e.target.value))}
-            className="schedule-select"
           >
             <option value="">Select a course</option>
             {courses.map((course) => (
@@ -139,32 +136,24 @@ function ScheduleTable() {
           </select>
         </div>
         <div>
-          <label className="schedule-label" htmlFor="hours">
-            Hours:
-          </label>
+          <label htmlFor="hours">Hours:</label>
           <input
             type="text"
             id="hours"
             value={hours}
             onChange={(e) => setHours(e.target.value)}
-            className="schedule-input"
           />
         </div>
         <div>
-          <label className="schedule-label" htmlFor="day">
-            Day:
-          </label>
+          <label htmlFor="day">Day:</label>
           <input
             type="text"
             id="day"
             value={day}
             onChange={(e) => setDay(e.target.value)}
-            className="schedule-input"
           />
         </div>
-        <button onClick={handleAddToSchedule} className="schedule-button">
-          Add to Schedule
-        </button>
+        <button onClick={handleAddToSchedule}>Add to Schedule</button>
       </div>
     </div>
   );

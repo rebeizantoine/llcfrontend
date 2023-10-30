@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/attendance.css'; // Import your CSS file
+import axios from 'axios';
 
-function Attendance() {
+const TeacherAttendance = () => {
   const [attendanceData, setAttendanceData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:8000/user/getTeacherAttendance');
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        const data = await response.json();
-        setAttendanceData(data.data);
+        const response = await axios.get('http://localhost:8000/user/getTeacherAtendance');
+        setAttendanceData(response.data.data);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -24,35 +20,38 @@ function Attendance() {
     fetchData();
   }, []);
 
-  const handleAttendanceChange = async (user_id, attend) => {
-    const endpoint = attend === 1
-      ? `http://localhost:8000/user/updateTeacherAttendance/${user_id}`
-      : `http://localhost:8000/user/updateTeacherAttendanceneg/${user_id}`;
+  const handleAttendanceChange = async (id, newValue) => {
+    const endpoint = newValue === '1'
+      ? `http://localhost:8000/user/updateActivationforuser/${id}`
+      : `http://localhost:8000/user/updateActivationforuserneg/${id}`;
 
     try {
-      const response = await fetch(endpoint, {
-        method: 'PUT',
+      await axios.put(endpoint, null, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
-      if (!response.ok) {
-        throw new Error('Failed to update attendance. Status: ' + response.status);
-      }
-      // You can also update the state or perform other actions here as needed.
+
+      const updatedData = attendanceData.map(item => {
+        if (item.user_id === id) {
+          return { ...item, attend: newValue };
+        }
+        return item;
+      });
+      setAttendanceData(updatedData);
     } catch (error) {
       console.error('Error updating attendance:', error);
     }
   };
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <div>Loading...</div>;
   }
 
   return (
-    <div className="attendance-container">
-      <h1 className="attendance-title">Teacher Attendance</h1>
-      <table className="attendance-table">
+    <div>
+      <h1>Teacher Attendance</h1>
+      <table>
         <thead>
           <tr>
             <th>Email</th>
@@ -64,24 +63,28 @@ function Attendance() {
         </thead>
         <tbody>
           {attendanceData.map((item, index) => (
-            <tr key={index} className="attendance-row">
+            <tr key={index}>
               <td>{item.email}</td>
               <td>{item.role}</td>
-              <td className="attendance-radio">
-                <input
-                  type="radio"
-                  name={`attendance_${index}`}
-                  value="1"
-                  checked={item.attend === 1}
-                  onChange={() => handleAttendanceChange(item.user_id, 1)}
-                /> Yes
-                <input
-                  type="radio"
-                  name={`attendance_${index}`}
-                  value="0"
-                  checked={item.attend === 0}
-                  onChange={() => handleAttendanceChange(item.user_id, 0)}
-                /> No
+              <td>
+                <label>
+                  <input
+                    type="radio"
+                    name={`attendance_${index}`}
+                    value="1"
+                    checked={item.attend === '1'}
+                    onChange={() => handleAttendanceChange(item.user_id, '1')}
+                  /> Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name={`attendance_${index}`}
+                    value="0"
+                    checked={item.attend === '0'}
+                    onChange={() => handleAttendanceChange(item.user_id, '0')}
+                  /> No
+                </label>
               </td>
               <td>{item.level}</td>
               <td>{item.title}</td>
@@ -93,4 +96,4 @@ function Attendance() {
   );
 }
 
-export default Attendance;
+export default TeacherAttendance;
