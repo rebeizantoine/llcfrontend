@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom'; // Assuming you're using react-router for navigation
 import '../styles/dashboardstudent.css';
 import english from '../images/english.jpg';
 import spanish from '../images/spanish123.png';
@@ -7,6 +8,7 @@ function DashboardStudent() {
     const [courses, setCourses] = useState([]);
     const [courseDetails, setCourseDetails] = useState([]);
     const [courseSchedules, setCourseSchedules] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         const fetchEnrolledCourses = async () => {
@@ -57,7 +59,10 @@ function DashboardStudent() {
                     const response = await fetch(`http://localhost:8000/user/getscheduleWhere/${course.course_id}`);
                     const data = await response.json();
                     if (data.success) {
-                        fetchedCourseSchedules = [...fetchedCourseSchedules, ...data.data.map(schedule => ({...schedule, title: course.title}))];
+                        fetchedCourseSchedules = [
+                            ...fetchedCourseSchedules,
+                            ...data.data.map(schedule => ({ ...schedule, title: course.title })),
+                        ];
                     }
                 }
                 setCourseSchedules(fetchedCourseSchedules);
@@ -69,10 +74,16 @@ function DashboardStudent() {
         fetchCourseSchedules();
     }, [courseDetails]);
 
+    const handleLogout = () => {
+        localStorage.removeItem('user_id');
+        history.push('/'); 
+    };
+
     return (
         <div className="sh1">
             <h1>LLC</h1>
             <h2>My courses</h2>
+            <button onClick={handleLogout}>Logout</button>
             <div className="container">
                 {courseDetails.map(course => (
                     <div className="container1" key={course.course_id}>
@@ -94,6 +105,16 @@ function DashboardStudent() {
                     <tbody>
                         {courseSchedules.map((schedule, index) => (
                             <tr key={index}>
-                                <td>{schedule.title}</td> <td>{schedule.day}</td> <td>{schedule.hours}</td> </tr> ))} </tbody> </table> {/* Rest of the component */} </div> </div> ); }
+                                <td>{schedule.title}</td>
+                                <td>{schedule.day}</td>
+                                <td>{schedule.hours}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    );
+}
 
 export default DashboardStudent;
