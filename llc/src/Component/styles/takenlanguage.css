@@ -5,6 +5,36 @@
 }
 
 .add-language-section {
+    position: absolute;
+    top: 220px;
+    right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    height: 355px;
+
+}
+
+.add-language-section h2 {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+
+
+.language-taken-image img {
+    width: 225px;
+    height: 225px;
+}
+
+.add-language-section {
     margin-top: 20px;
     text-align: left;
     margin-left: 27%;
@@ -13,24 +43,29 @@
 .add-language-section label {
     font-weight: bold;
     display: block;
+    color: brown;
+    margin-top: 15px;
 
 }
 
 .input-title-lang {
-    width: 100%;
+    width: 45% !important;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 10px !important;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 textarea {
-    width: 20%;
+    width: 68% !important;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 60px;
 }
+
+.input-title-lang {}
 
 
 
@@ -49,7 +84,7 @@ textarea {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .add-language-button:hover {
@@ -58,6 +93,7 @@ textarea {
 
 .all-languages-section {
     margin-top: 20px;
+    width: 50%;
 }
 
 .all-languages-section ul {

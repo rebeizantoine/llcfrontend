@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../styles/attendance.css'; // Import the CSS file
 
 const TeacherAttendance = () => {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -49,25 +50,25 @@ const TeacherAttendance = () => {
   }
 
   return (
-    <div>
-      <h1>Teacher Attendance</h1>
-      <table>
+    <div className="teacher-attendance-container">
+      <h1 className="teacher-attendance-title">Teacher Attendance</h1>
+      <table className="teacher-attendance-table">
         <thead>
           <tr>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Attendance</th>
-            <th>Level</th>
-            <th>Title</th>
+            <th className="email-header">Email</th>
+            <th className="role-header">Role</th>
+            <th className="attendance-header">Attendance</th>
+            <th className="level-header">Level</th>
+            <th className="title-header">Title</th>
           </tr>
         </thead>
         <tbody>
           {attendanceData.map((item, index) => (
             <tr key={index}>
-              <td>{item.email}</td>
-              <td>{item.role}</td>
-              <td>
-                <label>
+              <td className="email-data">{item.email}</td>
+              <td className="role-data">{item.role}</td>
+              <td className="attendance-data">
+                <label className="attendance-label">
                   <input
                     type="radio"
                     name={`attendance_${index}`}
@@ -76,7 +77,7 @@ const TeacherAttendance = () => {
                     onChange={() => handleAttendanceChange(item.user_id, '1')}
                   /> Yes
                 </label>
-                <label>
+                <label className="attendance-label">
                   <input
                     type="radio"
                     name={`attendance_${index}`}
@@ -86,8 +87,8 @@ const TeacherAttendance = () => {
                   /> No
                 </label>
               </td>
-              <td>{item.level}</td>
-              <td>{item.title}</td>
+              <td className="level-data">{item.level}</td>
+              <td className="title-data">{item.title}</td>
             </tr>
           ))}
         </tbody>

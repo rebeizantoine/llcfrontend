@@ -9,6 +9,8 @@ function LanguageTaken() {
   const [isLoading, setIsLoading] = useState(true);
   const [uploadError, setUploadError] = useState(null);
 
+  const MAX_DESCRIPTION_LENGTH = 75; // Set the maximum character limit
+
   const handleImageUpload = async (e) => {
     const formData = new FormData();
     formData.append("file", e.target.files[0]);
@@ -32,7 +34,6 @@ function LanguageTaken() {
   };
 
   const handleAddLanguage = async () => {
-
     if (!title || !description) {
       setUploadError("Please fill out the title and description.");
       return;
@@ -42,12 +43,12 @@ function LanguageTaken() {
       setUploadError("Please upload an image first.");
       return;
     }
+
     const newLanguageData = {
       title,
       description,
       languageimage: image,
     };
-    console.log(newLanguageData);
 
     try {
       const response = await fetch(
@@ -123,6 +124,13 @@ function LanguageTaken() {
     fetchLanguages();
   }, []);
 
+  const handleDescriptionChange = (e) => {
+    const inputText = e.target.value;
+    if (inputText.length <= MAX_DESCRIPTION_LENGTH) {
+      setDescription(inputText);
+    }
+  };
+
   return (
     <div className="language-taken-container">
       <h2>Language Data</h2>
@@ -136,11 +144,11 @@ function LanguageTaken() {
               <li key={language.taken_language_id}>
                 <h3>{language.title}</h3>
                 <p>{language.description}</p>
-                <img src={language.languageimage} alt={language.title} />
+                <div className="language-taken-image">
+                  <img src={language.languageimage} alt={language.title} />
+                </div>
                 <button
-                  onClick={() =>
-                    handleDeleteLanguage(language.taken_language_id)
-                  }
+                  onClick={() => handleDeleteLanguage(language.taken_language_id)}
                 >
                   Delete
                 </button>
@@ -150,8 +158,8 @@ function LanguageTaken() {
         )}
       </div>
 
-      <h2>Add New Language</h2>
       <div className="add-language-section">
+        <h2>Add New Language</h2>
         <label>Title:</label>
         <input
           className="input-title-lang"
@@ -159,11 +167,14 @@ function LanguageTaken() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <label>Description:</label>
+        <label>Description (Max {MAX_DESCRIPTION_LENGTH} characters):</label>
         <textarea
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={handleDescriptionChange}
         />
+        <p>
+          Characters Remaining: {MAX_DESCRIPTION_LENGTH - description.length}
+        </p>
         <label>Image:</label>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
         {uploadError && <p className="error">{uploadError}</p>}

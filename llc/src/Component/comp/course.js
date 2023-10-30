@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-const CourseManagement = () => {
+import '../styles/course.css'
+const Course = () => {
   const [modal, setModal] = useState(false);
   const [courses, setCourses] = useState([]);
   const [teachers, setTeachers] = useState([]);
@@ -179,32 +179,34 @@ const CourseManagement = () => {
 
   return (
     <div>
-      <h1>Course List</h1>
-      <Button color="primary" onClick={toggle}>
-        Assign the Course To a Teacher
-      </Button>
-      <div>
-        <label>Search by:</label>
+      <h1 className='course-list'>Course List</h1>
+
+      <div className='seaching'>
+        <label >Search by:</label>
         <select name="searchBy" onChange={handleSearchChange} value={search.searchBy}>
           <option value="level">Level</option>
           <option value="title">Language</option>
         </select>
         <input
+          className='searching-text'
           type="text"
           name="searchTerm"
           value={search.searchTerm}
           onChange={handleSearchChange}
         />
-        <button onClick={handleSearch}>Search</button>
-        <button onClick={resetSearch}>Reset</button>
+        <button className='searching-button-search' onClick={handleSearch}>Search</button>
+        <button className='searching-button-reset' onClick={resetSearch}>Reset</button>
       </div>
+      <Button color="primary" onClick={toggle}>
+        Assign the Course To a Teacher
+      </Button>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <ul>
+        <ul className='ul-course'>
           {courses.length > 0 ? (
             courses.map((course, index) => (
-              <li key={index}>
+              <li className='li-course' key={index}>
                 <strong>Duration:</strong> {course.duration} weeks<br />
                 <strong>Level:</strong> {course.level}<br />
                 <strong>Number of Sessions:</strong> {course.nbofsession}<br />
@@ -221,9 +223,10 @@ const CourseManagement = () => {
         </ul>
       )}
 
-      <h1>Add a New Course</h1>
-      <form onSubmit={handleSubmit}>
+
+      <form className='form-course' onSubmit={handleSubmit}>
         <div>
+          <h1>Add a New Course</h1>
           <label>Select a Language:</label>
           <select name="languageTitle" onChange={handleInputChange} value={formData.languageTitle}>
             <option value="">Select a language</option>
@@ -258,10 +261,10 @@ const CourseManagement = () => {
         <button type="submit">Add Course</button>
       </form>
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Assign the Course To a Teacher</ModalHeader>
-        <ModalBody>
-          <p>Select a course:</p>
-          <select value={selectedCourse} onChange={handleCourseChange}>
+        <ModalHeader toggle={toggle}><h2 className='h2-modal'>Assign the Course To a Teacher</h2></ModalHeader>
+        <ModalBody className='modal-body'>
+          <p><h3 className='h3-modal'>Select a Course:</h3></p>
+          <select className="select-dropdown" value={selectedCourse} onChange={handleCourseChange}>
             <option value="">Select a course</option>
             {courses.map((course) => (
               <option key={course.course_id} value={course.course_id}>
@@ -269,8 +272,9 @@ const CourseManagement = () => {
               </option>
             ))}
           </select>
-          <p>Select a teacher:</p>
-          <select value={selectedTeacher} onChange={handleTeacherChange}>
+
+          <p><h3 className='h3-modal'>Select a Teacher:</h3></p>
+          <select className="select-dropdown" value={selectedTeacher} onChange={handleTeacherChange}>
             <option value="">Select a teacher</option>
             {teachers.map((teacher) => (
               <option key={teacher.user_id} value={teacher.user_id}>
@@ -280,10 +284,10 @@ const CourseManagement = () => {
           </select>
         </ModalBody>
         <ModalFooter>
-          <Button color="secondary" onClick={toggle}>
+          <Button color="secondary" className='cancel-button' onClick={toggle}>
             Cancel
           </Button>
-          <Button color="primary" onClick={handleSubmit}>
+          <Button color="primary" className='save-button' onClick={handleSubmit}>
             Save
           </Button>
         </ModalFooter>
@@ -292,4 +296,4 @@ const CourseManagement = () => {
   );
 };
 
-export default CourseManagement;
+export default Course;

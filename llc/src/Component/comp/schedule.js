@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../styles/scheduleTable.css'; // Import a separate CSS file
 
 function ScheduleTable() {
   const [scheduleData, setScheduleData] = useState([]);
@@ -62,9 +63,47 @@ function ScheduleTable() {
   };
 
   return (
-    <div>
+    <div className="schedule-container">
       <h1>Schedule</h1>
-      <table>
+      <div className="add-to-schedule-box">
+        <h2>Add to Schedule</h2>
+        <div>
+          <label htmlFor="course">Course:</label>
+          <select
+            id="course"
+            value={JSON.stringify(selectedCourse)}
+            onChange={(e) => setSelectedCourse(JSON.parse(e.target.value))}
+          >
+            <option value="">Select a course</option>
+            {courses.map((course) => (
+              <option key={course.course_id} value={JSON.stringify(course)}>
+                {course.title} - {course.level}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="hours">Hours:</label>
+          <input
+            type="text"
+            id="hours"
+            value={hours}
+            onChange={(e) => setHours(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="day">Day:</label>
+          <input
+            type="text"
+            id="day"
+            value={day}
+            onChange={(e) => setDay(e.target.value)}
+          />
+        </div>
+        <button className='add-to-schedule-button' onClick={handleAddToSchedule}>Add to Schedule</button>
+      </div>
+      <h2 className='schedule-table'>Schedule Table</h2>
+      <table className='table123'>
         <thead>
           <tr>
             <th>Time</th>
@@ -118,43 +157,6 @@ function ScheduleTable() {
           ))}
         </tbody>
       </table>
-      <div>
-        <h2>Add to Schedule</h2>
-        <div>
-          <label htmlFor="course">Course:</label>
-          <select
-            id="course"
-            value={JSON.stringify(selectedCourse)}
-            onChange={(e) => setSelectedCourse(JSON.parse(e.target.value))}
-          >
-            <option value="">Select a course</option>
-            {courses.map((course) => (
-              <option key={course.course_id} value={JSON.stringify(course)}>
-                {course.title} - {course.level}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="hours">Hours:</label>
-          <input
-            type="text"
-            id="hours"
-            value={hours}
-            onChange={(e) => setHours(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="day">Day:</label>
-          <input
-            type="text"
-            id="day"
-            value={day}
-            onChange={(e) => setDay(e.target.value)}
-          />
-        </div>
-        <button onClick={handleAddToSchedule}>Add to Schedule</button>
-      </div>
     </div>
   );
 }

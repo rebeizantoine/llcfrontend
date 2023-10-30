@@ -10,7 +10,7 @@ import Courses from './Component/comp/popular';
 import Contact from './Component/comp/Contactus';
 import AllCourses from './Component/comp/view-all-courses';
 import Dashboard from './Component/comp/Dashboard';
-import Register from './Component/comp/Register';
+import Register from './Component/comp/register';
 import Section from './Component/comp/section';
 import Hero from './Component/comp/hero';
 import DashboardStudent from './Component/comp/Dashboardstudent';

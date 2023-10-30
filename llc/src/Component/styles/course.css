@@ -1,10 +1,25 @@
-/* course.css */
-
-.course-container {
-    text-align: center;
+.li-course {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 45%;
+    box-sizing: border-box;
+    display: block;
 }
 
-.course-title {
+.form-course {
+    position: absolute;
+    top: 358px;
+    right: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+    z-index: 1;
+    /* Ensure the form-course appears above other content */
+}
+
+.form-course h1 {
     color: #FFBF52;
     text-align: center;
     font-family: Roboto;
@@ -14,97 +29,99 @@
     line-height: normal;
 }
 
-.search-container {
-    margin-top: 20px;
-}
-
-.search-label {
-    display: block;
-    font-weight: bold;
-}
-
-.search-select {
-    width: 20%;
-    padding: 8px;
-    margin-top: 5px;
+/* Style the modal */
+.modal {
+    position: absolute;
+    top: -800px;
+    /* Adjust the top position as needed */
+    right: 0;
+    z-index: 2;
+    top: -910px;
+    right: 60px;
     border: 1px solid #ccc;
     border-radius: 4px;
-
+    width: 30.5%;
+    height: 325px;
+    background: #846F63;
+    z-index: 1;
 }
 
-.search-input {
-    width: 20%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-left: 20px !important;
-
-}
-
-.add-course-container {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}   
-
-
-.search-button {
-    background-color: #008CBA;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+.h2-modal {
+    font-size: 26px;
+    color: orange;
     margin-left: 20px;
-}
-
-.reset-button {
-    margin-left: 20px;
-    padding: 10px 20px;
-    background-color: #008CBA;
-    color: white;
 
 }
 
-.search-button:hover {
-    background-color: #005F7D;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.select-dropdown {
+    width: 79%;
     padding: 10px;
-    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: -40px;
 }
 
-strong {
-    font-weight: bold;
+.modal-body {
+    margin-top: -50px;
+    margin-left: 120px;
 }
 
-.zoom-a a {
-    text-decoration: none;
-    color: #008CBA;
-    margin-top: 5px;
+.cancel-button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 32px;
+    height: 30px;
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: larger;
+    margin-left: 50px;
 
 }
 
-.zoom-a:hover {
-    text-decoration: underline;
+.save-button {
+    margin-left: 70px;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: larger;
 }
 
-.loading {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #008CBA;
+.btn-close {
+    background-color: transparent !important;
 }
 
-.error {
-    color: red;
+.searching-text {
+    width: 25% !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
 }
 
-/* Additional customizations can be added as needed. */
+.course-list {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.searching-button-search {
+    margin-right: 35px;
+    border-radius: 8px;
+    background-color: #846F63;
+    width: 80px;
+}
+
+.searching-button-reset {
+    border-radius: 8px;
+    background-color: #FF6B6B;
+    color: white;
+    width: 80px;
+}
