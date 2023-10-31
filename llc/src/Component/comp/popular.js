@@ -129,7 +129,7 @@ const Popular = () => {
                 <div className="courses-language">
                     {courses.map(course => (
                         <div className="language1" key={course.course_id}>
-                            <img src={course.languageimage} alt={course.title} className={`img-language-${course.taken_language_id}`} />
+                            <img src={course.languageimage} alt={course.title} className="img-language" />
                             <p className="name-language">{course.title}</p>
                             <p className="descriptionf">{course.description}</p>
                             <button className="enrollf" onClick={() => handleEnroll(course)}>ENROLL NOW</button>
@@ -137,21 +137,23 @@ const Popular = () => {
                     ))}
                 </div>
             </div>
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Enroll in Course</ModalHeader>
-                <ModalBody>
-                    <p>You are about to enroll in the {selectedCourse?.title}. Please select a level:</p>
-                    <select>
-                        {selectedCourse?.levels.map((level, index) => (
-                            <option key={index}>{level}</option>
-                        ))}
-                    </select>
-                </ModalBody>
-                <ModalFooter>
-                    <Button color="primary" onClick={enrollCourse}>Enroll</Button>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
-                </ModalFooter>
-            </Modal>
+            <div className='modal123'>
+                <Modal isOpen={modal} toggle={toggle} className="custom-modal12">
+                    <ModalHeader toggle={toggle}>Enroll in Course</ModalHeader>
+                    <ModalBody>
+                        <p>You are about to enroll in the {selectedCourse?.title}. Please select a level:</p>
+                        <select>
+                            {selectedCourse?.levels.map((level, index) => (
+                                <option key={index}>{level}</option>
+                            ))}
+                        </select>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={enrollCourse}>Enroll</Button>
+                        <Button color="secondary" onClick={toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
         </div>
     );
 };

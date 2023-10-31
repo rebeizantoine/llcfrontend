@@ -78,6 +78,16 @@
     flex-direction: column;
 }
 
+.schedule-container h1 {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .adding-schedule {
     order: 1;
 }
@@ -106,5 +116,5 @@
 .add-to-schedule-box {}
 
 .table123 {
-    margin-left: 60px;
+    margin-left: 70px;
 }

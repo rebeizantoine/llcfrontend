@@ -1,112 +1,118 @@
-
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import '../styles/dashboardstudent.css'; // Import the CSS file
-import english from '../images/english.jpg'
-import spanish from '../images/spanish123.png'
-import logoutIcon from '../images/exit1.png';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom'; // Assuming you're using react-router for navigation
+import '../styles/dashboardstudent.css';
+import english from '../images/english.jpg';
+import spanish from '../images/spanish123.png';
 
 function DashboardStudent() {
-    const [activePage, setActivePage] = useState('teacher');
+    const [courses, setCourses] = useState([]);
+    const [courseDetails, setCourseDetails] = useState([]);
+    const [courseSchedules, setCourseSchedules] = useState([]);
     const history = useHistory();
 
-    const handleMenuClick = (page) => {
-        setActivePage(page);
-    };
+    useEffect(() => {
+        const fetchEnrolledCourses = async () => {
+            const user_id = localStorage.getItem('user_id');
+            try {
+                const response = await fetch(`http://localhost:8000/user/getEnrolled/${user_id}`);
+                const data = await response.json();
+                if (data.success) {
+                    const enrolledCourses = data.data;
+                    setCourses(enrolledCourses.map(course => course.course_id));
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchEnrolledCourses();
+    }, []);
+
+    useEffect(() => {
+        const fetchCourseDetails = async () => {
+            let fetchedCourseDetails = [];
+            try {
+                for (const courseId of courses) {
+                    const response = await fetch(`http://localhost:8000/user/getCourseLanWhere/${courseId}`);
+                    const data = await response.json();
+                    if (data.success && data.data.length > 0) {
+                        const courseData = data.data[0];
+                        if (!fetchedCourseDetails.some(course => course.title === courseData.title)) {
+                            fetchedCourseDetails.push(courseData);
+                        }
+                    }
+                }
+                setCourseDetails(fetchedCourseDetails);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchCourseDetails();
+    }, [courses]);
+
+    useEffect(() => {
+        const fetchCourseSchedules = async () => {
+            let fetchedCourseSchedules = [];
+            try {
+                for (const course of courseDetails) {
+                    const response = await fetch(`http://localhost:8000/user/getscheduleWhere/${course.course_id}`);
+                    const data = await response.json();
+                    if (data.success) {
+                        fetchedCourseSchedules = [
+                            ...fetchedCourseSchedules,
+                            ...data.data.map(schedule => ({ ...schedule, title: course.title })),
+                        ];
+                    }
+                }
+                setCourseSchedules(fetchedCourseSchedules);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchCourseSchedules();
+    }, [courseDetails]);
 
     const handleLogout = () => {
-        const userId = localStorage.getItem('userId');
-        if (userId !== null) {
-            localStorage.removeItem('userId');
-            history.push('/'); // Redirect to the homepage
-        } else {
-            console.log('userId not found in local storage');
-        }
+        localStorage.removeItem('user_id');
+        history.push('/');
     };
+
     return (
         <div className="sh1">
-            <div className='logout-button'>
-                <a href="/" className="logout-button" onClick={handleLogout}>
-                    <img src={logoutIcon} alt="Logout" />
-                </a>
-            </div>
             <h1>LLC</h1>
             <h2>My courses</h2>
+            <button onClick={handleLogout}>Logout</button>
             <div className="container">
-                <div className="container1">
-                    <img src={english} alt="Image Description" />
-                    <div className="Engf">
-                        <h1>ENGLISH LANGUAGE</h1>
-                        <p>Eu adipiscing nec erat amet at aliquam blandit gravida massa suscipit massa.</p>
+                {courseDetails.map(course => (
+                    <div className="container1" key={course.course_id}>
+                        <img src={course.languageimage} alt="Image Description" />
+                        <div className="Engf">
+                            <h1>{course.title}</h1>
+                            <p>{course.description}</p>
+                        </div>
                     </div>
-                </div>
-                <div className="container2">
-                    <img className="Imaged" src={spanish} alt="Image Description" />
-                    <div className="Spaf">
-                        <h1>SPANISH LANGUAGE</h1>
-                        <p>Eu adipiscing nec erat amet at aliquam blandit gravida massa suscipit massa.</p>
-                    </div>
-                </div>
+                ))}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Day</th>
+                            <th>Hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {courseSchedules.map((schedule, index) => (
+                            <tr key={index}>
+                                <td>{schedule.title}</td>
+                                <td>{schedule.day}</td>
+                                <td>{schedule.hours}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-            <h2>MY SCHEDULE</h2>
-            <table className="week">
-                <tr>
-                    <th></th>
-                    <th className="weekdays">Monday</th>
-                    <th className="weekdays">Tuesday</th>
-                    <th className="weekdays">Wednesday</th>
-                    <th className="weekdays">Thursday</th>
-                    <th className="weekdays">Friday</th>
-                </tr>
-                <tr>
-                    <td>10:00 - 12:00</td>
-                    <td>Eng A2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Eng A2</td>
-                </tr>
-                <tr>
-                    <td>12:00 - 14:00</td>
-                    <td></td>
-                    <td></td>
-                    <td>Spa. B1</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14:00 - 16:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:00 - 18:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Spa. B1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>18:00 - 20:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>20:00 - 22:00</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
         </div>
     );
 }
