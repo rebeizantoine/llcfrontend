@@ -80,6 +80,16 @@ function DashboardStudent() {
     history.push('/');
   };
 
+  const groupedSchedules = {};
+
+  courseSchedules.forEach(schedule => {
+    const hours = schedule.hours;
+    if (!groupedSchedules[hours]) {
+      groupedSchedules[hours] = [];
+    }
+    groupedSchedules[hours].push(schedule);
+  });
+
   return (
     <div className="sh1">
       <Link to="/"><h1>LLC</h1></Link>
@@ -107,34 +117,54 @@ function DashboardStudent() {
             </tr>
           </thead>
           <tbody>
-            {courseSchedules.map(schedule => (
-              <tr key={schedule.course_id}>
-                <td>{schedule.hours}</td>
-                <td>{schedule.day === "Monday" && (
-                  <p>
-                    Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
-                  </p>
-                )}</td>
-                <td>{schedule.day === "Tuesday" && (
-                  <p>
-                    Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
-                  </p>
-                )}</td>
-                <td>{schedule.day === "Wednesday" && (
-                  <p>
-                    Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
-                  </p>
-                )}</td>
-                <td>{schedule.day === "Thursday" && (
-                  <p>
-                    Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
-                  </p>
-                )}</td>
-                <td>{schedule.day === "Friday" && (
-                  <p>
-                    Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
-                  </p>
-                )}</td>
+            {Object.keys(groupedSchedules).map(hours => (
+              <tr key={hours}>
+                <td>{hours}</td>
+                <td>
+                  {groupedSchedules[hours].map(schedule => (
+                    schedule.day === 'Monday' && (
+                      <p key={schedule.course_id}>
+                        Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
+                <td>
+                  {groupedSchedules[hours].map(schedule => (
+                    schedule.day === 'Tuesday' && (
+                      <p key={schedule.course_id}>
+                        Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
+                <td>
+                  {groupedSchedules[hours].map(schedule => (
+                    schedule.day === 'Wednesday' && (
+                      <p key={schedule.course_id}>
+                        Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
+                <td>
+                  {groupedSchedules[hours].map(schedule => (
+                    schedule.day === 'Thursday' && (
+                      <p key={schedule.course_id}>
+                        Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
+                <td>
+                  {groupedSchedules[hours].map(schedule => (
+                    schedule.day === 'Friday' && (
+                      <p key={schedule.course_id}>
+                        Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>
