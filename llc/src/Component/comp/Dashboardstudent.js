@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Assuming you're using react-router for navigation
+import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'; 
 import '../styles/dashboardstudent.css';
 import english from '../images/english.jpg';
 import spanish from '../images/spanish123.png';
@@ -81,7 +82,7 @@ function DashboardStudent() {
 
     return (
         <div className="sh1">
-            <h1>LLC</h1>
+            <Link to="/"><h1>LLC</h1></Link>
             <h2>My courses</h2>
             <button onClick={handleLogout}>Logout</button>
             <div className="container">

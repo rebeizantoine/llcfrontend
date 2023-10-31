@@ -36,7 +36,7 @@ const CourseManagement = () => {
             zoom_link: course.zoom_link,
             title: course.title,
             course_id: course.course_id,
-            taken_language_id: course.taken_language_id,
+            taken_language_id: course.taken_language_id, // Include taken_language_id
           }));
           setCourses(extractedCourses);
         } else {
@@ -111,12 +111,7 @@ const CourseManagement = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const selectedLanguage = languages.find((language) => language.title === formData.languageTitle);
-
-    if (!selectedLanguage) {
-      alert('The selected language is not available.');
-      return;
-    }
+    const selectedLanguage = languages.find((language) => language.title === formData.languageTitle)
 
     const newCourse = {
       taken_language_id: selectedLanguage.taken_language_id,
@@ -228,7 +223,7 @@ const CourseManagement = () => {
           <select name="languageTitle" onChange={handleInputChange} value={formData.languageTitle}>
             <option value="">Select a language</option>
             {languages.map((language) => (
-              <option key={language.taken_language_id} value={language.taken_language_id}>
+              <option key={language.taken_language_id} value={language.title}>
                 {language.title}
               </option>
             ))}

@@ -55,6 +55,9 @@ function App() {
           <Route path="/Student">
             <DashboardStudent />
           </Route>
+          <Route path="/Dashboard">
+            <Dashboard />
+          </Route>
           <ProtectedRoute
             path="/Dashboard"
             component={Dashboard}
