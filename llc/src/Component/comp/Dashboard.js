@@ -18,15 +18,17 @@ function Dashboard() {
     const handleMenuClick = (page) => {
         setActivePage(page);
     };
+    const handleLogout = () => {
+        localStorage.removeItem('user_id');
+        history.push('/');
+    }
 
 
     return (
         <div className="menu-and-content">
-            <a href="/" className="logout-button-dashboard">
-                <img src={logoutIcon} alt="Logout" />
-            </a>
+
             <div className="menu">
-                <h1 className='h1-top'>LLC</h1>
+                <h1 className='h1-top'>  <a href="/">LLC</a></h1>
                 <div className="menu-content">
                     <div className='llctop'>
 
@@ -49,6 +51,9 @@ function Dashboard() {
                     </div>
                     <div className="menu-item">
                         <a href="#attendance" onClick={() => handleMenuClick('attendance')}>Attendance</a>
+                    </div>
+                    <div className="button-logout-31">
+                        <button onClick={handleLogout}>Logout</button>
                     </div>
                 </div>
             </div>

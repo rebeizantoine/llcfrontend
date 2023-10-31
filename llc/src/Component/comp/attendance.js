@@ -27,7 +27,7 @@ const TeacherAttendance = () => {
       : `http://localhost:8000/user/updateActivationforuserneg/${id}`;
 
     try {
-      await axios.put(endpoint, null, {
+      await axios.put(endpoint, {
         headers: {
           'Content-Type': 'application/json',
         },

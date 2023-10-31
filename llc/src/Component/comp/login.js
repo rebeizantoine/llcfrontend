@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import '../styles/login.css';
-import Goback from '../images/goback.png'
+import Goback from '../images/goback.png';
 
 const Login = () => {
     const history = useHistory();
@@ -11,7 +11,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const handleLogin = async () => {
-        // Make an API request to fetch user data from "http://localhost:8000/user/getAll"
         try {
             const response = await fetch("http://localhost:8000/user/getAll");
             const data = await response.json();
@@ -32,6 +31,9 @@ const Login = () => {
                     } else {
                         alert('Invalid role. Please try again.');
                     }
+
+                    // Store the user_id in local storage
+                    localStorage.setItem('user_id', user.user_id);
                 } else {
                     alert('Incorrect email or password. Please try again.');
                 }
@@ -87,11 +89,3 @@ const Login = () => {
 };
 
 export default Login;
-/*const userId = localStorage.getItem('userId');
-if (userId !== null) {
-
-  localStorage.removeItem('userId');
-  console.log('userId has been removed from local storage');
-} else {
-  console.log('userId not found in local storage');
-}*/

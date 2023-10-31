@@ -1,50 +1,93 @@
-.container {
-    background: #FAF4F1;
-    width: 60%;
-    display: flex;
-    column-gap: 200px;
-
-}
-
-.logout-button a {
-    margin-left: -700px !important;
-}
+/* dashboardstudent.css */
 
 .sh1 {
-    background: #FAF4F1;
-    width: 60%
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    background: linear-gradient(180deg, #99D6C8 0%, rgba(6, 29, 33, 0.00) 100%);
 }
 
-.Imaged {
-    width: 300px;
-    height: 240px
+.Engf p {
+    margin-top: -10px;
 }
 
-.week {
-    width: 70%;
-    background-color: #FAF4F1;
+.h1-llc {
+    margin-left: 45%;
+    font-size: 50px;
+    margin-top: -10px;
+    font-weight: 700;
 }
 
-.week td {
-    text-align: center;
+.sh1 h1 {
+    color: #9B6C1B;
+
+}
+
+.sh1 h2 {
+    color: #9B6C1B;
+    margin-left: 15%;
+}
+
+.container6 {
+    margin-left: 0;
+}
+
+.container61 {
+    width: 45% !important;
+    padding: 8px;
+    margin-top: 10px !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+
+.container61 img {
+    width: 580px;
+    height: 300px;
+    margin-right: 20px;
 }
 
 .Engf {
-    width: 230px;
-    background-color: white;
-    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
 }
 
-.Spaf {
-    width: 300px;
-    background-color: white;
-    margin-top: -25px;
+.student-schedule-1 {
+    position: absolute;
+    top: 26%;
+    right: 12%;
 }
 
-.Engf h1 {
-    font-size: 20px
+.thead-1 th {
+    width: 100% !important;
 }
 
-.Spaf h1 {
-    font-size: 20px
+.tbody-1 td {
+    width: 100%;
+}
+
+
+
+.logout-image1 {
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+
+
+}
+
+.logout-image1:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover */
+    border: 1px 0px 0px 0px solid grey;
+    /* Add a border on hover */
+    box-shadow: 0px 0px 5px 2px #9B6C1B;
+    /* Add a shadow effect on hover */
 }

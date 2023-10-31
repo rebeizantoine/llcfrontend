@@ -53,6 +53,21 @@ body {
     line-height: normal;
 }
 
+.button-logout-31 {
+    border-radius: 8px;
+    background-color: #FF6B6B !important;
+    color: white;
+    width: 200px;
+}
+
+.button-logout-31 button {
+    border-radius: 8px;
+    background-color: #FF6B6B !important;
+    color: white;
+    width: 200px;
+}
+
+
 .panel-section {
     display: flex;
     width: 379px;

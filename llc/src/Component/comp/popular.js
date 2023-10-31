@@ -79,13 +79,6 @@ const Popular = () => {
                 console.error(error);
             });
     };
-
-
-
-
-
-
-
     useEffect(() => {
         axios.get('http://localhost:8000/user/getCourseLan')
             .then(response => {
@@ -118,6 +111,7 @@ const Popular = () => {
     if (error) {
         return <div>Error: {error.message}</div>;
     }
+
 
     return (
         <div id="Courses">
