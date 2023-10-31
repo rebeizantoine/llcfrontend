@@ -36,7 +36,7 @@ const CourseManagement = () => {
             zoom_link: course.zoom_link,
             title: course.title,
             course_id: course.course_id,
-            taken_language_id: course.taken_language_id, // Include taken_language_id
+            taken_language_id: course.taken_language_id, 
           }));
           setCourses(extractedCourses);
         } else {
@@ -95,11 +95,56 @@ const CourseManagement = () => {
 
   const handleCourseChange = (e) => {
     setSelectedCourse(e.target.value);
+    console.log("Selected Course ID: ", e.target.value);
   };
 
   const handleTeacherChange = (e) => {
     setSelectedTeacher(e.target.value);
+    console.log("Selected Teacher ID: ", e.target.value);
   };
+
+  const handleEnroll = async () => {
+    try {
+      const postUrl = `http://localhost:8000/user/postEnrolled/${selectedTeacher}/${selectedCourse}`;
+      const enrollResponse = await axios.post(postUrl);
+      console.log(enrollResponse.data);
+  
+      const getUrl = `http://localhost:8000/user/getEnrolledWhere/${selectedTeacher}/${selectedCourse}`;
+      const enrollCheckResponse = await axios.get(getUrl);
+  
+      if (enrollCheckResponse.data.success && enrollCheckResponse.data.data.length > 0) {
+        console.log("Enroll ID:", enrollCheckResponse.data.data[0].enroll_id);
+  
+        const scheduleUrl = `http://localhost:8000/user/getscheduleWhere/${selectedCourse}`;
+        console.log("Schedule URL:", scheduleUrl);
+  
+        const scheduleResponse = await axios.get(scheduleUrl);
+        console.log("Schedule Response:", scheduleResponse);
+  
+        if (scheduleResponse.data && scheduleResponse.data.data.length > 0) {
+          console.log("Schedule ID:", scheduleResponse.data.data[0].schedule_id);
+  
+     
+          const enrollId = enrollCheckResponse.data.data[0].enroll_id;
+          const scheduleId = scheduleResponse.data.data[0].schedule_id;
+          const postEnrollAndScheduleUrl = `http://localhost:8000/user/post/${enrollId}/${scheduleId}`;
+          const postResponse = await axios.post(postEnrollAndScheduleUrl);
+          console.log("Post Response:", postResponse.data);
+        } else {
+          console.error("Error getting schedule ID: No data returned.");
+        }
+        
+      } else {
+        console.error("Error getting enroll ID: No data returned or", enrollCheckResponse.data.message);
+      }
+    } catch (error) {
+      console.error('Error enrolling the teacher to the course or getting enroll/schedule ID:', error);
+    }
+  };
+  
+  
+  
+
 
   const handleSearchChange = (e) => {
     const { name, value } = e.target;
@@ -151,7 +196,7 @@ const CourseManagement = () => {
     axios
       .get('http://localhost:8000/user/getCourseLan')
       .then((response) => {
-        const courseData = response.data.data;
+        const courseData= response.data.data;
         if (Array.isArray(courseData)) {
           const extractedCourses = courseData.map((course) => ({
             duration: course.duration,
@@ -260,7 +305,7 @@ const CourseManagement = () => {
             <option value="">Select a course</option>
             {courses.map((course) => (
               <option key={course.course_id} value={course.course_id}>
-                {`${course.level} - ${course.title}`}
+               {`${course.level} - ${course.title}`}
               </option>
             ))}
           </select>
@@ -278,7 +323,7 @@ const CourseManagement = () => {
           <Button color="secondary" onClick={toggle}>
             Cancel
           </Button>
-          <Button color="primary" onClick={handleSubmit}>
+          <Button color="primary" onClick={handleEnroll}>
             Save
           </Button>
         </ModalFooter>
@@ -288,3 +333,5 @@ const CourseManagement = () => {
 };
 
 export default CourseManagement;
+
+

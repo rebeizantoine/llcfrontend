@@ -22,8 +22,8 @@ const TeacherAttendance = () => {
 
   const handleAttendanceChange = async (id, newValue) => {
     const endpoint = newValue === '1'
-      ? `http://localhost:8000/user/updateActivationforuser/${id}`
-      : `http://localhost:8000/user/updateActivationforuserneg/${id}`;
+      ? `http://localhost:8000/user/updateStudentAttendance/${id}`
+      : `http://localhost:8000/user/updateStudentAttendanceneg/${id}`;
 
     try {
       await axios.put(endpoint, null, {
