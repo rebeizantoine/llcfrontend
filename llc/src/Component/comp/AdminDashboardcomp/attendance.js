@@ -56,7 +56,6 @@ const TeacherAttendance = () => {
         <thead>
           <tr>
             <th>Email</th>
-            <th>Role</th>
             <th>Attendance</th>
             <th>Level</th>
             <th>Title</th>
@@ -66,7 +65,6 @@ const TeacherAttendance = () => {
           {attendanceData.map((item, index) => (
             <tr key={index}>
               <td>{item.email}</td>
-              <td>{item.role}</td>
               <td>
                 <label>
                   <input
