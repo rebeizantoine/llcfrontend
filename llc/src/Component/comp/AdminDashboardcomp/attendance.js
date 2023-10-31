@@ -22,11 +22,11 @@ const TeacherAttendance = () => {
 
   const handleAttendanceChange = async (id, newValue) => {
     const endpoint = newValue === '1'
-      ? `http://localhost:8000/user/updateStudentAttendance/${id}`
-      : `http://localhost:8000/user/updateStudentAttendanceneg/${id}`;
+      ? `http://localhost:8000/user/updateTeacherAttendance/${id}`
+      : `http://localhost:8000/user/updateTeacherAttendanceneg/${id}`;
 
     try {
-      await axios.put(endpoint, null, {
+      await axios.put(endpoint, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -38,6 +38,7 @@ const TeacherAttendance = () => {
         }
         return item;
       });
+
       setAttendanceData(updatedData);
     } catch (error) {
       console.error('Error updating attendance:', error);
@@ -72,7 +73,7 @@ const TeacherAttendance = () => {
                     type="radio"
                     name={`attendance_${index}`}
                     value="1"
-                    checked={item.attend === '1'}
+                    checked={item.attend === 1}
                     onChange={() => handleAttendanceChange(item.user_id, '1')}
                   /> Yes
                 </label>
@@ -81,7 +82,7 @@ const TeacherAttendance = () => {
                     type="radio"
                     name={`attendance_${index}`}
                     value="0"
-                    checked={item.attend === '0'}
+                    checked={item.attend === 0}
                     onChange={() => handleAttendanceChange(item.user_id, '0')}
                   /> No
                 </label>
