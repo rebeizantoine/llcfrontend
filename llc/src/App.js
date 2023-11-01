@@ -30,6 +30,21 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Hero />
+                <Section />
+                <About />
+                <Courses />
+                <Testimonial />
+                <ToastContainer />
+                <Footer />
+              </>
+            }
+          ></Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/all-courses" element={<AllCourses />} />
