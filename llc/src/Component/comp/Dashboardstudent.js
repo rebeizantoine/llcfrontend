@@ -145,7 +145,7 @@ function DashboardStudent() {
         nextArrow: <SampleNextArrow />,
         appendDots: dots => (
             <div>
-                <ul style={{ marginTop: "20px" }}>{dots}</ul>
+                <ul style={{ marginTop: "50px" }}>{dots}</ul>
             </div>
         ),
     };
@@ -170,17 +170,63 @@ function DashboardStudent() {
                 <table className='student-schedule-1'>
                     <thead className='thead-1'>
                         <tr>
-                            <th>Course</th>
-                            <th>Day</th>
-                            <th>Hour</th>
+                            <th className='th-time'>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
                         </tr>
                     </thead>
                     <tbody className='tbody-1'>
-                        {courseSchedules.map((schedule, index) => (
-                            <tr key={index}>
-                                <td>{schedule.title}</td>
-                                <td>{schedule.day}</td>
-                                <td>{schedule.hours}</td>
+                        {Object.keys(groupedSchedules).map(hours => (
+                            <tr key={hours}>
+                                <td>{hours}</td>
+                                <td>
+                                    {groupedSchedules[hours].map(schedule => (
+                                        schedule.day === 'Monday' && (
+                                            <p key={schedule.course_id}>
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                            </p>
+                                        )
+                                    ))}
+                                </td>
+                                <td>
+                                    {groupedSchedules[hours].map(schedule => (
+                                        schedule.day === 'Tuesday' && (
+                                            <p key={schedule.course_id}>
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                            </p>
+                                        )
+                                    ))}
+                                </td>
+                                <td>
+                                    {groupedSchedules[hours].map(schedule => (
+                                        schedule.day === 'Wednesday' && (
+                                            <p key={schedule.course_id}>
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                            </p>
+                                        )
+                                    ))}
+                                </td>
+                                <td>
+                                    {groupedSchedules[hours].map(schedule => (
+                                        schedule.day === 'Thursday' && (
+                                            <p key={schedule.course_id}>
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                            </p>
+                                        )
+                                    ))}
+                                </td>
+                                <td>
+                                    {groupedSchedules[hours].map(schedule => (
+                                        schedule.day === 'Friday' && (
+                                            <p key={schedule.course_id}>
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                            </p>
+                                        )
+                                    ))}
+                                </td>
                             </tr>
                         ))}
                     </tbody>

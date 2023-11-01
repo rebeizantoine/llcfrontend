@@ -7,6 +7,9 @@
     font-weight: 500;
     line-height: normal;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+
     background: linear-gradient(180deg, #99D6C8 0%, rgba(6, 29, 33, 0.00) 100%);
 }
 
@@ -17,7 +20,7 @@
 .h1-llc {
     margin-left: 45%;
     font-size: 50px;
-    margin-top: -10px;
+    margin-top: 10px;
     font-weight: 700;
 }
 
@@ -29,14 +32,17 @@
 .sh1 h2 {
     color: #9B6C1B;
     margin-left: 15%;
+    margin-top: 10px;
 }
 
 .container6 {
-    margin-left: 0;
+
+    margin-top: 25%;
+    margin-left: 400px;
 }
 
 .container61 {
-    width: 45% !important;
+    width: 63% !important;
     padding: 8px;
     margin-top: 10px !important;
     border: 1px solid #ccc;
@@ -45,7 +51,7 @@
 }
 
 .container61 img {
-    width: 580px;
+    width: 500px;
     height: 300px;
     margin-right: 20px;
 }
@@ -56,11 +62,7 @@
     margin-top: -20px;
 }
 
-.student-schedule-1 {
-    position: absolute;
-    top: 26%;
-    right: 12%;
-}
+
 
 .thead-1 th {
     width: 100% !important;
@@ -90,4 +92,57 @@
     /* Add a border on hover */
     box-shadow: 0px 0px 5px 2px #9B6C1B;
     /* Add a shadow effect on hover */
+}
+
+/* Add your existing styles here */
+
+/* Table styles */
+.student-schedule-1 {
+    width: 60%;
+    /* Increase the overall table width */
+    border-collapse: collapse;
+    position: absolute;
+    top: 170px;
+    right: 20%;
+    /* Adjust the 'right' value to move the table further to the right */
+}
+
+.student-schedule-1 th,
+.student-schedule-1 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Header row styles */
+.student-schedule-1 th {
+    background-color: #f2f2f2;
+}
+
+/* Alternate row background color */
+.student-schedule-1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Define specific styles for the table header cells (Time, Monday, Tuesday, etc.) */
+/* You can adjust these styles as needed */
+.thead-1 th {
+    font-weight: bold;
+    width: 120px;
+    /* Increase the width of the header cells */
+}
+
+/* Define specific styles for the table cells containing schedule information */
+.tbody-1 p {
+    margin: 0;
+    width: 190px;
+    /* Increase the width of the cells with schedule information */
+}
+
+/* Increase the width of the "Monday," "Tuesday," "Wednesday," and the info under them */
+.th-monday,
+.th-tuesday,
+.th-wednesday,
+.th-info {
+    width: 120px;
 }
