@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logoutIcon from '../images/exit1.png';
 import '../styles/Dashboardteacher.css';
 
 const DashboardTeacher = () => {
     const [activePage, setActivePage] = useState('teacher');
-    const history = useHistory();
+
 
     const handleMenuClick = (page) => {
         setActivePage(page);
@@ -16,7 +15,7 @@ const DashboardTeacher = () => {
         const userId = localStorage.getItem('userId');
         if (userId !== null) {
             localStorage.removeItem('userId');
-            history.push('/'); // Redirect to the homepage
+
         } else {
             console.log('userId not found in local storage');
         }

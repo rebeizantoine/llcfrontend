@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import Teacher from './teacher';
 import '../styles/teacher.css'
 import Student from './student';
@@ -13,14 +13,14 @@ import horizontal from '../images/Rectangle20.png'
 import logoutIcon from '../images/exit1.png';
 function Dashboard() {
     const [activePage, setActivePage] = useState('teacher');
-    const history = useHistory(); // Initialize the history object
 
     const handleMenuClick = (page) => {
         setActivePage(page);
     };
+    const navigate = useNavigate();
     const handleLogout = () => {
         localStorage.removeItem('user_id');
-        history.push('/');
+        navigate('/');
     }
 
 

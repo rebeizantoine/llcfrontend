@@ -1,6 +1,5 @@
-// Import the necessary libraries and components
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -9,6 +8,7 @@ import '../styles/dashboardstudent.css';
 import english from '../images/english.jpg';
 import spanish from '../images/spanish123.png';
 import logout1 from '../images/logout1.png';
+
 
 // Define a custom previous arrow component
 const SamplePrevArrow = (props) => {
@@ -49,7 +49,7 @@ function DashboardStudent() {
     const [courses, setCourses] = useState([]);
     const [courseDetails, setCourseDetails] = useState([]);
     const [courseSchedules, setCourseSchedules] = useState([]);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     // Fetch enrolled courses when the component mounts
     useEffect(() => {
@@ -105,7 +105,7 @@ function DashboardStudent() {
                     if (data.success) {
                         fetchedCourseSchedules = [
                             ...fetchedCourseSchedules,
-                            ...data.data.map(schedule => ({ ...schedule, title: course.title })),
+                            ...data.data.map(schedule => ({ ...schedule, title: course.title, zoom_link: course.zoom_link })),
                         ];
                     }
                 }
@@ -121,7 +121,7 @@ function DashboardStudent() {
     // Handle user logout
     const handleLogout = () => {
         localStorage.removeItem('user_id');
-        history.push('/');
+        navigate('/');
     };
     const groupedSchedules = {};
 
