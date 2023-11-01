@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/popular-courses.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
@@ -12,7 +12,7 @@ const Popular = () => {
   const [modal, setModal] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [enrollId, setEnrollId] = useState(null);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const toggle = () => setModal(!modal);
 
@@ -21,7 +21,7 @@ const Popular = () => {
     if (localStorage.getItem('user_id')) {
       toggle();
     } else {
-      history.push('/login');
+      navigate('/login');
     }
   };
 
@@ -55,7 +55,7 @@ const Popular = () => {
                         .then(response => {
                           console.log(response.data);
                           toast.success("Welcome!! You enrolled in one of our courses.",{
-                            onClick: () => history.push('/DashboardStudent')}); 
+                            onClick: () => navigate('/DashboardStudent')}); 
                         })
                         .catch(error => {
                           console.error(error);

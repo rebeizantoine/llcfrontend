@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import '../styles/login.css';
-import Goback from '../images/goback.png';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../styles/login.css";
+import Goback from "../images/goback.png";
 
 const Login = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
     try {
@@ -16,33 +15,26 @@ const Login = () => {
       const data = await response.json();
 
       if (data.success) {
-        const user = data.data.find((userData) => userData.email === username && userData.password === password && userData.active === 1);
+        const user = data.data.find(
+          (userData) =>
+            userData.email === username &&
+            userData.password === password &&
+            userData.active === 1
+        );
 
         if (user) {
-          if (user.role === 'teacher') {
-            // Redirect to the teacher component
-            history.push('/DashboardTeacher');
-          } else if (user.role === 'student') {
-            // Redirect to the student component
-            history.push('/DashboardStudent');
-          } else if (user.role === 'admin') {
-            // Redirect to the admin component
-            history.push('/Dashboard');
-          } else {
-            alert('Invalid role. Please try again.');
-          }
-
-          // Store the user_id in local storage
-          localStorage.setItem('user_id', user.user_id);
+          localStorage.setItem("user_id", user.user_id);
+          localStorage.setItem("userrole", user.role);
+          navigate("/dash");
         } else {
-          alert('Incorrect email or password. Please try again.');
+          alert("Incorrect email or password. Please try again.");
         }
       } else {
-        alert('API request failed.');
+        alert("API request failed.");
       }
     } catch (error) {
       console.error(error);
-      alert('An error occurred while processing your request.');
+      alert("An error occurred while processing your request.");
     }
   };
 
@@ -56,7 +48,9 @@ const Login = () => {
         </div>
         <h1 className="login1">Login</h1>
         <form className="form1">
-          <label htmlFor="email" className="email1">Email Address</label>
+          <label htmlFor="email" className="email1">
+            Email Address
+          </label>
           <input
             type="email"
             id="email"
@@ -66,7 +60,9 @@ const Login = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
 
-          <label htmlFor="password" className="password1">Password</label>
+          <label htmlFor="password" className="password1">
+            Password
+          </label>
           <input
             type="password"
             id="password"

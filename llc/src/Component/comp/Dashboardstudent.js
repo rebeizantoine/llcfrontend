@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/dashboardstudent.css';
 import english from '../images/english.jpg';
 import spanish from '../images/spanish123.png';
@@ -9,7 +8,7 @@ function DashboardStudent() {
   const [courses, setCourses] = useState([]);
   const [courseDetails, setCourseDetails] = useState([]);
   const [courseSchedules, setCourseSchedules] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchEnrolledCourses = async () => {
@@ -77,7 +76,7 @@ function DashboardStudent() {
 
   const handleLogout = () => {
     localStorage.removeItem('user_id');
-    history.push('/');
+    navigate('/');
   };
 
   const groupedSchedules = {};

@@ -15,7 +15,8 @@ function MenuAndContent() {
     const handleMenuClick = (page) => {
         setActivePage(page);
     };
-
+// if role == admin show admin component 
+// 
     return (
         <div className="menu-and-content">
             <div className="menu">
