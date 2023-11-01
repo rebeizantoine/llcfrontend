@@ -123,6 +123,15 @@ function DashboardStudent() {
         localStorage.removeItem('user_id');
         history.push('/');
     };
+    const groupedSchedules = {};
+
+    courseSchedules.forEach(schedule => {
+        const hours = schedule.hours;
+        if (!groupedSchedules[hours]) {
+            groupedSchedules[hours] = [];
+        }
+        groupedSchedules[hours].push(schedule);
+    });
 
     // Settings for the Slider component
     const sliderSettings = {

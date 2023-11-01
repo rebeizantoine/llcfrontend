@@ -62,6 +62,14 @@ function ScheduleTable() {
     }
   };
 
+  // Group the scheduleData by hour
+  const groupedScheduleData = scheduleData.reduce((grouped, item) => {
+    if (!grouped[item.hours]) {
+      grouped[item.hours] = [];
+    }
+    grouped[item.hours].push(item);
+    return grouped;
+  }, {});
   return (
     <div className="schedule-container">
       <h1>Schedule</h1>
@@ -115,44 +123,20 @@ function ScheduleTable() {
           </tr>
         </thead>
         <tbody>
-          {scheduleData.map((item) => (
-            <tr key={item.course_id}>
-              <td>{item.hours}</td>
-              <td>
-                {item.day === "Monday" && (
-                  <p>
-                    Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
-                  </p>
-                )}
-              </td>
-              <td>
-                {item.day === "Tuesday" && (
-                  <p>
-                    Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
-                  </p>
-                )}
-              </td>
-              <td>
-                {item.day === "Wednesday" && (
-                  <p>
-                    Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
-                  </p>
-                )}
-              </td>
-              <td>
-                {item.day === "Thursday" && (
-                  <p>
-                    Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
-                  </p>
-                )}
-              </td>
-              <td>
-                {item.day === "Friday" && (
-                  <p>
-                    Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
-                  </p>
-                )}
-              </td>
+          {Object.keys(groupedScheduleData).map((hour) => (
+            <tr key={hour}>
+              <td>{hour}</td>
+              {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => (
+                <td key={day}>
+                  {groupedScheduleData[hour].map((item) => (
+                    item.day === day && (
+                      <p key={item.course_id}>
+                        Title: {item.title}, Level: {item.level}, Zoom Link: {item.zoom_link}
+                      </p>
+                    )
+                  ))}
+                </td>
+              ))}
             </tr>
           ))}
         </tbody>

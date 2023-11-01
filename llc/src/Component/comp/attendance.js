@@ -56,7 +56,6 @@ const TeacherAttendance = () => {
         <thead>
           <tr>
             <th className="email-header">Email</th>
-            <th className="role-header">Role</th>
             <th className="attendance-header">Attendance</th>
             <th className="level-header">Level</th>
             <th className="title-header">Title</th>
@@ -66,7 +65,7 @@ const TeacherAttendance = () => {
           {attendanceData.map((item, index) => (
             <tr key={index}>
               <td className="email-data">{item.email}</td>
-              <td className="role-data">{item.role}</td>
+
               <td className="attendance-data">
                 <label className="attendance-label">
                   <input
