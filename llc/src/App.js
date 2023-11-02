@@ -24,7 +24,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./Component/comp/ProtectedRoute";
 import MainDash from "./Component/comp/maindashboard";
-
+import FetchedDash from "./Component/comp/TeacherDashfetch";
 function App() {
   return (
     <div className="App">
@@ -49,6 +49,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/all-courses" element={<AllCourses />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/teacher" element={<FetchedDash />} />
           <Route
             path="/dash/*"
             element={
