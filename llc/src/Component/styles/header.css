@@ -244,7 +244,7 @@ a {
 
     .llc-header {
         display: flex;
-        column-gap: 10px;
+        column-gap: 70px;
         margin-left: -60px;
         margin-top: 40px;
         width: 326px;
@@ -309,7 +309,13 @@ a {
     }
 
     .login {
-        display: none;
+        margin-top: 30px !important;
+        margin-left: 200px !important
+    }
+
+    .login:hover {
+        background-color: orange;
+        text-decoration: underline;
     }
 
     .enroll {
@@ -390,6 +396,12 @@ a {
         flex-shrink: 0;
         background: rgba(250, 244, 241, 0.1);
         display: flex;
+    }
+
+    .login {
+        display: block !important;
+        margin-top: 29px !important;
+        margin-left: -160px !important;
     }
 
     .llc {

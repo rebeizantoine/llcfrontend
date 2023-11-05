@@ -311,7 +311,7 @@ hr {
     }
 
     .social-icons {
-        margin-left: 450px;
+        margin-left: 0px;
     }
 
     .final {
@@ -422,6 +422,18 @@ hr {
         height: 50px;
     }
 
+    .social-icons {
+        margin-left: 50% !important;
+    }
+
+    .social-icons li {
+
+        display: inline-block;
+        margin-right: 80px !important;
+
+    }
+
+
     .sub-stat-container p {
         font-size: x-large;
         margin: 20px;
@@ -466,7 +478,7 @@ hr {
     }
 
     .final {
-        margin-left: 45%;
+        margin-left: 35%;
     }
 }
 
@@ -481,8 +493,20 @@ hr {
         margin-left: 80px;
     }
 
+    .social-icons {
+        display: block;
+        margin-left: 50px !important;
+    }
+
+    .social-icons li {
+
+        display: inline-block;
+        margin-right: 50px !important;
+
+    }
+
     .social-container {
-        margin-left: 80px;
+        margin-left: 80px !important;
     }
 
     .footer {
@@ -521,7 +545,7 @@ hr {
 
     .CI {
         width: 390px;
-        margin-left: 0;
+        margin-left: -5px;
 
     }
 

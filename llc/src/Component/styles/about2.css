@@ -129,6 +129,10 @@
         justify-content: center;
     }
 
+    #third {
+        margin-left: 25px;
+    }
+
     .student-about {
         display: block;
         gap: 10px;
@@ -160,10 +164,15 @@
     .header1 h2 {
         width: 280px;
         margin-left: 40px;
+        margin-bottom: 60px;
     }
 
     .student-about {
         margin-top: -50px;
+    }
+
+    #third {
+        margin-left: 35px;
     }
 
     .all1 {

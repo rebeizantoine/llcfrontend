@@ -70,17 +70,17 @@ html {
     width: 400px;
 }
 
-.img-language-eng {
+.img-language1-eng {
     width: 300px;
     height: 300px;
 }
 
-.img-language-fr {
+.img-language1-fr {
     width: 300px;
     height: 300px;
 }
 
-.img-language-dut {
+.img-language1-dut {
     width: 300px;
     height: 300px;
 }
@@ -145,6 +145,20 @@ html {
         line-height: normal;
     }
 
+    .language1 {
+        width: 600px !important;
+        align-items: center;
+    }
+
+    .descriptionf1 {
+        margin-left: 140px;
+    }
+
+    .name-language1 {
+        margin-left: 50px;
+    }
+
+
     .view-all-courses {
         width: 252px;
         height: 50px;
@@ -200,15 +214,15 @@ html {
         width: 320px;
     }
 
-    .img-language-eng {
+    .img-language1-eng {
         width: 290px;
     }
 
-    .img-language-fr {
+    .img-language1-fr {
         width: 290px;
     }
 
-    .img-language-dut {
+    .img-language1-dut {
         width: 300px;
     }
 
@@ -221,11 +235,32 @@ html {
     .courses-language {
         height: 1700px;
         margin-left: 0px !important;
+        margin-top: 50px !important;
+        padding-bottom: 30px;
+    }
+
+    .language1 img {
+        margin-left: 0px;
+        width: 300px;
+
     }
 
     .language1 {
-        margin-left: 0px;
-
+        width: 330px !important;
+        align-items: center;
     }
+
+    .descriptionf1 {
+        margin-left: 10px;
+    }
+
+    .name-language1 {
+        margin-left: -40px;
+    }
+
+    .enrollf1 {
+        width: 100%;
+    }
+
 
 }
