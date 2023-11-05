@@ -1,222 +1,134 @@
-.afterLoginPageTeacher {
-    background-color: #FAF4F1;
-    padding-bottom: 50px;
-}
-
-.profileTeacher {
-    margin-left: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.logout-button-teacher {
-    margin-left: 0px;
-    position: absolute;
-
-}
-
-.cercle {
-    width: 150px;
-    height: 150px;
-}
-
-.portrait {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: rgb(145, 135, 135);
-    margin-top: 50px;
-}
-
-.teacherInfos {
-    margin-right: 800px;
-    width: 300px;
-    margin-top: 40px;
-}
-
-.teacherName {
-    color: #5c5454;
-    font-size: xx-large;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.backToHomepage h1 {
-    font-size: 50px;
-    margin-top: 0;
-}
-
-.dashboardteacher {
-    height: 100%;
-}
-
-.manageProfileTeacher {
-    background-color: #5c5454;
-    color: #FAF4F1;
-    border: none;
-    width: 150px;
-    height: 30px;
-}
-
-.manageProfileTeacher:hover {
-    color: #5c5454;
-    background-color: #FAF4F1;
-    cursor: pointer;
-
-}
-
-table {
-    border-collapse: collapse;
-    width: 400px;
-    /*border: 2px solid #5c5454;*/
-    background-color: white;
-}
-
-th,
-td {
-    padding: 8px;
-    border: none;
-    height: 20px;
-}
-
-td {
-    padding: 8px;
-    border-bottom: 2px solid #5c5454;
-}
-
-.fonctionsTeachers {
-    margin-top: 100px;
-    margin-left: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.assignments {
-    margin-top: -35px;
-}
-
-.ass {
-    display: flex;
-    font-size: 25px;
-}
-
-.createAssignments {
-    margin-left: 170px;
-    margin-top: 25px;
-    width: 100px;
-    height: 30px;
-    background-color: #5c5454;
-    color: #FAF4F1;
-    border: none;
-    cursor: pointer;
-}
-
-.createAssignments:hover {
-    color: #5c5454;
-    background-color: #FAF4F1;
-}
-
-.premier-row {
-    text-align: center;
-    border-bottom: 2px solid #5c5454;
-    background-color: #5c5454;
-    color: #FAF4F1;
-
-}
-
-.img-languge-education {
-    width: 400px;
-    background-color: #5c5454;
-    height: 190px;
-}
-
-.liveClass {
-    margin-top: 50px;
-}
-
-.students-education {
-    margin-top: 35px;
-    font-size: 25px;
-    color: #5c5454;
-}
-
-#std {
-    width: 200px;
-    height: 160px;
-    background-color: #5c5454;
-}
-
-#std option {
+.teacher-dashboard {
     padding: 20px;
-    line-height: 20px;
-    color: #FAF4F1;
+
 }
 
-#std option:checked {
-    background-color: #FAF4F1;
-    color: #5c5454;
+.teacher-container123 {
+    background: linear-gradient(180deg, #99D6C8 0%, rgba(6, 29, 33, 0.00) 100%);
+
+
 }
 
-#std option:hover {
-    background-color: #FAF4F1;
-    color: #5c5454;
+.h1-llc-teacher {
+    font-size: 50px;
+    color: orange;
+    margin-top: 0px;
 }
 
-@media(max-width:800px) {
-    .afterLoginPageTeacher {
-        margin: 0px;
+.h1-llc-teacher:hover {
+    text-decoration: underline;
+}
+
+.logout-image2 {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+
+
+}
+
+
+
+.logout-image2:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover */
+    border: 1px 0px 0px 0px solid grey;
+    /* Add a border on hover */
+    box-shadow: 0px 0px 5px 2px #9B6C1B;
+    /* Add a shadow effect on hover */
+}
+
+
+.dashboard-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.user-profile-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.course-data-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.time123 {
+    width: 50px;
+}
+
+.user-info-container {
+    margin-bottom: 10px;
+    display: flex;
+    border: 3px solid gold;
+    justify-content: center;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.container122 {
+    background: linear-gradient(180deg, #99D6C8 0%, rgba(6, 29, 33, 0.00) 100%);
+
+}
+
+.user-info {
+    font-size: 20px;
+}
+
+.loading-message {
+    font-size: 16px;
+}
+
+.course-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+course-schedule-table th,
+.course-schedule-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    width: 300px;
+}
+
+course-schedule-table th {
+    background-color: #f5f5f5;
+}
+
+.course-schedule-container {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-info label {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    course-schedule-table {
+        font-size: 14px;
     }
 
-    .profileTeacher {
-        margin-left: 10px;
-    }
-
-    .portrait {
-        width: 120px;
-        height: 120px;
-    }
-
-    .teacherInfos {
-        margin-left: 10px;
-        font-size: 30px;
-        margin-top: 15px;
-    }
-
-    .manageProfileTeacher {
-        padding-bottom: -30px;
-    }
-
-    .fonctionsTeachers {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        margin-left: 0px;
-    }
-
-    .img-languge-education {
-        margin-bottom: 100px;
-        width: 320px;
-        margin-left: 10px;
-    }
-
-    #table {
-        width: 300px;
-        margin-left: -2px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .createAssignments {
-        margin-left: 60px;
-    }
-
-    .assignments {
-        margin-left: 20px;
-    }
-
-    .liveClass {
-        margin-left: 20px;
-    }
-
-    .students-education {
-        margin-left: Â 20px;
+    course-schedule-table th,
+    course-schedule-table td {
+        padding: 8px;
     }
 }

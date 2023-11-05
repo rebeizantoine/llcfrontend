@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import Login from "./Component/comp/login";
 import Footer from "./Component/comp/footer";
-import Courses from "./Component/comp/popular";
+import Popular from "./Component/comp/popular";
 import Contact from "./Component/comp/Contactus";
 import AllCourses from "./Component/comp/view-all-courses";
 import Dashboard from "./Component/comp/Dashboard";
@@ -19,11 +19,12 @@ import Register from "./Component/comp/register";
 import Section from "./Component/comp/section";
 import Hero from "./Component/comp/hero";
 import DashboardStudent from "./Component/comp/Dashboardstudent";
-import DashboardTeacher from "./Component/comp/Dashoardteacher";
+import DashboardTeacher from "./Component/comp/Dashboardteacher";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./Component/comp/ProtectedRoute";
 import MainDash from "./Component/comp/maindashboard";
+
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
                 <Hero />
                 <Section />
                 <About />
-                <Courses />
+                <Popular />
                 <Testimonial />
                 <ToastContainer />
                 <Footer />
@@ -47,8 +48,9 @@ function App() {
           ></Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/all-courses" element={<AllCourses />} />
+          <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/teacher" element={<DashboardTeacher />} />
           <Route
             path="/dash/*"
             element={

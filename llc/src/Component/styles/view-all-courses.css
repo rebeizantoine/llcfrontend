@@ -1,5 +1,8 @@
 .popular-courses {
     background-color: #faf4f1;
+    margin-top: -30px;
+
+
 }
 
 .roboto {
@@ -71,12 +74,29 @@
     color: #FAF4F1;
 }
 
+.logout-image12 {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.logout-image12:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover */
+    border: 1px 0px 0px 0px solid grey;
+    /* Add a border on hover */
+    box-shadow: 0px 0px 5px 2px #9B6C1B;
+    /* Add a shadow effect on hover */
+}
+
 .courses-language {
     margin: 30px;
     display: flex;
     direction: row;
     margin-right: 20px;
-    background-color: #faf4f1;
     margin-top: -120px;
     margin-left: 7%
 }
@@ -104,17 +124,57 @@
     background-color: white;
 }
 
+.courses123 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.language1 {
+    width: calc(47.33% - 10px);
+    /* 33.33% width for each course with 10px margin */
+    margin-bottom: 20px;
+    /* Add some vertical spacing between courses */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width */
+    margin-left: 16px;
+    border: 1px solid #ccc;
+    background-color: #FFF;
+
+}
+
+.img-language {
+    max-width: 100%;
+    /* Ensure the image fits within its container */
+}
+
+.img-language:hover {
+    width: 600px;
+}
+
+.title123 h1 {
+    font-size: 60px;
+    color: #FFBF52;
+
+}
+
+.title123 h1:hover {
+    text-decoration: underline;
+}
+
 .name-language {
     width: 392.069px;
     height: 71.858px;
     flex-shrink: 0;
-    color: #000;
+    color: #FFBF52;
     font-family: Roboto;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-align: center;
+    margin-left: 110px;
+    margin-top: 11px;
 }
 
 .descriptionf {
@@ -129,7 +189,7 @@
     line-height: normal;
     margin-top: -50px;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 170px;
 }
 
 .enrollf {

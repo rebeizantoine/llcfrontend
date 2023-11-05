@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import StudentComponent from "./Dashboardstudent";
-import TeacherComponent from "./Dashoardteacher";
+import TeacherComponent from "./Dashboardteacher";
 import Dashboard from "./Dashboard";
 
 const Dash = () => {

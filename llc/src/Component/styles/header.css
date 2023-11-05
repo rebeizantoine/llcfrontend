@@ -13,8 +13,8 @@
     display: flex;
 }
 
-.llc {
-    margin-top: -37px;
+.llc a {
+    margin-top: -40px;
     width: 127px;
     height: 65px;
     flex-shrink: 0;
@@ -24,6 +24,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.llc a:hover {
+    color: orange;
+    text-decoration: underline;
 }
 
 .main1 {
@@ -43,6 +48,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 25px;
 }
 
 .llc-header p a {
@@ -85,11 +91,11 @@ a {
 }
 
 .orange-line {
-    width: 149px;
+    width: 100px;
     height: 9px;
     background: #FFBF52;
-    margin-left: 30px;
-    margin-top: 400px;
+    margin-left: 0px;
+    margin-top: 380px;
 }
 
 .modern {

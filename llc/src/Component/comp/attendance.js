@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/attendance.css'; // Import the CSS file
+import '../styles/attendance.css'
 
 const TeacherAttendance = () => {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -23,8 +23,8 @@ const TeacherAttendance = () => {
 
   const handleAttendanceChange = async (id, newValue) => {
     const endpoint = newValue === '1'
-      ? `http://localhost:8000/user/updateActivationforuser/${id}`
-      : `http://localhost:8000/user/updateActivationforuserneg/${id}`;
+      ? `http://localhost:8000/user/updateTeacherAttendance/${id}`
+      : `http://localhost:8000/user/updateTeacherAttendanceneg/${id}`;
 
     try {
       await axios.put(endpoint, {
@@ -39,6 +39,7 @@ const TeacherAttendance = () => {
         }
         return item;
       });
+
       setAttendanceData(updatedData);
     } catch (error) {
       console.error('Error updating attendance:', error);
@@ -95,5 +96,6 @@ const TeacherAttendance = () => {
     </div>
   );
 }
+
 
 export default TeacherAttendance;

@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/contact-us.css';
 import Header from '../comp/header';
+import telephone from '../images/telephone123.png'
 const Contact = () => {
     const form = useRef()
 
@@ -28,8 +29,8 @@ const Contact = () => {
                         <div class="name">
                             <label class="labelf" id='namef'>NAME</label>
                             <div>
-                                <input className='inputf12' type="text" id="first-name" name="user_name" required placeholder='first' />
-                                <input className='inputf12' type="text" id="last-name" name="user_lastname" required placeholder='last' />
+                                <input className='inputf12' type="text" id="first-name" name="user_name" required placeholder='FIRST' />
+                                <input className='inputf12' type="text" id="last-name" name="user_lastname" required placeholder='LAST' />
                             </div>
                         </div>
 
@@ -55,7 +56,7 @@ const Contact = () => {
                 </form>
                 <div class="textf">
                     <h2 class="contain1">Feel free to contact
-                        me for any questions
+                        us for any questions
                         and doubts</h2>
 
                     <h3 class="contain2">Vulputate egestas nullam volutpat diam nisi at venenatis<br />
@@ -66,14 +67,23 @@ const Contact = () => {
                         purus est purus gravida nibh odio ante.</p>
                     <hr class="linef" />
                     <div className="social-container">
-                        <ul className="social-icons">
+                        <ul className="social-icons1">
                             <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                             <li><a href="#"><i className="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i className="fa fa-youtube"></i></a></li>
                         </ul>
                     </div>
+
                 </div>
             </div>
+            <div className='bottom-img'>
+                <img src={telephone} alt="" />
+            </div>
+            <div className="final1">
+                <p>Powered by LLC-© 2023 LLC</p>
+
+            </div>
+
         </div>
 
     )
