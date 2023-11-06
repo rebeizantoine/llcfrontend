@@ -123,7 +123,7 @@ const Popular = () => {
                 <div className="courses-language">
                     {courses.map(course => (
                         <div className="language1" key={course.course_id}>
-                            <img src={course.languageimage} alt={course.title} className="img-language" />
+                            <img src={course.languageimage} alt={course.title} className="img-language1" />
                             <p className="name-language1">{course.title}</p>
                             <p className="descriptionf1">{course.description}</p>
                             <button className="enrollf1" onClick={() => handleEnroll(course)}>ENROLL NOW</button>
