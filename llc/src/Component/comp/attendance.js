@@ -9,7 +9,7 @@ const TeacherAttendance = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:8000/user/getTeacherAtendance');
+        const response = await axios.get('/user/getTeacherAtendance');
         setAttendanceData(response.data.data);
         setLoading(false);
       } catch (error) {
@@ -23,8 +23,8 @@ const TeacherAttendance = () => {
 
   const handleAttendanceChange = async (id, newValue) => {
     const endpoint = newValue === '1'
-      ? `http://localhost:8000/user/updateTeacherAttendance/${id}`
-      : `http://localhost:8000/user/updateTeacherAttendanceneg/${id}`;
+      ? `/user/updateTeacherAttendance/${id}`
+      : `/user/updateTeacherAttendanceneg/${id}`;
 
     try {
       await axios.put(endpoint, {

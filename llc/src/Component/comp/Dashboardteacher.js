@@ -19,7 +19,7 @@ function TeacherDashboard() {
             const user_id = localStorage.getItem("user_id");
             try {
                 const response = await fetch(
-                    `http://localhost:8000/user/getEnrolled/${user_id}`
+                    `/user/getEnrolled/${user_id}`
                 );
                 const data = await response.json();
                 if (data.success) {
@@ -40,7 +40,7 @@ function TeacherDashboard() {
             try {
                 for (const courseId of courses) {
                     const response = await fetch(
-                        `http://localhost:8000/user/getCourseLanWhere/${courseId}`
+                        `/user/getCourseLanWhere/${courseId}`
                     );
                     const data = await response.json();
                     if (data.success && data.data.length > 0) {
@@ -70,7 +70,7 @@ function TeacherDashboard() {
             try {
                 for (const course of courseDetails) {
                     const response = await fetch(
-                        `http://localhost:8000/user/getscheduleWhere/${course.course_id}`
+                        `/user/getscheduleWhere/${course.course_id}`
                     );
                     const data = await response.json();
                     if (data.success) {
@@ -108,7 +108,7 @@ function TeacherDashboard() {
         const user_id = localStorage.getItem("user_id");
 
         if (user_id) {
-            fetch(`http://localhost:8000/user/getEnrolled/${user_id}`)
+            fetch(`/user/getEnrolled/${user_id}`)
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
@@ -138,7 +138,7 @@ function TeacherDashboard() {
 
     useEffect(() => {
         if (courseId) {
-            fetch(`http://localhost:8000/user/getStudentEnrolled/${courseId}`)
+            fetch(`/user/getStudentEnrolled/${courseId}`)
                 .then((response) => {
                     if (response.ok) {
                         return response.json();

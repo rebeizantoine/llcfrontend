@@ -8,7 +8,7 @@ const EnrollCourse = () => {
 
 
 
-    axios.get('http://localhost:8000/user/getCourseLan')
+    axios.get('/user/getCourseLan')
 
         .then(response => {
 
@@ -24,13 +24,13 @@ const EnrollCourse = () => {
 
                 const { course_id } = course;
 
-                axios.post(`http://localhost:8000/user/postEnrolled/${user_id}`, { course_id })
+                axios.post(`/user/postEnrolled/${user_id}`, { course_id })
 
                     .then(response => {
 
                         console.log(response.data);
 
-                        axios.get(`http://localhost:8000/user/getEnrolledWhere/${user_id}/${course_id}`)
+                        axios.get(`/user/getEnrolledWhere/${user_id}/${course_id}`)
 
                             .then(response => {
 
@@ -44,7 +44,7 @@ const EnrollCourse = () => {
 
 
 
-                                axios.get(`http://localhost:8000/user/getscheduleWhere/${course_id}`)
+                                axios.get(`/user/getscheduleWhere/${course_id}`)
 
                                     .then(response => {
 
@@ -56,7 +56,7 @@ const EnrollCourse = () => {
 
 
 
-                                        axios.post(`http://localhost:8000/user/post/${enroll_id}/${schedule_id}`)
+                                        axios.post(`/user/post/${enroll_id}/${schedule_id}`)
 
                                             .then(response => {
 

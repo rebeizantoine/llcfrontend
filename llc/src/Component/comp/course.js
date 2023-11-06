@@ -24,7 +24,7 @@ const Course = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/user/getCourseLan')
+      .get('/user/getCourseLan')
       .then((response) => {
         const courseData = response.data.data;
 
@@ -51,7 +51,7 @@ const Course = () => {
       });
 
     axios
-      .get('http://localhost:8000/user/getActiveTeacher')
+      .get('/user/getActiveTeacher')
       .then((response) => {
         const teacherData = response.data.data;
 
@@ -70,7 +70,7 @@ const Course = () => {
       });
 
     axios
-      .get('http://localhost:8000/user/getAllLanguage')
+      .get('/user/getAllLanguage')
       .then((response) => {
         setLanguages(response.data.data);
       })
@@ -107,17 +107,17 @@ const Course = () => {
 
   const handleEnroll = async () => {
     try {
-      const postUrl = `http://localhost:8000/user/postEnrolled/${selectedTeacher}/${selectedCourse}`;
+      const postUrl = `/user/postEnrolled/${selectedTeacher}/${selectedCourse}`;
       const enrollResponse = await axios.post(postUrl);
       console.log(enrollResponse.data);
 
-      const getUrl = `http://localhost:8000/user/getEnrolledWhere/${selectedTeacher}/${selectedCourse}`;
+      const getUrl = `/user/getEnrolledWhere/${selectedTeacher}/${selectedCourse}`;
       const enrollCheckResponse = await axios.get(getUrl);
 
       if (enrollCheckResponse.data.success && enrollCheckResponse.data.data.length > 0) {
         console.log("Enroll ID:", enrollCheckResponse.data.data[0].enroll_id);
 
-        const scheduleUrl = `http://localhost:8000/user/getscheduleWhere/${selectedCourse}`;
+        const scheduleUrl = `/user/getscheduleWhere/${selectedCourse}`;
         console.log("Schedule URL:", scheduleUrl);
 
         const scheduleResponse = await axios.get(scheduleUrl);
@@ -129,7 +129,7 @@ const Course = () => {
 
           const enrollId = enrollCheckResponse.data.data[0].enroll_id;
           const scheduleId = scheduleResponse.data.data[0].schedule_id;
-          const postEnrollAndScheduleUrl = `http://localhost:8000/user/post/${enrollId}/${scheduleId}`;
+          const postEnrollAndScheduleUrl = `/user/post/${enrollId}/${scheduleId}`;
           const postResponse = await axios.post(postEnrollAndScheduleUrl);
           console.log("Post Response:", postResponse.data);
         } else {
@@ -168,7 +168,7 @@ const Course = () => {
     };
 
     axios
-      .post('http://localhost:8000/user/postCourse', newCourse)
+      .post('/user/postCourse', newCourse)
       .then((response) => {
         alert('New course added successfully');
       })
@@ -194,7 +194,7 @@ const Course = () => {
     });
 
     axios
-      .get('http://localhost:8000/user/getCourseLan')
+      .get('/user/getCourseLan')
       .then((response) => {
         const courseData = response.data.data;
         if (Array.isArray(courseData)) {
