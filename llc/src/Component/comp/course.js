@@ -300,38 +300,40 @@ const Course = () => {
         </div>
         <button type="submit">Add Course</button>
       </form>
-      <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}><h2 className='h2-modal'>Assign the Course To a Teacher</h2></ModalHeader>
-        <ModalBody className='modal-body'>
-          <p><h3 className='h3-modal'>Select a Course:</h3></p>
-          <select className="select-dropdown" value={selectedCourse} onChange={handleCourseChange}>
-            <option value="">Select a course</option>
-            {courses.map((course) => (
-              <option key={course.course_id} value={course.course_id}>
-                {`${course.level} - ${course.title}`}
-              </option>
-            ))}
-          </select>
+      <div className='modal-container'>
+        <Modal className='modal1' isOpen={modal} toggle={toggle}>
+          <ModalHeader toggle={toggle}><h2 className='h2-modal1'>Assign the Course To a Teacher</h2></ModalHeader>
+          <ModalBody className='modal1-body'>
+            <p><h3 className='h3-modal1'>Select a Course:</h3></p>
+            <select className="select-dropdown" value={selectedCourse} onChange={handleCourseChange}>
+              <option value="">Select a course</option>
+              {courses.map((course) => (
+                <option key={course.course_id} value={course.course_id}>
+                  {`${course.level} - ${course.title}`}
+                </option>
+              ))}
+            </select>
 
-          <p><h3 className='h3-modal'>Select a Teacher:</h3></p>
-          <select className="select-dropdown" value={selectedTeacher} onChange={handleTeacherChange}>
-            <option value="">Select a teacher</option>
-            {teachers.map((teacher) => (
-              <option key={teacher.user_id} value={teacher.user_id}>
-                {teacher.email}
-              </option>
-            ))}
-          </select>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="secondary" className='cancel-button' onClick={toggle}>
-            Cancel
-          </Button>
-          <Button color="primary" className='save-button' onClick={handleEnroll}>
-            Save
-          </Button>
-        </ModalFooter>
-      </Modal>
+            <p><h3 className='h3-modal1'>Select a Teacher:</h3></p>
+            <select className="select-dropdown" value={selectedTeacher} onChange={handleTeacherChange}>
+              <option value="">Select a teacher</option>
+              {teachers.map((teacher) => (
+                <option key={teacher.user_id} value={teacher.user_id}>
+                  {teacher.email}
+                </option>
+              ))}
+            </select>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" className='cancel-button' onClick={toggle}>
+              Cancel
+            </Button>
+            <Button color="primary" className='save-button' onClick={handleEnroll}>
+              Save
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
     </div>
   );
 };

@@ -29,8 +29,8 @@
     line-height: normal;
 }
 
-/* Style the modal */
-.modal {
+/* Style the modal1 */
+.modal1 {
     position: absolute;
     top: -950px !important;
     /* Adjust the top position as needed */
@@ -46,7 +46,7 @@
     z-index: 1;
 }
 
-.h2-modal {
+.h2-modal1 {
     font-size: 26px;
     color: orange;
     margin-left: 20px;
@@ -62,7 +62,7 @@
     margin-left: -40px;
 }
 
-.modal-body {
+.modal1-body {
     margin-top: -50px;
     margin-left: 120px;
 }
