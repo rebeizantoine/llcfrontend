@@ -220,7 +220,7 @@ function TeacherDashboard() {
                                     {courseData.data.map((student, index) => (
                                         <div key={index} className="user-info-container">
                                             <p className="user-info">Email: {student.email}</p>
-                                            <p className="user-info">&amp Course ID: {student.course_id}</p>
+                                            <p className="user-info">Course ID: {student.course_id}</p>
                                         </div>
                                     ))}
                                 </div>

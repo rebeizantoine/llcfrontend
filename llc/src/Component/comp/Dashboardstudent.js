@@ -153,7 +153,8 @@ function DashboardStudent() {
     return (
         <div className="sh1">
             <h1 className='h1-llc'><a href='/'>LLC</a></h1>
-            <h2>My courses</h2>
+            <h2>My Schedule</h2>
+
             <img className='logout-image1' onClick={handleLogout} src={logout1} />
             <div className="container6">
                 <Slider {...sliderSettings}>
@@ -231,6 +232,8 @@ function DashboardStudent() {
                         ))}
                     </tbody>
                 </table>
+                <div className='my-courses'><h2 >My Courses</h2></div>
+
             </div>
         </div>
     );
