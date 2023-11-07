@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Component/styles/App.css";
 import About from "./Component/comp/About";
 import Header from "./Component/comp/header";
+import { Helmet } from 'react-helmet';
 import Testimonial from "./Component/comp/Testimonial";
 import {
   BrowserRouter as Router,
@@ -24,10 +25,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./Component/comp/ProtectedRoute";
 import MainDash from "./Component/comp/maindashboard";
-
+import image1 from './Component/images/imagehero1.png';
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Language Learning Center</title>
+        <link rel="icon" href="https://i.ibb.co/gVRfV8S/imagehero1.png" type="image/x-icon" />
+      </Helmet>
       <Router>
         <Routes>
           <Route
@@ -49,7 +54,6 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/teacher" element={<DashboardTeacher />} />
           <Route
             path="/dash/*"
             element={
