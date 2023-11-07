@@ -28,7 +28,7 @@ function Dashboard() {
         <div className="menu-and-content">
 
             <div className="menu">
-                <h1 className='h1-top'>  <a href="/">LLC</a></h1>
+                <h1 className='h1-top'><a href="/">LLC</a></h1>
                 <div className="menu-content">
                     <div className='llctop'>
 

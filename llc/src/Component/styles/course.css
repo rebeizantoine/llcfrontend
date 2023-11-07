@@ -31,20 +31,23 @@
 
 /* Style the modal1 */
 .modal1 {
-    position: absolute;
-    top: -950px !important;
-    /* Adjust the top position as needed */
-    right: 0;
-    z-index: 2;
-    top: -910px;
-    right: 50px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Shift the modal left and up by half its width and height */
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 30.5%;
     height: 325px;
     background: #846F63;
-    z-index: 1;
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
+  
 
 .h2-modal1 {
     font-size: 26px;

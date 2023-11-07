@@ -25,7 +25,6 @@ import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./Component/comp/ProtectedRoute";
 import MainDash from "./Component/comp/maindashboard";
 
-
 function App() {
   return (
     <div className="App">

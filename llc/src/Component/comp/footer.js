@@ -55,17 +55,17 @@ function Footer() {
                 <div className="AM">
                     <h3 className="c2">About Me</h3>
                     <ul class="aboutme">
-                        <li>My Story</li>
-                        <li>My Expertise    </li>
+                        <li>Our Story</li>
+                        <li>Our Expertise    </li>
                         <li>Awards </li>
                         <li>News</li>
                     </ul>
                 </div>
                 <div className="MO">
-                    <h3 className="c3">My Offering</h3>
+                    <h3 className="c3">Our Offering</h3>
                     <ul class="offer">
-                        <li>Baking </li>
-                        <li>Virtual </li>
+                        <li>Speaking Lessons </li>
+                        <li>Speaking Lessons</li>
                         <li>Private Events</li>
                         <li>Gifts</li>
                     </ul>

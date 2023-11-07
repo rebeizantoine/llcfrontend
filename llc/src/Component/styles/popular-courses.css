@@ -55,7 +55,7 @@ html {
 }
 
 .courses-language {
-    margin: 30px;
+    margin: -20px;
     display: flex;
     direction: row;
     margin-right: 20px;
@@ -63,6 +63,29 @@ html {
     margin-top: -120px;
 }
 
+.centered-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+;
+    background-color: #fff; 
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 500px; 
+    width: 100%;
+}
+.centered-modal select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.centered-modal .modal-content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
 .language1 {
     background-color: white;
     margin-right: 30px;

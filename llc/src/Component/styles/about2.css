@@ -1,4 +1,4 @@
-.header1 {
+.header {
     color: #000;
     text-align: center;
     font-family: Fraunces;
@@ -9,13 +9,11 @@
     letter-spacing: 3.84px;
     width: 776px;
     justify-content: center;
-    margin-left: 270px;
-}
+    margin-left: 300px;
 
-.header1 h2 {
-    width: 800px;
-}
 
+
+}
 
 .container {
     justify-content: center;
@@ -23,7 +21,6 @@
     height: auto;
     justify-content: space-between;
     margin-left: -6px;
-    flex-wrap: wrap;
 }
 
 
@@ -82,14 +79,12 @@
     margin-top: 10%;
     justify-content: space-between;
     height: 500px;
-    margin-left: -50px;
+    margin-left: -80px;
 }
 
 .student-about {
     display: flex;
     width: 350px;
-    margin-left: 7%;
-
 }
 
 .right {
@@ -101,7 +96,7 @@
     height: 500px;
 }
 
-@media (max-width: 864px) {
+@media (max-width: 860px) {
     .right {
         margin-left: 40px;
     }
@@ -114,7 +109,7 @@
         margin-left: 0%;
     }
 
-    .header1 {
+    .header {
         margin-left: -20px;
         margin-right: 320px;
         color: #000;
@@ -129,148 +124,12 @@
         justify-content: center;
     }
 
-    #third {
-        margin-left: 25px;
-    }
-
     .student-about {
         display: block;
         gap: 10px;
     }
 
     #second {
-        margin-top: -400px;
-    }
-
-    .right {
-        margin-bottom: 0;
-        height: 300px;
-        margin-top: -8%;
-    }
-
-    .left {
-        margin-bottom: 0;
-        height: 300px;
-    }
-}
-
-@media (max-width:400px) {
-    .header1 {
-        width: 390px;
-        font-size: 24px;
-        margin-top: -40px;
-    }
-
-    .header1 h2 {
-        width: 280px;
-        margin-left: 40px;
-        margin-bottom: 60px;
-    }
-
-    .student-about {
-        margin-top: -50px;
-    }
-
-    #third {
-        margin-left: 35px;
-    }
-
-    .all1 {
-        width: 390px;
-        margin-left: 0;
-    }
-
-    .right {
-        margin-left: 40px;
-        width: 390px;
-        height: 500px;
-    }
-
-    .left {
-        margin-left: 0%;
-        width: 390px;
-        height: 500px;
-    }
-
-    .container {
-        margin-left: 0%;
-    }
-
-    .student-about {
-        display: block;
-        gap: 10px;
-    }
-
-    #second {
-        margin-top: 0px;
-    }
-
-    .right {
-        margin-bottom: 0;
-        height: 300px;
-        margin-top: 0%;
-    }
-
-    .left {
-        margin-bottom: 0;
-        height: 300px;
-        margin-left: -40px;
-    }
-
-    #first p {
-        margin-left: -20px;
-        width: 290px;
-        margin-top: -100px;
-    }
-
-    #first .text2 {
-        margin-top: -10px;
-    }
-
-    .text2 p {
-        margin-top: 50px;
-    }
-
-    #second p {
-        margin-left: -20px;
-        width: 290px;
-        margin-top: -30px;
-    }
-
-    #third {
-        width: 370px;
-    }
-
-    #third p {
-        margin-left: 0px;
-        width: 290px;
-        margin-top: 0px;
-    }
-
-    #third img {
-        margin-top: 105px;
-        margin-left: -70px;
-    }
-
-    #fourth {
-        display: none;
-    }
-
-    #second p {
-        margin-left: 0px;
-        width: 290px;
-        margin-top: -120px !important;
-    }
-
-    #second img {
-        margin-top: 0px;
-    }
-
-    #second .text2 {
-        margin-top: -8px !important;
-    }
-
-    #third .text2 {
-        margin-top: -10px;
+        margin-top: -600px;
     }
 }

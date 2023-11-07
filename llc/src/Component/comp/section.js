@@ -27,7 +27,7 @@ function Section() {
   useEffect(() => {
     // Start counting animations when the component mounts
     startCountAnimation("trainerCount", 15, 1); // 1 seconds duration
-    startCountAnimation("studentCount", 55, 1); // 1 seconds duration
+    startCountAnimation("studentCount", 105, 1); // 1 seconds duration
     startCountAnimation("coursesCount", 16, 1); // 1 seconds duration
     startCountAnimation("projectsCount", 65, 1); // 1 seconds duration
     // Repeat this for other statistics as needed
@@ -44,7 +44,7 @@ function Section() {
             <p>
               <span id="trainerCount">0</span>
             </p>
-            <button>Trainer</button>
+            <button>Trainers</button>
           </div>
           <div>
             <section className="image-section">
@@ -53,7 +53,7 @@ function Section() {
             <p>
               <span id="studentCount">0</span>
             </p>
-            <button>Student</button>
+            <button>Students</button>
           </div>
         </div>
 
