@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import '../styles/view-all-courses.css';
 import logout1 from '../images/logout1.png';
+import Happy from '../images/happy1.png'
 
 import English from '../images/english.png';
 
@@ -266,7 +267,7 @@ const AllCourses = () => {
                 <div className='title123'><h1><a href="/">LLC</a></h1></div>
                 <img className='logout-image12' onClick={handleLogout} src={logout1} />
 
-                <p className="roboto">Popular courses</p>
+                <p className="roboto">Our courses</p>
 
                 <p className="medium">Mi mattis tortor dolor vitae congue purus mi imperdiet<br />
 
@@ -274,9 +275,10 @@ const AllCourses = () => {
 
                 <Link to="/AllCourses">
 
-                    <button className="view-all-coursess">VIEW ALL COURSES</button>
+                    <button className="view-all-coursess1">VIEW ALL COURSES</button>
 
                 </Link>
+                <div className='happy123'> <img src={Happy} alt="" /></div>
 
                 <div className="courses123">
 

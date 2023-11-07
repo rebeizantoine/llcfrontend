@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/Dashboardteacher.css'
 import logout1 from '../images/logout1.png';
+import Welcome1 from '../images/welcome1.png'
+import Welcome2 from '../images/welcome2.png'
 
 function TeacherDashboard() {
     const [userData, setUserData] = useState(null);
@@ -159,6 +161,7 @@ function TeacherDashboard() {
     return (
         <>
             <div className="teacher-container123">
+                <div className="welcome1"><img src={Welcome1} alt="" /></div>
                 <div className="teacher-dashboard">
                     <h1 className='h1-llc-teacher'><a href='/'>LLC</a></h1>
                     <h1 className="dashboard-title">Course Schedule</h1>

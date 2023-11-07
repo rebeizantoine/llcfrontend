@@ -27,7 +27,7 @@ const Contact = () => {
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"></link>
                     <div class="contact-information">
                         <div class="name">
-                            <label class="labelf" id='namef'>NAME</label>
+                            <label class="labelf" id='namef'>NAME <div className='dota'>*</div></label>
                             <div>
                                 <input className='inputf12' type="text" id="first-name" name="user_name" required placeholder='FIRST' />
                                 <input className='inputf12' type="text" id="last-name" name="user_lastname" required placeholder='LAST' />
@@ -36,19 +36,19 @@ const Contact = () => {
 
 
                         <div class="email">
-                            <label class="labelf">EMAIL</label>
+                            <label class="labelf" id='emailfff'>EMAIL<div className='dota1'>*</div></label>
                             <input className='inputf12' type="text" id="emailf" name="user_email" required />
                         </div>
 
 
                         <div class="subject">
-                            <label class="labelf">SUBJECT</label>
+                            <label class="labelf" id='subjectfff'>SUBJECT </label>
                             <input className='inputf12' type="text" id="subjectf" name="subject" required />
                         </div>
 
 
                         <div class="message">
-                            <label class="labelf">MESSAGE</label>
+                            <label class="labelf" id='messagefff'>MESSAGE<div className='dota2'>*</div></label>
                             <textarea id="messagef" name="message" className='inputf12' required></textarea>
                         </div>
                         <button class="submitf">Submit</button>

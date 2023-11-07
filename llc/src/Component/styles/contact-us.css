@@ -6,6 +6,7 @@
     z-index: 5;
 }
 
+
 .textf {
     margin-left: -1120px;
     margin-top: 30px;
@@ -19,6 +20,32 @@
     margin-left: 600px;
     padding: 50px;
     border-radius: 20%;
+}
+
+.dota {
+    width: 20px;
+    height: 20px;
+    margin-left: 440px;
+    margin-top: -20px;
+    color: #F00;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dota1 {
+    width: 20px;
+    height: 20px;
+    margin-left: 450px;
+    margin-top: -20px;
+    color: #F00;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .contain1 {
@@ -227,6 +254,331 @@
 
 }
 
+
+
+@media (min-width:401px)and (max-width:864px) {
+    .contact-me {
+        margin-top: -800px;
+        margin-left: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+
+
+    .contact-information {
+        margin: 0px;
+        padding-left: 20px;
+        text-align: center;
+        border-radius: 20px;
+        width: 250px;
+    }
+
+    #first-name {
+        margin-top: -10px;
+    }
+
+    .bottom-img img {
+
+        display: none;
+
+    }
+
+    #last-name {
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+
+    }
+
+
+
+    #messagef {
+        width: 290px !important;
+    }
+
+    .submitf {
+        margin-left: 35%;
+    }
+
+    .textf {
+        margin: 0px;
+        padding: 0px;
+        width: 400px;
+        margin-top: -670px;
+        margin-left: 390px;
+    }
+
+    #namef {
+        margin-left: 0px !important;
+
+    }
+
+    #emailfff {
+        margin-left: 0px !important;
+        margin-bottom: 0px;
+        margin-right: 200px !important;
+    }
+
+    #messagefff {
+        margin-left: -0px !important;
+        margin-right: 200px !important;
+    }
+
+    #subjectfff {
+        margin-left: 10px !important;
+        margin-bottom: 0px;
+    }
+
+    .final1 {
+        margin-left: 300px !important;
+    }
+
+    .contain1 {
+        margin-left: -20px !important;
+    }
+
+    .contain1 {
+        font-size: x-large;
+    }
+
+    .contain2 {
+        margin-left: 00px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contain3 {
+        margin-left: 00px;
+    }
+
+    .labelf {
+        margin-left: 0 !important;
+        margin-right: 300px !important;
+    }
+
+    .inputf12 {
+        width: 260px;
+        margin-left: -15px;
+    }
+
+    #first-name {
+        width: 250px !important;
+    }
+
+    #last-name {
+        width: 250px !important;
+        margin-left: -260px !important;
+        margin-top: 40px !important;
+    }
+
+    #last-name {
+        margin-left: 160px;
+        margin-top: -35px;
+    }
+
+    .linef {
+        width: 380px;
+        margin-left: -8px;
+    }
+
+    .social-container {
+        margin-left: -300px;
+    }
+
+    .dota {
+        width: 20px;
+        height: 20px;
+        margin-left: 70px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dota1 {
+        width: 20px;
+        height: 20px;
+        margin-left: 70px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    .dota2 {
+        width: 20px;
+        height: 20px;
+        margin-left: 80px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+}
+
+@media (max-width:400px) {
+
+    .social-icons1 {
+
+
+        width: 380px !important;
+    }
+
+    .contact-me {
+        width: 380px;
+    }
+
+    .form {
+        width: 380px;
+    }
+
+    .textf {
+        width: 380px;
+    }
+
+    #first-name {
+        width: 260px !important;
+    }
+
+    #last-name {
+        width: 260px !important;
+    }
+
+    #messagefff {
+        margin-left: -150px !important;
+        max-width: 380px !important;
+    }
+
+    #messagef {
+        margin-left: -20px !important;
+        width: 380px;
+    }
+
+    #emailf {
+        margin-top: 0;
+    }
+
+    .contain1 {
+        margin-top: -770px !important;
+        margin-bottom: 750px;
+        max-width: 380px !important;
+    }
+
+    .contain2,
+    .contain3 {
+        display: none !important;
+    }
+
+    .form {
+        max-width: 380px;
+    }
+
+    .final1 {
+        margin-top: 450px;
+        width: 200px;
+        margin-left: 100px;
+    }
+
+    .contain2,
+    .contain3 {
+        width: 380px;
+        margin-left: 0px;
+    }
+
+    #messagef {
+        width: 310px !important;
+        margin-left: 0px;
+    }
+
+    .subject label {
+        margin-left: -200px;
+        margin-top: 0
+    }
+
+    .subject input {
+        margin-top: 0px !important;
+    }
+
+    .contact-information {
+        margin-top: 50px !important;
+    }
+
+    .email label {
+        margin-left: -220px;
+    }
+
+    .message label {
+        margin-left: -220px;
+    }
+
+    .social-icons1 {
+        margin-left: -150px !important;
+    }
+
+    .dota {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 300px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dota1 {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 270px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    .dota2 {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 300px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .textf {
+        max-width: 380px !important;
+    }
+
+
+
+}
+
 @media(max-width:800px) {
     .contact-me {
         margin-top: -800px;
@@ -322,189 +674,3 @@
         margin-left: -650px;
     }
 }
-
-
-@media (min-width:401px)and (max-width:864px) {
-    .contact-me {
-        margin-top: -800px;
-        margin-left: 0px;
-        padding: 0px;
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
-    }
-
-
-
-    .contact-information {
-        margin: 0px;
-        padding-left: 20px;
-        text-align: center;
-        border-radius: 20px;
-        width: 250px;
-    }
-
-    #first-name {
-        margin-top: -10px;
-    }
-
-    .bottom-img img {
-
-        display: none;
-
-    }
-
-    #last-name {
-        margin-top: 20px !important;
-        margin-left: 0px !important;
-
-    }
-
-
-
-    #messagef {
-        width: 290px !important;
-    }
-
-    .submitf {
-        margin-left: 35%;
-    }
-
-    .textf {
-        margin: 0px;
-        padding: 0px;
-        width: 400px;
-        margin-top: -670px;
-        margin-left: 390px;
-    }
-
-    .final1 {
-        margin-left: 300px !important;
-    }
-
-    .contain1 {
-        margin-left: -20px !important;
-    }
-
-    .contain1 {
-        font-size: x-large;
-    }
-
-    .contain2 {
-        margin-left: 00px;
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .contain3 {
-        margin-left: 00px;
-    }
-
-    .labelf {
-        margin-left: 0 !important;
-        margin-right: 300px !important;
-    }
-
-    .inputf12 {
-        width: 260px;
-        margin-left: -15px;
-    }
-
-    #first-name {
-        width: 250px !important;
-    }
-
-    #last-name {
-        width: 250px !important;
-    }
-
-    #last-name {
-        margin-left: 160px;
-        margin-top: -35px;
-    }
-
-    .linef {
-        width: 380px;
-        margin-left: -8px;
-    }
-
-    .social-container {
-        margin-left: -300px;
-    }
-
-
-}
-
-@media (max-width:400px) {
-
-    .social-icons1 {
-
-
-        width: 380px !important;
-    }
-
-    .contact-me {
-        width: 380px;
-    }
-
-    .form {
-        width: 380px;
-    }
-
-    .textf {
-        width: 380px;
-    }
-
-    #first-name {
-        width: 260px !important;
-    }
-
-    #last-name {
-        width: 260px !important;
-    }
-
-    #emailf {
-        margin-top: 0;
-    }
-
-    .final1 {
-        margin-top: 450px;
-        width: 200px;
-        margin-left: 100px;
-    }
-
-    .contain2,
-    .contain3 {
-        width: 380px;
-        margin-left: 0px;
-    }
-
-    #messagef {
-        width: 310px !important;
-        margin-left: 0px;
-    }
-
-    .subject label {
-        margin-left: -200px;
-        margin-top: 0
-    }
-
-    .subject input {
-        margin-top: 0px !important;
-    }
-
-    .email label {
-        margin-left: -220px;
-    }
-
-    .message label {
-        margin-left: -220px;
-    }
-
-    .social-icons1 {
-        margin-left: -200px !important;
-    }
-
-
-}
-
-@media (min-width:401px)and(max-width:864px) {}

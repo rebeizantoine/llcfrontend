@@ -30,6 +30,14 @@
 
 }
 
+.welcome1 img {
+    width: 40%;
+    height: 20.5%;
+
+    position: absolute;
+    left: 0.6%;
+    top: 2%;
+}
 
 
 .logout-image2:hover {
@@ -44,7 +52,7 @@
 
 .dashboard-title {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .user-profile-container {
