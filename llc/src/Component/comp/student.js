@@ -22,7 +22,7 @@ class Teacher extends Component {
 
     fetchTeacherData() {
         axios
-            .get("/user/getStudent")
+            .get(`${process.env.REACT_APP_API_URL}/user/getStudent`)
             .then((response) => {
                 this.setState({ teacherData: response.data.data });
             })
@@ -46,7 +46,7 @@ class Teacher extends Component {
     handleAddNewTeacher = () => {
         // Implement the logic to add a new teacher using the provided API endpoint
         axios
-            .post("/user/addStudent", this.state.newTeacher)
+            .post(`${process.env.REACT_APP_API_URL}/user/addStudent`, this.state.newTeacher)
             .then(() => {
                 console.log("New teacher added successfully.");
                 // Clear the form fields
@@ -78,7 +78,7 @@ class Teacher extends Component {
         // You can update the values in the database using the API
         const updatedTeacher = this.state.teacherData.find((teacher) => teacher.user_id === user_id);
         axios
-            .put(`/user/updateUser/${user_id}`, updatedTeacher)
+            .put(`${process.env.REACT_APP_API_URL}/user/updateUser/${user_id}`, updatedTeacher)
             .then(() => {
                 this.setState((prevState) => ({
                     teacherData: prevState.teacherData.map((teacher) =>

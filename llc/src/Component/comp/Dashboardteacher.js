@@ -19,7 +19,7 @@ function TeacherDashboard() {
             const user_id = localStorage.getItem("user_id");
             try {
                 const response = await fetch(
-                    `/user/getEnrolled/${user_id}`
+                    `${process.env.REACT_APP_API_URL}/user/getEnrolled/${user_id}`
                 );
                 const data = await response.json();
                 if (data.success) {
@@ -40,7 +40,7 @@ function TeacherDashboard() {
             try {
                 for (const courseId of courses) {
                     const response = await fetch(
-                        `/user/getCourseLanWhere/${courseId}`
+                        `${process.env.REACT_APP_API_URL}/user/getCourseLanWhere/${courseId}`
                     );
                     const data = await response.json();
                     if (data.success && data.data.length > 0) {
@@ -70,7 +70,7 @@ function TeacherDashboard() {
             try {
                 for (const course of courseDetails) {
                     const response = await fetch(
-                        `/user/getscheduleWhere/${course.course_id}`
+                        `${process.env.REACT_APP_API_URL}/user/getscheduleWhere/${course.course_id}`
                     );
                     const data = await response.json();
                     if (data.success) {
@@ -108,7 +108,7 @@ function TeacherDashboard() {
         const user_id = localStorage.getItem("user_id");
 
         if (user_id) {
-            fetch(`/user/getEnrolled/${user_id}`)
+            fetch(`${process.env.REACT_APP_API_URL}/user/getEnrolled/${user_id}`)
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
@@ -138,7 +138,7 @@ function TeacherDashboard() {
 
     useEffect(() => {
         if (courseId) {
-            fetch(`/user/getStudentEnrolled/${courseId}`)
+            fetch(`${process.env.REACT_APP_API_URL}/user/getStudentEnrolled/${courseId}`)
                 .then((response) => {
                     if (response.ok) {
                         return response.json();

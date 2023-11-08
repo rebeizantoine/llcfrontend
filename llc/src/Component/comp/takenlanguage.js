@@ -52,7 +52,7 @@ function LanguageTaken() {
 
     try {
       const response = await fetch(
-        "/user/addNewLanguage",
+        `${process.env.REACT_APP_API_URL}/user/addNewLanguage`,
         {
           method: "POST",
           headers: {
@@ -81,7 +81,7 @@ function LanguageTaken() {
 
   const fetchLanguages = async () => {
     try {
-      const response = await fetch("/user/getAllLanguage");
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAllLanguage`);
       if (response.ok) {
         const data = await response.json();
         setLanguages(data.data);
@@ -97,7 +97,7 @@ function LanguageTaken() {
   const handleDeleteLanguage = async (id) => {
     try {
       const response = await fetch(
-        `/user/deleteLanguage/${id}`,
+        `${process.env.REACT_APP_API_URL}/user/deleteLanguage/${id}`,
         {
           method: "DELETE",
         }

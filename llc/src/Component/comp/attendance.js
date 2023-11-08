@@ -9,7 +9,7 @@ const TeacherAttendance = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('/user/getTeacherAtendance');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/user/getTeacherAtendance`);
         setAttendanceData(response.data.data);
         setLoading(false);
       } catch (error) {

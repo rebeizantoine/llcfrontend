@@ -56,7 +56,7 @@ function DashboardStudent() {
         const fetchEnrolledCourses = async () => {
             const user_id = localStorage.getItem('user_id');
             try {
-                const response = await fetch(`/user/getEnrolled/${user_id}`);
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getEnrolled/${user_id}`);
                 const data = await response.json();
                 if (data.success) {
                     const enrolledCourses = data.data;
@@ -76,7 +76,7 @@ function DashboardStudent() {
             let fetchedCourseDetails = [];
             try {
                 for (const courseId of courses) {
-                    const response = await fetch(`/user/getCourseLanWhere/${courseId}`);
+                    const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getCourseLanWhere/${courseId}`);
                     const data = await response.json();
                     if (data.success && data.data.length > 0) {
                         const courseData = data.data[0];
@@ -100,7 +100,7 @@ function DashboardStudent() {
             let fetchedCourseSchedules = [];
             try {
                 for (const course of courseDetails) {
-                    const response = await fetch(`/user/getscheduleWhere/${course.course_id}`);
+                    const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getscheduleWhere/${course.course_id}`);
                     const data = await response.json();
                     if (data.success) {
                         fetchedCourseSchedules = [

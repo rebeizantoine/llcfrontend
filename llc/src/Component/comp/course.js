@@ -24,7 +24,7 @@ const Course = () => {
 
   useEffect(() => {
     axios
-      .get('/user/getCourseLan')
+      .get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
       .then((response) => {
         const courseData = response.data.data;
 
@@ -51,7 +51,7 @@ const Course = () => {
       });
 
     axios
-      .get('/user/getActiveTeacher')
+      .get(`${process.env.REACT_APP_API_URL}/user/getActiveTeacher`)
       .then((response) => {
         const teacherData = response.data.data;
 
@@ -70,7 +70,7 @@ const Course = () => {
       });
 
     axios
-      .get('/user/getAllLanguage')
+      .get(`${process.env.REACT_APP_API_URL}/user/getAllLanguage`)
       .then((response) => {
         setLanguages(response.data.data);
       })
@@ -107,17 +107,17 @@ const Course = () => {
 
   const handleEnroll = async () => {
     try {
-      const postUrl = `/user/postEnrolled/${selectedTeacher}/${selectedCourse}`;
+      const postUrl = `${process.env.REACT_APP_API_URL}/user/postEnrolled/${selectedTeacher}/${selectedCourse}`;
       const enrollResponse = await axios.post(postUrl);
       console.log(enrollResponse.data);
 
-      const getUrl = `/user/getEnrolledWhere/${selectedTeacher}/${selectedCourse}`;
+      const getUrl = `${process.env.REACT_APP_API_URL}/user/getEnrolledWhere/${selectedTeacher}/${selectedCourse}`;
       const enrollCheckResponse = await axios.get(getUrl);
 
       if (enrollCheckResponse.data.success && enrollCheckResponse.data.data.length > 0) {
         console.log("Enroll ID:", enrollCheckResponse.data.data[0].enroll_id);
 
-        const scheduleUrl = `/user/getscheduleWhere/${selectedCourse}`;
+        const scheduleUrl = `${process.env.REACT_APP_API_URL}/user/getscheduleWhere/${selectedCourse}`;
         console.log("Schedule URL:", scheduleUrl);
 
         const scheduleResponse = await axios.get(scheduleUrl);
@@ -129,7 +129,7 @@ const Course = () => {
 
           const enrollId = enrollCheckResponse.data.data[0].enroll_id;
           const scheduleId = scheduleResponse.data.data[0].schedule_id;
-          const postEnrollAndScheduleUrl = `/user/post/${enrollId}/${scheduleId}`;
+          const postEnrollAndScheduleUrl = `${process.env.REACT_APP_API_URL}/user/post/${enrollId}/${scheduleId}`;
           const postResponse = await axios.post(postEnrollAndScheduleUrl);
           console.log("Post Response:", postResponse.data);
         } else {
@@ -168,7 +168,7 @@ const Course = () => {
     };
 
     axios
-      .post('/user/postCourse', newCourse)
+      .post(`${process.env.REACT_APP_API_URL}/user/postCourse`, newCourse)
       .then((response) => {
         alert('New course added successfully');
       })
@@ -194,7 +194,7 @@ const Course = () => {
     });
 
     axios
-      .get('/user/getCourseLan')
+      .get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
       .then((response) => {
         const courseData = response.data.data;
         if (Array.isArray(courseData)) {

@@ -14,7 +14,7 @@ function ScheduleTable() {
   }, []);
 
   const fetchScheduleData = () => {
-    fetch("/user/getschedule")
+    fetch(`${process.env.REACT_APP_API_URL}/user/getschedule`)
       .then((response) => response.json())
       .then((data) => {
         const sortedData = data.data.sort((a, b) => a.hours.localeCompare(b.hours));
@@ -24,7 +24,7 @@ function ScheduleTable() {
   };
 
   const fetchCourses = () => {
-    fetch("/user/getCourseLan")
+    fetch(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
       .then((response) => response.json())
       .then((data) => {
         setCourses(data.data);
@@ -40,7 +40,7 @@ function ScheduleTable() {
     if (selectedCourseData) {
       const { course_id } = selectedCourseData;
 
-      fetch("/user/postschedule", {
+      fetch(`${process.env.REACT_APP_API_URL}/user/postschedule`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

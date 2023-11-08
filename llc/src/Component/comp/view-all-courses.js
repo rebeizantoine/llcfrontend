@@ -50,7 +50,7 @@ const AllCourses = () => {
         const user_id = localStorage.getItem("user_id");
 
         axios
-            .get("/user/getCourseLan")
+            .get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
             .then((response) => {
                 const allCourses = Array.isArray(response.data.data)
                     ? response.data.data
@@ -62,13 +62,13 @@ const AllCourses = () => {
                     const { course_id } = course;
                     axios
                         .post(
-                            `/user/postEnrolled/${user_id}/${course_id}`
+                            `${process.env.REACT_APP_API_URL}/user/postEnrolled/${user_id}/${course_id}`
                         )
                         .then((response) => {
                             console.log(response.data);
                             axios
                                 .get(
-                                    `/user/getEnrolledWhere/${user_id}/${course_id}`
+                                    `${process.env.REACT_APP_API_URL}/user/getEnrolledWhere/${user_id}/${course_id}`
                                 )
                                 .then((response) => {
                                     const enrollData = response.data.data[0];
@@ -78,7 +78,7 @@ const AllCourses = () => {
 
                                     axios
                                         .get(
-                                            `/user/getscheduleWhere/${course_id}`
+                                            `${process.env.REACT_APP_API_URL}/user/getscheduleWhere/${course_id}`
                                         )
                                         .then((response) => {
                                             const scheduleData = response.data.data[0];
@@ -87,7 +87,7 @@ const AllCourses = () => {
 
                                             axios
                                                 .post(
-                                                    `/user/post/${enroll_id}/${schedule_id}`
+                                                    `${process.env.REACT_APP_API_URL}/user/post/${enroll_id}/${schedule_id}`
                                                 )
                                                 .then((response) => {
                                                     console.log(response.data);
@@ -121,7 +121,7 @@ const AllCourses = () => {
     };
     useEffect(() => {
         axios
-            .get(" /user/getCourseLan")
+            .get(`${process.env.REACT_APP_API_URL} /user/getCourseLan`)
             .then((response) => {
                 const allCourses = Array.isArray(response.data.data)
                     ? response.data.data

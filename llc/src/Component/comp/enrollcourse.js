@@ -8,7 +8,7 @@ const EnrollCourse = () => {
 
 
 
-    axios.get('/user/getCourseLan')
+    axios.get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
 
         .then(response => {
 
@@ -24,13 +24,13 @@ const EnrollCourse = () => {
 
                 const { course_id } = course;
 
-                axios.post(`/user/postEnrolled/${user_id}`, { course_id })
+                axios.post(`${process.env.REACT_APP_API_URL}/user/postEnrolled/${user_id}`, { course_id })
 
                     .then(response => {
 
                         console.log(response.data);
 
-                        axios.get(`/user/getEnrolledWhere/${user_id}/${course_id}`)
+                        axios.get(`${process.env.REACT_APP_API_URL}/user/getEnrolledWhere/${user_id}/${course_id}`)
 
                             .then(response => {
 
@@ -44,7 +44,7 @@ const EnrollCourse = () => {
 
 
 
-                                axios.get(`/user/getscheduleWhere/${course_id}`)
+                                axios.get(`${process.env.REACT_APP_API_URL}/user/getscheduleWhere/${course_id}`)
 
                                     .then(response => {
 
@@ -56,7 +56,7 @@ const EnrollCourse = () => {
 
 
 
-                                        axios.post(`/user/post/${enroll_id}/${schedule_id}`)
+                                        axios.post(`${process.env.REACT_APP_API_URL}/user/post/${enroll_id}/${schedule_id}`)
 
                                             .then(response => {
 
