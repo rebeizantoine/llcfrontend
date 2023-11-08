@@ -16,7 +16,7 @@ function LanguageTaken() {
     formData.append("file", e.target.files[0]);
 
     try {
-      const response = await fetch("/upload", {
+      const response = await fetch("https://api.imgbb.com/1/upload", {
         method: "POST",
         body: formData,
       });
