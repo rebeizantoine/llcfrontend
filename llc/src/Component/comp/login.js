@@ -15,36 +15,38 @@ const Login = () => {
   const handleLogin = async () => {
     const token = captchaRef.current.getValue();
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/user/getAll`,
-        {
-          method: "GET",
+        const response = await fetch("http://localhost:8000/user/getAll", {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
-        }
-      );
-      const data = await response.json();
-
-      if (data.success) {
-        const user = data.data.find(
-          (userData) =>
-            userData.email === username &&
-            userData.password === password &&
-            userData.active === 1
-        );
-
-        if (user) {
-          localStorage.setItem("user_id", user.user_id);
-          localStorage.setItem("userrole", user.role);
-          navigate("/dash");
+          body: JSON.stringify({
+            username,
+            password,
+            recaptcha: token,
+          }),
+        });
+        const data = await response.json();
+  
+        if (data.success) {
+          const user = data.data.find(
+            (userData) =>
+              userData.email === username &&
+              userData.password === password &&
+              userData.active === 1
+          );
+  
+          if (user) {
+            localStorage.setItem("user_id", user.user_id);
+            localStorage.setItem("userrole", user.role);
+            navigate("/dash");
+          } else {
+            alert("Incorrect email or password. Please try again.");
+          }
         } else {
-          alert("Incorrect email or password. Please try again.");
+          alert("API request failed.");
         }
-      } else {
-        alert("API request failed.");
-      }
-    } catch (error) {
+      } catch (error) {
       console.error(error);
       alert("An error occurred while processing your request.");
     }
