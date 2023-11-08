@@ -24,6 +24,10 @@
     font-weight: 700;
 }
 
+.h1-llc:hover {
+    text-decoration: underline;
+}
+
 .my-courses {
     margin-top: -550px;
     margin-left: -55%;
@@ -44,7 +48,7 @@
 
 .container6 {
 
-    margin-top: 25%;
+    margin-top: 20%;
     margin-left: 35%;
 }
 

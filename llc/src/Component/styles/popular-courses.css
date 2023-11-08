@@ -161,6 +161,10 @@ html {
     border: #000;
 }
 
+.secondary1 {
+    margin-left: 40px !important;
+}
+
 .enrollf button:hover {
     background-color: #5c5454 !important;
 }
@@ -339,6 +343,10 @@ html {
     }
 
 
+}
+
+.modalfpop button {
+    margin-right: 25px;
 }
 
 .modal123 {

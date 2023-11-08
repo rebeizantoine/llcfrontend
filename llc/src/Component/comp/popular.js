@@ -141,8 +141,8 @@ const Popular = () => {
                         </select>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={enrollCourse}>Enroll</Button>
-                        <Button color="secondary" onClick={toggle}>Cancel</Button>
+                        <Button color="primary1" onClick={enrollCourse}>Enroll</Button>
+                        <Button color="secondary1" onClick={toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>
             </div>

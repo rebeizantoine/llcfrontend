@@ -23,13 +23,7 @@ function Main() {
                         </p>
                     </div>
                     <div className="buttons">
-                        <div className="enroll">
 
-                            <a href="/AllCourses">
-                                <p>ENROLL TODAY</p>
-                            </a>
-
-                        </div>
                         <div className="courses">
                             <p>View Courses</p>
                         </div>
@@ -38,6 +32,15 @@ function Main() {
                 <div className="left-content">
                     <img className="hola" src={image1} />
                 </div>
+
+
+
+            </div>
+            <div className="enroll">
+
+                <a href="/AllCourses">
+                    <p>ENROLL TODAY</p>
+                </a>
 
             </div>
         </div>
