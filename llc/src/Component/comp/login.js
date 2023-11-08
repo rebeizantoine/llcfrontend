@@ -15,17 +15,20 @@ const Login = () => {
   const handleLogin = async () => {
     const token = captchaRef.current.getValue();
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAll`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username,
-          password,
-          recaptcha: token,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/user/getAll`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+            recaptcha: token,
+          }),
+        }
+      );
       const data = await response.json();
 
       if (data.success) {
@@ -95,7 +98,10 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <ReCAPTCHA ref={captchaRef} sitekey="6LfVPAYpAAAAAFOLBLwKo0iI7Mou8I7TG6_dkS2N" />
+          <ReCAPTCHA
+            ref={captchaRef}
+            sitekey="6LfVPAYpAAAAAFOLBLwKo0iI7Mou8I7TG6_dkS2N"
+          />
 
           <button type="button" onClick={handleLogin} className="submit1">
             Login
