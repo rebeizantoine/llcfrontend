@@ -24,9 +24,11 @@ function Main() {
                     </div>
                     <div className="buttons">
                         <div className="enroll">
-                            <a href="/">
+
+                            <a href="/AllCourses">
                                 <p>ENROLL TODAY</p>
                             </a>
+
                         </div>
                         <div className="courses">
                             <p>View Courses</p>

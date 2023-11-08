@@ -56,7 +56,7 @@ function DashboardStudent() {
         const fetchEnrolledCourses = async () => {
             const user_id = localStorage.getItem('user_id');
             try {
-                const response = await fetch(`http://localhost:8000/user/getEnrolled/${user_id}`);
+                const response = await fetch(`/user/getEnrolled/${user_id}`);
                 const data = await response.json();
                 if (data.success) {
                     const enrolledCourses = data.data;
@@ -76,7 +76,7 @@ function DashboardStudent() {
             let fetchedCourseDetails = [];
             try {
                 for (const courseId of courses) {
-                    const response = await fetch(`http://localhost:8000/user/getCourseLanWhere/${courseId}`);
+                    const response = await fetch(`/user/getCourseLanWhere/${courseId}`);
                     const data = await response.json();
                     if (data.success && data.data.length > 0) {
                         const courseData = data.data[0];
@@ -100,12 +100,12 @@ function DashboardStudent() {
             let fetchedCourseSchedules = [];
             try {
                 for (const course of courseDetails) {
-                    const response = await fetch(`http://localhost:8000/user/getscheduleWhere/${course.course_id}`);
+                    const response = await fetch(`/user/getscheduleWhere/${course.course_id}`);
                     const data = await response.json();
                     if (data.success) {
                         fetchedCourseSchedules = [
                             ...fetchedCourseSchedules,
-                            ...data.data.map(schedule => ({ ...schedule, title: course.title, zoom_link: course.zoom_link })),
+                            ...data.data.map(schedule => ({ ...schedule, level: course.level, title: course.title, zoom_link: course.zoom_link })),
                         ];
                     }
                 }
@@ -186,7 +186,7 @@ function DashboardStudent() {
                                     {groupedSchedules[hours].map(schedule => (
                                         schedule.day === 'Monday' && (
                                             <p key={schedule.course_id}>
-                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: <a href={schedule.zoom_link}>{schedule.zoom_link}</a>
                                             </p>
                                         )
                                     ))}
@@ -195,7 +195,7 @@ function DashboardStudent() {
                                     {groupedSchedules[hours].map(schedule => (
                                         schedule.day === 'Tuesday' && (
                                             <p key={schedule.course_id}>
-                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: <a href={schedule.zoom_link}>{schedule.zoom_link}</a>
                                             </p>
                                         )
                                     ))}
@@ -204,7 +204,7 @@ function DashboardStudent() {
                                     {groupedSchedules[hours].map(schedule => (
                                         schedule.day === 'Wednesday' && (
                                             <p key={schedule.course_id}>
-                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: <a href={schedule.zoom_link}>{schedule.zoom_link}</a>
                                             </p>
                                         )
                                     ))}
@@ -213,7 +213,7 @@ function DashboardStudent() {
                                     {groupedSchedules[hours].map(schedule => (
                                         schedule.day === 'Thursday' && (
                                             <p key={schedule.course_id}>
-                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: <a href={schedule.zoom_link}>{schedule.zoom_link}</a>
                                             </p>
                                         )
                                     ))}
@@ -222,7 +222,7 @@ function DashboardStudent() {
                                     {groupedSchedules[hours].map(schedule => (
                                         schedule.day === 'Friday' && (
                                             <p key={schedule.course_id}>
-                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: {schedule.zoom_link}
+                                                Title: {schedule.title}, Level: {schedule.level}, Zoom Link: <a href={schedule.zoom_link}>{schedule.zoom_link}</a>
                                             </p>
                                         )
                                     ))}

@@ -22,7 +22,7 @@ import Spanish from '../images/spanish.png';
 
 import Italian from '../images/italian.png';
 
- 
+
 
 const ViewAllCourses = () => {
 
@@ -40,11 +40,11 @@ const ViewAllCourses = () => {
 
     const history = useHistory();
 
- 
+
 
     const toggle = () => setModal(!modal);
 
- 
+
 
     const handleEnroll = (course) => {
 
@@ -68,9 +68,9 @@ const ViewAllCourses = () => {
 
         const user_id = localStorage.getItem('user_id');
 
- 
 
-        axios.get('http://localhost:8000/user/getCourseLan')
+
+        axios.get('/user/getCourseLan')
 
             .then(response => {
 
@@ -86,13 +86,13 @@ const ViewAllCourses = () => {
 
                     const { course_id } = course;
 
-                    axios.post(`http://localhost:8000/user/postEnrolled/${user_id}`, { course_id })
+                    axios.post(`/user/postEnrolled/${user_id}`, { course_id })
 
                         .then(response => {
 
                             console.log(response.data);
 
-                            axios.get(`http://localhost:8000/user/getEnrolledWhere/${user_id}/${course_id}`)
+                            axios.get(`/user/getEnrolledWhere/${user_id}/${course_id}`)
 
                                 .then(response => {
 
@@ -104,9 +104,9 @@ const ViewAllCourses = () => {
 
                                     console.log("enroll_id:", enroll_id);
 
- 
 
-                                    axios.get(`http://localhost:8000/user/getscheduleWhere/${course_id}`)
+
+                                    axios.get(`/user/getscheduleWhere/${course_id}`)
 
                                         .then(response => {
 
@@ -116,9 +116,9 @@ const ViewAllCourses = () => {
 
                                             console.log("schedule_id:", schedule_id);
 
- 
 
-                                            axios.post(`http://localhost:8000/user/post/${enroll_id}/${schedule_id}`)
+
+                                            axios.post(`/user/post/${enroll_id}/${schedule_id}`)
 
                                                 .then(response => {
 
@@ -164,7 +164,7 @@ const ViewAllCourses = () => {
 
                 }
 
- 
+
 
             })
 
@@ -176,11 +176,11 @@ const ViewAllCourses = () => {
 
     };
 
- 
+
 
     useEffect(() => {
 
-        axios.get('http://localhost:8000/user/getCourseLan')
+        axios.get('/user/getCourseLan')
 
             .then(response => {
 
@@ -198,7 +198,7 @@ const ViewAllCourses = () => {
 
                 console.log(allCourses)
 
- 
+
 
                 const coursesWithLevels = uniqueCourses.map(course => ({
 
@@ -210,7 +210,7 @@ const ViewAllCourses = () => {
 
                         .map(c => c.course)
 
-                   
+
 
                 }));
 
@@ -232,7 +232,7 @@ const ViewAllCourses = () => {
 
     }, []);
 
- 
+
 
     if (loading) {
 
@@ -240,7 +240,7 @@ const ViewAllCourses = () => {
 
     }
 
- 
+
 
     if (error) {
 
@@ -248,7 +248,7 @@ const ViewAllCourses = () => {
 
     }
 
- 
+
 
     return (
 
@@ -274,7 +274,7 @@ const ViewAllCourses = () => {
 
                         <div className="language1" key={course.course_id}>
 
- 
+
 
                             <img src={course.languageimage} alt={course.title} className='img-language' />
 
@@ -292,16 +292,16 @@ const ViewAllCourses = () => {
 
             </div>
 
- 
+
 
         </div>
 
- 
+
 
     );
 
 }
 
- 
+
 
 export default ViewAllCourses

@@ -22,7 +22,7 @@ class Teacher extends Component {
 
     fetchTeacherData() {
         axios
-            .get("http://localhost:8000/user/getTeacher")
+            .get("/user/getTeacher")
             .then((response) => {
                 this.setState({ teacherData: response.data.data });
             })
@@ -46,7 +46,7 @@ class Teacher extends Component {
     handleAddNewTeacher = () => {
         // Implement the logic to add a new teacher using the provided API endpoint
         axios
-            .post("http://localhost:8000/user/addTeacher", this.state.newTeacher)
+            .post("/user/addTeacher", this.state.newTeacher)
             .then(() => {
                 console.log("New teacher added successfully.");
                 // Clear the form fields
@@ -78,7 +78,7 @@ class Teacher extends Component {
         // You can update the values in the database using the API
         const updatedTeacher = this.state.teacherData.find((teacher) => teacher.user_id === user_id);
         axios
-            .put(`http://localhost:8000/user/updateUser/${user_id}`, updatedTeacher)
+            .put(`/user/updateUser/${user_id}`, updatedTeacher)
             .then(() => {
                 this.setState((prevState) => ({
                     teacherData: prevState.teacherData.map((teacher) =>

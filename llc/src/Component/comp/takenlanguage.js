@@ -16,7 +16,7 @@ function LanguageTaken() {
     formData.append("file", e.target.files[0]);
 
     try {
-      const response = await fetch("http://localhost:8000/upload", {
+      const response = await fetch("/upload", {
         method: "POST",
         body: formData,
       });
@@ -52,7 +52,7 @@ function LanguageTaken() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/user/addNewLanguage",
+        "/user/addNewLanguage",
         {
           method: "POST",
           headers: {
@@ -81,7 +81,7 @@ function LanguageTaken() {
 
   const fetchLanguages = async () => {
     try {
-      const response = await fetch("http://localhost:8000/user/getAllLanguage");
+      const response = await fetch("/user/getAllLanguage");
       if (response.ok) {
         const data = await response.json();
         setLanguages(data.data);
@@ -97,7 +97,7 @@ function LanguageTaken() {
   const handleDeleteLanguage = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/user/deleteLanguage/${id}`,
+        `/user/deleteLanguage/${id}`,
         {
           method: "DELETE",
         }

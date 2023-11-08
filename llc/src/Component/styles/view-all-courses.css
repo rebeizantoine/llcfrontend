@@ -5,6 +5,11 @@
 
 }
 
+.LLCOFALL {
+    text-align: left;
+    margin-left: -1200px;
+}
+
 .roboto {
     width: 454.219px;
     height: 61px;
@@ -92,7 +97,7 @@
     /* Add a shadow effect on hover */
 }
 
-.courses-language {
+.courses-languages {
     margin: 30px;
     display: flex;
     direction: row;
@@ -125,23 +130,21 @@
 }
 
 .courses123 {
+    margin-left: 5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
+
 
 .language1 {
-    width: calc(47.33% - 10px);
-    /* 33.33% width for each course with 10px margin */
+    flex-basis: calc(23.33% - 5px);
     margin-bottom: 20px;
-    /* Add some vertical spacing between courses */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width */
-    margin-left: 16px;
     border: 1px solid #ccc;
     background-color: #FFF;
-
 }
+
+
 
 .img-language {
     max-width: 100%;
@@ -173,7 +176,6 @@
     font-weight: 700;
     line-height: normal;
     text-align: center;
-    margin-left: 110px;
     margin-top: 11px;
 }
 
@@ -187,13 +189,42 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-left: 40px;
     margin-top: -50px;
     text-align: left;
-    margin-left: 170px;
+
+}
+
+.happy123 img {
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    border-radius: 50%;
+}
+
+.happy1234 img {
+    width: 450px;
+    border: 3px black;
+    height: 300px;
+    position: absolute;
+    top: 11%;
+    right: 5%;
+    border-radius: 50%;
+
+
+    border: 2px solid #000;
+    /* Add border to the image */
+
+    /* Optionally, add border radius */
+
+    /* Optionally, add padding around the image */
+
 }
 
 .enrollf {
-    width: 370px;
+    width: 90%;
     height: 44.912px;
     flex-shrink: 0;
     background-color: #5e3a3a;
@@ -208,7 +239,54 @@
     border-radius: 8%;
 }
 
+.custom-modalpop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.custom-modalpop .modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.custom-modalpop .modal-header,
+.custom-modalpop .modal-footer {
+    border: none;
+}
+
+.custom-modalpop .modal-body {
+    margin-bottom: 20px;
+}
+
+.custom-modalpop .modal-footer {
+    justify-content: flex-end;
+}
+
+.custom-modalpop select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.custom-modalpop button {
+    margin-left: 10px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
 
 
 @media (min-width:401)and(max-width:864px) {
@@ -240,7 +318,7 @@
         margin-bottom: 50px;
     }
 
-    .courses-language {
+    .courses-languages {
         flex-direction: column;
         margin: 10px;
         margin-top: 70px;
@@ -267,7 +345,7 @@
         text-align: center;
     }
 
-    .name-language {
+    .name-language1 {
         font-size: 25px;
         text-align: center;
         margin: 0px;
@@ -307,26 +385,19 @@
     .img-language-ita {
         width: 300px;
     }
+
+
 }
 
 @media (max-width:400px) {
-    .view-all-coursess {
-        width: 318px !important;
-        height: 72px;
-        border: 1px solid #000;
-        background: #FAF4F1;
-        float: right;
-        margin-top: -80px;
-        cursor: pointer;
-        color: #000;
-        font-family: Kokoro;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-right: 20px;
-        margin-bottom: 0px;
 
+
+    .happy1234 {
+        display: none;
+    }
+
+    .happy123 {
+        display: none;
     }
 
     .language {
@@ -336,5 +407,36 @@
 
     .descriptionf {
         margin-top: -5px;
+        margin-left: 5px;
+    }
+
+    .enrollf {
+        width: 90%;
+        height: 44.912px;
+        flex-shrink: 0;
+        background-color: #5e3a3a;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+        border: #000;
+        border-radius: 8%;
+    }
+
+    .LLCOFALL {
+        text-align: left;
+        margin-left: -240px;
+        font-size: xxx-large;
+    }
+
+    .happy1234 img {
+        display: none;
+    }
+
+    .courses123 {
+        margin-left: -30px;
     }
 }

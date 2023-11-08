@@ -12,7 +12,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch("http://localhost:8000/user/getAll");
+            const response = await fetch("/user/getAll");
             const data = await response.json();
 
             if (data.success) {

@@ -14,7 +14,21 @@ const Popular = () => {
     const [enrollId, setEnrollId] = useState(null);
     const navigate = useNavigate();
 
-    const toggle = () => setModal(!modal);
+    let scrollPosition = 0;
+
+    const toggle = () => {
+        if (!modal) {
+            scrollPosition = window.pageYOffset;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+        } else {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            window.scrollTo(0, scrollPosition);
+        }
+        setModal(!modal);
+    };
+
 
     const handleEnroll = (course) => {
         setSelectedCourse(course);
@@ -29,33 +43,33 @@ const Popular = () => {
         const { title, level } = selectedCourse;
         const user_id = localStorage.getItem('user_id');
 
-        axios.get('http://localhost:8000/user/getCourseLan')
+        axios.get(' /user/getCourseLan')
             .then(response => {
                 const allCourses = Array.isArray(response.data.data) ? response.data.data : [];
                 const course = allCourses.find(c => c.title === title && c.level === level);
                 if (course) {
                     const { course_id } = course;
-                    axios.post(`http://localhost:8000/user/postEnrolled/${user_id}`, { course_id })
+                    axios.post(` /user/postEnrolled/${user_id}/${course_id}`)
                         .then(response => {
                             console.log(response.data);
-                            axios.get(`http://localhost:8000/user/getEnrolledWhere/${user_id}/${course_id}`)
+                            axios.get(`/user/getEnrolledWhere/${user_id}/${course_id}`)
                                 .then(response => {
                                     const enrollData = response.data.data[0];
                                     const enroll_id = enrollData.enroll_id;
                                     setEnrollId(enroll_id);
                                     console.log("enroll_id:", enroll_id);
 
-                                    axios.get(`http://localhost:8000/user/getscheduleWhere/${course_id}`)
+                                    axios.get(`/user/getscheduleWhere/${course_id}`)
                                         .then(response => {
                                             const scheduleData = response.data.data[0];
                                             const schedule_id = scheduleData.schedule_id;
                                             console.log("schedule_id:", schedule_id);
 
-                                            axios.post(`http://localhost:8000/user/post/${enroll_id}/${schedule_id}`)
+                                            axios.post(`/user/post/${enroll_id}/${schedule_id}`)
                                                 .then(response => {
                                                     console.log(response.data);
                                                     toast.success("Welcome!! You enrolled in one of our courses.", {
-                                                        onClick: () => navigate('/DashboardStudent')
+                                                        onClick: () => navigate('/dash')
                                                     });
                                                 })
                                                 .catch(error => {
@@ -80,7 +94,7 @@ const Popular = () => {
             });
     };
     useEffect(() => {
-        axios.get('http://localhost:8000/user/getCourseLan')
+        axios.get(' /user/getCourseLan')
             .then(response => {
                 const allCourses = Array.isArray(response.data.data) ? response.data.data : [];
                 const uniqueCourses = allCourses.filter((course, index, self) =>
@@ -115,6 +129,23 @@ const Popular = () => {
 
     return (
         <div id="Courses">
+            <div className='modalfpop'>
+                <Modal isOpen={modal} toggle={toggle} className="custom-modalfpop centered-modal">
+                    <ModalHeader toggle={toggle}>Enroll in Course</ModalHeader>
+                    <ModalBody>
+                        <p>You are about to enroll in the {selectedCourse?.title}. Please select a level:</p>
+                        <select>
+                            {selectedCourse?.levels.map((level, index) => (
+                                <option key={index}>{level}</option>
+                            ))}
+                        </select>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={enrollCourse}>Enroll</Button>
+                        <Button color="secondary" onClick={toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
+            </div>
             <div className="popular-courses">
                 <p className="roboto">Popular courses</p>
                 <p className="medium">Mi mattis tortor dolor vitae congue purus mi imperdiet<br />
@@ -131,23 +162,7 @@ const Popular = () => {
                     ))}
                 </div>
             </div>
-            <div className='modal123'>
-                <Modal isOpen={modal} toggle={toggle} className="custom-modal12">
-                    <ModalHeader toggle={toggle}>Enroll in Course</ModalHeader>
-                    <ModalBody>
-                        <p>You are about to enroll in the {selectedCourse?.title}. Please select a level:</p>
-                        <select>
-                            {selectedCourse?.levels.map((level, index) => (
-                                <option key={index}>{level}</option>
-                            ))}
-                        </select>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button color="primary" onClick={enrollCourse}>Enroll</Button>
-                        <Button color="secondary" onClick={toggle}>Cancel</Button>
-                    </ModalFooter>
-                </Modal>
-            </div>
+
         </div>
     );
 };
