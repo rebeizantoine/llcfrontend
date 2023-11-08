@@ -22,11 +22,6 @@ const Login = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            username,
-            password,
-            recaptcha: token,
-          }),
         }
       );
       const data = await response.json();
