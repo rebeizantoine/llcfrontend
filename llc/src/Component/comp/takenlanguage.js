@@ -51,16 +51,13 @@ function LanguageTaken() {
     };
 
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/user/addNewLanguage`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newLanguageData),
-        }
-      );
+      const response = await fetch("/user/addNewLanguage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newLanguageData),
+      });
 
       if (response.ok) {
         const data = await response.json();
@@ -81,7 +78,7 @@ function LanguageTaken() {
 
   const fetchLanguages = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAllLanguage`);
+      const response = await fetch("/user/getAllLanguage");
       if (response.ok) {
         const data = await response.json();
         setLanguages(data.data);
@@ -96,12 +93,9 @@ function LanguageTaken() {
 
   const handleDeleteLanguage = async (id) => {
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/user/deleteLanguage/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const response = await fetch(`/user/deleteLanguage/${id}`, {
+        method: "DELETE",
+      });
 
       if (response.ok) {
         const data = await response.json();
@@ -148,7 +142,9 @@ function LanguageTaken() {
                   <img src={language.languageimage} alt={language.title} />
                 </div>
                 <button
-                  onClick={() => handleDeleteLanguage(language.taken_language_id)}
+                  onClick={() =>
+                    handleDeleteLanguage(language.taken_language_id)
+                  }
                 >
                   Delete
                 </button>
@@ -168,10 +164,7 @@ function LanguageTaken() {
           onChange={(e) => setTitle(e.target.value)}
         />
         <label>Description (Max {MAX_DESCRIPTION_LENGTH} characters):</label>
-        <textarea
-          value={description}
-          onChange={handleDescriptionChange}
-        />
+        <textarea value={description} onChange={handleDescriptionChange} />
         <p>
           Characters Remaining: {MAX_DESCRIPTION_LENGTH - description.length}
         </p>
