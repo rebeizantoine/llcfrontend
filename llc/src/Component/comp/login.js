@@ -15,7 +15,7 @@ const Login = () => {
   const handleLogin = async () => {
     const token = captchaRef.current.getValue();
     try {
-        const response = await fetch("http://localhost:8000/user/getAll", {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAll`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
