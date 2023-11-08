@@ -1,5 +1,5 @@
 {
-  "proxy": "https://llcbackend.onrender.com",
+  
   "name": "llc",
   "version": "0.1.0",
   "private": true,
