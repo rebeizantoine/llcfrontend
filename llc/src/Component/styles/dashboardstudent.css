@@ -110,7 +110,7 @@
     /* Increase the overall table width */
     border-collapse: collapse;
     position: absolute;
-    top: 21%;
+    top: 31%;
     right: 10%;
     /* Adjust the 'right' value to move the table further to the right */
 }
