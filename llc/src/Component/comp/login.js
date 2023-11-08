@@ -16,8 +16,7 @@ const Login = () => {
     const token = captchaRef.current.getValue();
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/user/getAll`
-      );
+        `${process.env.REACT_APP_API_URL}/user/getAll`);
       if (response.ok) {
         const data = await response.json();
 
