@@ -78,7 +78,7 @@ a {
     background: #FFFEFE;
     margin-left: auto;
     margin-top: 23px;
-    margin-left: 10px;
+    margin-left: 60px;
     cursor: pointer;
 }
 
@@ -171,6 +171,7 @@ a {
     position: relative;
     border-radius: 8%;
     z-index: 3;
+    margin-left: 30px;
 }
 
 .courses {
