@@ -15,38 +15,43 @@ const Login = () => {
   const handleLogin = async () => {
     const token = captchaRef.current.getValue();
     try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAll`, {
-          method: 'POST',
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/user/getAll`,
+        {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             username,
             password,
-            recaptcha: token,
           }),
-        });
-        const data = await response.json();
-  
-        if (data.success) {
-          const user = data.data.find(
-            (userData) =>
-              userData.email === username &&
-              userData.password === password &&
-              userData.active === 1
-          );
-  
-          if (user) {
-            localStorage.setItem("user_id", user.user_id);
-            localStorage.setItem("userrole", user.role);
-            navigate("/dash");
-          } else {
-            alert("Incorrect email or password. Please try again.");
-          }
-        } else {
-          alert("API request failed.");
         }
-      } catch (error) {
+      );
+      if (response.ok) {
+        const data = await response.json();
+        // rest```
+      }
+
+      if (data.success) {
+        const user = data.data.find(
+          (userData) =>
+            userData.email === username &&
+            userData.password === password &&
+            userData.active === 1
+        );
+
+        if (user) {
+          localStorage.setItem("user_id", user.user_id);
+          localStorage.setItem("userrole", user.role);
+          navigate("/dash");
+        } else {
+          alert("Incorrect email or password. Please try again.");
+        }
+      } else {
+        alert("API request failed.");
+      }
+    } catch (error) {
       console.error(error);
       alert("An error occurred while processing your request.");
     }
