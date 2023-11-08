@@ -16,7 +16,8 @@ const Login = () => {
     const token = captchaRef.current.getValue();
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/user/getAll`);
+        `${process.env.REACT_APP_API_URL}/user/getAll`
+      );
       if (response.ok) {
         const data = await response.json();
 
@@ -94,7 +95,7 @@ const Login = () => {
 
           <ReCAPTCHA
             ref={captchaRef}
-            sitekey="6LfVPAYpAAAAAFOLBLwKo0iI7Mou8I7TG6_dkS2N"
+            sitekey="6LeUWQcpAAAAAOl4mQ8RcISEu0nuKzlkUW8SaYv9"
           />
 
           <button type="button" onClick={handleLogin} className="submit1">
