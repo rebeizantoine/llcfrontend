@@ -103,11 +103,6 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <ReCAPTCHA
-            ref={captchaRef}
-            sitekey="6LfVPAYpAAAAAFOLBLwKo0iI7Mou8I7TG6_dkS2N"
-          />
-
           <button type="button" onClick={handleLogin} className="submit1">
             Login
           </button>
