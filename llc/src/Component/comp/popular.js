@@ -43,13 +43,13 @@ const Popular = () => {
         const { title, level } = selectedCourse;
         const user_id = localStorage.getItem('user_id');
 
-        axios.get(`${process.env.REACT_APP_API_URL} /user/getCourseLan`)
+        axios.get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
             .then(response => {
                 const allCourses = Array.isArray(response.data.data) ? response.data.data : [];
                 const course = allCourses.find(c => c.title === title && c.level === level);
                 if (course) {
                     const { course_id } = course;
-                    axios.post(`${process.env.REACT_APP_API_URL} /user/postEnrolled/${user_id}/${course_id}`)
+                    axios.post(`${process.env.REACT_APP_API_URL}/user/postEnrolled/${user_id}/${course_id}`)
                         .then(response => {
                             console.log(response.data);
                             axios.get(`${process.env.REACT_APP_API_URL}/user/getEnrolledWhere/${user_id}/${course_id}`)
@@ -94,7 +94,7 @@ const Popular = () => {
             });
     };
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL} /user/getCourseLan`)
+        axios.get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
             .then(response => {
                 const allCourses = Array.isArray(response.data.data) ? response.data.data : [];
                 const uniqueCourses = allCourses.filter((course, index, self) =>

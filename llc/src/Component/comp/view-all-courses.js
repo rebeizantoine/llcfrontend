@@ -94,7 +94,7 @@ const AllCourses = () => {
                                                     toast.success(
                                                         "Welcome!! You enrolled in one of our courses.",
                                                         {
-                                                            onClick: () => navigate("/DashboardStudent"),
+                                                            onClick: () => navigate("/dash"),
                                                         }
                                                     );
                                                 })
@@ -121,7 +121,7 @@ const AllCourses = () => {
     };
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_APP_API_URL} /user/getCourseLan`)
+            .get(`${process.env.REACT_APP_API_URL}/user/getCourseLan`)
             .then((response) => {
                 const allCourses = Array.isArray(response.data.data)
                     ? response.data.data
