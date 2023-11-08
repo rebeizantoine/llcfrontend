@@ -1,0 +1,135 @@
+/* login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/loginimage.png');
+    background-size: cover;
+}
+
+.home-link {
+    width: 110px;
+    margin-bottom: -60px;
+
+}
+
+.login-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.login1 {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    /* Align label text to the left */
+}
+
+.email1,
+.password1 {
+    color: #9B6C1B;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 0;
+    text-align: left;
+    /* Align label text to the left */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.submit1 {
+    background-color: orange;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-now {
+    display: flex;
+    justify-content: flex-start;
+    color: #FFBF52;
+    margin-top: 20px;
+    color: #FFBF52;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.email1 {
+    margin-left: -290px;
+}
+
+.password1 {
+    margin-left: -330px;
+}
+
+@media (max-width: 400px) {
+    .login-box {
+        max-width: 100%;
+        /* Adjust the box to full width for smaller screens */
+    }
+
+    .email1,
+    .password1 {
+        margin-left: 0;
+        /* Reset the margin for labels */
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        /* Full width for input fields */
+    }
+
+    .submit1 {
+        width: 100%;
+        /* Full width for the login button */
+    }
+}

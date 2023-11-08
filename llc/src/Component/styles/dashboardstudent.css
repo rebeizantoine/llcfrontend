@@ -1,0 +1,273 @@
+/* dashboardstudent.css */
+
+.sh1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(180deg, #99D6C8 0%, rgba(6, 29, 33, 0.00) 100%);
+}
+
+.Engf p {
+    margin-top: -10px;
+}
+
+.h1-llc {
+    margin-left: 45%;
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.h1-llc:hover {
+    text-decoration: underline;
+}
+
+.my-courses {
+    margin-top: -550px;
+    margin-left: -55%;
+}
+
+
+
+.sh1 h1 {
+    color: #9B6C1B;
+
+}
+
+.sh1 h2 {
+    color: #9B6C1B;
+    margin-left: 15%;
+    margin-top: -10px;
+}
+
+.container6 {
+
+    margin-top: 20%;
+    margin-left: 35%;
+}
+
+.container61 {
+    width: 63% !important;
+    padding: 1%;
+    margin-top: 20px !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+
+.container61 img {
+    width: 80%;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.Engf {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+
+
+.thead-1 th {
+    width: auto;
+}
+
+.tbody-1 td {
+    width: auto;
+}
+
+
+
+.logout-image1 {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.logout-image1:hover {
+    background-color: #ffffff;
+    /* Change the background color on hover */
+    border: 1px 0px 0px 0px solid grey;
+    /* Add a border on hover */
+    box-shadow: 0px 0px 5px 2px #9B6C1B;
+    /* Add a shadow effect on hover */
+}
+
+
+
+.student-schedule-1 {
+    width: 80%;
+    /* Increase the overall table width */
+    border-collapse: collapse;
+    position: absolute;
+    top: 21%;
+    right: 10%;
+    /* Adjust the 'right' value to move the table further to the right */
+}
+
+.student-schedule-1 th,
+.student-schedule-1 td {
+    border: 3px solid black;
+    padding: 8px;
+    text-align: center;
+    width: fit-content;
+    height: auto;
+
+}
+
+.student-schedule-1 th {
+    background-color: #f2f2f2;
+
+}
+
+/* Alternate row background color */
+.student-schedule-1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.tbody-1 p {
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    font-family: Roboto;
+    /* Increase the width of the cells with schedule information */
+}
+
+/* Increase the width of the "Monday," "Tuesday," "Wednesday," and the info under them */
+.th-monday,
+.th-tuesday,
+.th-wednesday,
+.th-info {
+    width: auto;
+}
+
+@media (max-width: 400px) {
+    .container61 {
+        margin-top: 20px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .container61 img {
+        margin-right: 0;
+        /* Remove margin for smaller screens */
+    }
+
+    .logout-image1 {
+        top: 10px;
+        /* Adjust position for smaller screens */
+        right: 10px;
+        /* Adjust position for smaller screens */
+    }
+
+
+}
+
+@media (min-width:401px)and (max-width:864px) {
+
+    .container6 {
+        margin-top: 350px;
+        margin-left: 150px;
+    }
+
+    .my-courses {
+
+        margin-left: 50px;
+    }
+
+    .container61 {
+        width: 78% !important;
+        padding: 8px;
+        margin-top: 10px !important;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: antiquewhite;
+    }
+
+    .student-schedule-1 {
+        width: 100% !important;
+    }
+
+
+    .student-schedule-1 table {
+        width: 70%;
+        /* Increase the overall table width */
+        /* Adjust the 'right' value to move the table further to the right */
+    }
+
+    .student-schedule-1 th,
+    .student-schedule-1 td {
+        border: 3px solid black;
+        padding: 8px;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .slick-next {}
+
+    /* Header row styles */
+    .student-schedule-1 th {
+        background-color: #f2f2f2;
+    }
+
+    /* Alternate row background color */
+    .student-schedule-1 tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Define specific styles for the table header cells (Time, Monday, Tuesday, etc.) */
+    /* You can adjust these styles as needed */
+    .thead-1 th {
+        font-weight: bold;
+        width: 150px;
+        /* Increase the width of the header cells */
+    }
+
+    /* Define specific styles for the table cells containing schedule information */
+    .tbody-1 p {
+        margin: 0;
+        width: 100%;
+        background-color: white;
+        font-family: Roboto;
+        /* Increase the width of the cells with schedule information */
+    }
+
+    /* Increase the width of the "Monday," "Tuesday," "Wednesday," and the info under them */
+    .th-monday,
+    .th-tuesday,
+    .th-wednesday,
+    .th-info {
+        width: 40px !important;
+    }
+
+    .student-schedule-1 {
+        width: 70%;
+        /* Increase the overall table width */
+        border-collapse: collapse;
+        position: absolute;
+        top: 170px;
+        right: 0%;
+        /* Adjust the 'right' value to move the table further to the right */
+        font-size: 15px;
+    }
+
+    .student-schedule-1 tr,
+    th {
+        max-width: 800px !important;
+    }
+
+
+
+
+
+}

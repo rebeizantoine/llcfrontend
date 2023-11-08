@@ -1,0 +1,676 @@
+.contact-me {
+    display: flex;
+    margin-left: 100px;
+    margin-top: -550px;
+    position: absolute;
+    z-index: 5;
+}
+
+
+.textf {
+    margin-left: -1120px;
+    margin-top: 30px;
+}
+
+.contact-information {
+    background-color: #faf4f1;
+    border-radius: 10px;
+    width: 450px;
+    height: 600px;
+    margin-left: 600px;
+    padding: 50px;
+    border-radius: 20%;
+}
+
+.dota {
+    width: 20px;
+    height: 20px;
+    margin-left: 440px;
+    margin-top: -20px;
+    color: #F00;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dota1 {
+    width: 20px;
+    height: 20px;
+    margin-left: 450px;
+    margin-top: -20px;
+    color: #F00;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contain1 {
+    margin-top: 60px;
+    width: 410px;
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.contain2 {
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.contain3 {
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.linef {
+
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.name {
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#last-name {
+    margin-right: 50px;
+}
+
+.inputf12 {
+    width: 160px !important;
+    height: 30px;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+    float: left;
+}
+
+#emailf {
+    width: 250px !important;
+    margin-left: 0px;
+}
+
+#subjectf {
+    width: 250px !important;
+}
+
+#messagef {
+    width: 400px !important;
+}
+
+#last-name {
+    margin-left: 40px !important;
+}
+
+.inputf12:hover {
+    border: solid 2px #5e3a3a;
+}
+
+.labelf {
+    color: #5e3a3a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 20px;
+    margin-left: -400px;
+    margin-top: -0px;
+}
+
+.email {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*margin-top: 150px;*/
+    margin-bottom: 10px;
+}
+
+.email input {
+    width: 350px;
+}
+
+.social-icons1 {
+    margin-left: 250px !important;
+}
+
+.social-icons1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+
+}
+
+.social-icons1 li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons1 li:last-child {
+    margin-right: 0;
+}
+
+.social-icons1 a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #5e443a;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons1 a:hover {
+    background-color: rosybrown;
+}
+
+.bottom-img img {
+
+    height: 300px;
+    width: 100%;
+    margin-top: 200px;
+
+}
+
+.social-icons1 a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icons1 i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.subject {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin-left: 30px;*/
+    margin-bottom: 10px;
+}
+
+.subject input {
+    width: 350px;
+}
+
+.message {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*margin-left: 30px;*/
+    margin-bottom: 10px;
+}
+
+.message textarea {
+    width: 350px;
+    height: 100px;
+    resize: none;
+}
+
+.message textarea:hover {
+    border: solid 2px #5e3a3a;
+
+}
+
+.submitf {
+    background-color: #5e3a3a;
+    color: #faf4f1;
+    /* margin-left: 30px;*/
+    margin-top: 20px;
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    float: left;
+    margin-left: 150px;
+}
+
+.submitf:hover {
+    background-color: #5e3a3a;
+    color: #faf4f1;
+}
+
+.social-container {
+    margin-top: 30px;
+}
+
+.social-icons1 li {
+    margin-right: 60px;
+}
+
+.final1 {
+    display: flex;
+    gap: 70%;
+    color: #5E443A;
+    margin-left: 580px;
+
+}
+
+
+
+@media (min-width:401px)and (max-width:864px) {
+    .contact-me {
+        margin-top: -800px;
+        margin-left: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+
+
+    .contact-information {
+        margin: 0px;
+        padding-left: 20px;
+        text-align: center;
+        border-radius: 20px;
+        width: 250px;
+    }
+
+    #first-name {
+        margin-top: -10px;
+    }
+
+    .bottom-img img {
+
+        display: none;
+
+    }
+
+    #last-name {
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+
+    }
+
+
+
+    #messagef {
+        width: 290px !important;
+    }
+
+    .submitf {
+        margin-left: 35%;
+    }
+
+    .textf {
+        margin: 0px;
+        padding: 0px;
+        width: 400px;
+        margin-top: -670px;
+        margin-left: 390px;
+    }
+
+    #namef {
+        margin-left: 0px !important;
+
+    }
+
+    #emailfff {
+        margin-left: 0px !important;
+        margin-bottom: 0px;
+        margin-right: 200px !important;
+    }
+
+    #messagefff {
+        margin-left: -0px !important;
+        margin-right: 200px !important;
+    }
+
+    #subjectfff {
+        margin-left: 10px !important;
+        margin-bottom: 0px;
+    }
+
+    .final1 {
+        margin-left: 300px !important;
+    }
+
+    .contain1 {
+        margin-left: -20px !important;
+    }
+
+    .contain1 {
+        font-size: x-large;
+    }
+
+    .contain2 {
+        margin-left: 00px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contain3 {
+        margin-left: 00px;
+    }
+
+    .labelf {
+        margin-left: 0 !important;
+        margin-right: 300px !important;
+    }
+
+    .inputf12 {
+        width: 260px;
+        margin-left: -15px;
+    }
+
+    #first-name {
+        width: 250px !important;
+    }
+
+    #last-name {
+        width: 250px !important;
+        margin-left: -260px !important;
+        margin-top: 40px !important;
+    }
+
+    #last-name {
+        margin-left: 160px;
+        margin-top: -35px;
+    }
+
+    .linef {
+        width: 380px;
+        margin-left: -8px;
+    }
+
+    .social-container {
+        margin-left: -300px;
+    }
+
+    .dota {
+        width: 20px;
+        height: 20px;
+        margin-left: 70px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dota1 {
+        width: 20px;
+        height: 20px;
+        margin-left: 70px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    .dota2 {
+        width: 20px;
+        height: 20px;
+        margin-left: 80px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+}
+
+@media (max-width:400px) {
+
+    .social-icons1 {
+
+
+        width: 380px !important;
+    }
+
+    .contact-me {
+        width: 380px;
+    }
+
+    .form {
+        width: 380px;
+    }
+
+    .textf {
+        width: 380px;
+    }
+
+    #first-name {
+        width: 260px !important;
+    }
+
+    #last-name {
+        width: 260px !important;
+    }
+
+    #messagefff {
+        margin-left: -150px !important;
+        max-width: 380px !important;
+    }
+
+    #messagef {
+        margin-left: -20px !important;
+        width: 380px;
+    }
+
+    #emailf {
+        margin-top: 0;
+    }
+
+    .contain1 {
+        margin-top: -770px !important;
+        margin-bottom: 750px;
+        max-width: 380px !important;
+    }
+
+    .contain2,
+    .contain3 {
+        display: none !important;
+    }
+
+    .form {
+        max-width: 380px;
+    }
+
+    .final1 {
+        margin-top: 450px;
+        width: 200px;
+        margin-left: 100px;
+    }
+
+    .contain2,
+    .contain3 {
+        width: 380px;
+        margin-left: 0px;
+    }
+
+    #messagef {
+        width: 310px !important;
+        margin-left: 0px;
+    }
+
+    .subject label {
+        margin-left: -200px;
+        margin-top: 0
+    }
+
+    .subject input {
+        margin-top: 0px !important;
+    }
+
+    .contact-information {
+        margin-top: 50px !important;
+    }
+
+    .email label {
+        margin-left: -220px;
+    }
+
+    .message label {
+        margin-left: -220px;
+    }
+
+    .social-icons1 {
+        margin-left: -150px !important;
+    }
+
+    .dota {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 300px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dota1 {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 270px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    .dota2 {
+        display: none;
+        width: 20px;
+        height: 20px;
+        margin-left: 300px;
+        margin-top: -20px;
+        color: #F00;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .textf {
+        max-width: 380px !important;
+    }
+
+
+
+}
+
+@media(max-width:800px) {
+    .contact-me {
+        margin-top: -800px;
+        margin-left: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .bottom-img img {
+
+        display: none;
+
+    }
+
+    .contact-information {
+        margin: 0px;
+        padding-left: 20px;
+        text-align: center;
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    #first-name {
+        margin-top: -10px;
+    }
+
+    #last-name {
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+    }
+
+    #messagef {
+        width: 350px !important;
+    }
+
+    .submitf {
+        margin-left: 35%;
+    }
+
+    .textf {
+        margin: 0px;
+        padding: 0px;
+        width: 780px;
+    }
+
+    .contain1 {
+        margin-left: -20px !important;
+    }
+
+    .contain1 {
+        font-size: x-large;
+    }
+
+    .contain2 {
+        margin-left: -400px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contain3 {
+        margin-left: -400px;
+    }
+
+    .labelf {
+        margin-left: -250px;
+    }
+
+    .inputf12 {
+        width: 250px;
+        margin-left: -15px;
+    }
+
+    #first-name {
+        width: 150px;
+    }
+
+    #last-name {
+        width: 150px;
+    }
+
+    #last-name {
+        margin-left: 160px;
+        margin-top: -35px;
+    }
+
+    .linef {
+        width: 380px;
+        margin-left: -8px;
+    }
+
+    .social-container {
+        margin-left: -650px;
+    }
+}

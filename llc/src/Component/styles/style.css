@@ -1,0 +1,597 @@
+.footer {
+    display: flex;
+    column-gap: 60px;
+    margin-left: 100px;
+}
+
+.form {
+    display: flex;
+    gap: 50%;
+    padding-bottom: 50px;
+}
+
+.final {
+    display: flex;
+    gap: 70%;
+    color: #5E443A;
+    margin-left: 580px;
+
+}
+
+
+
+
+.sub {
+    color: #5E443A;
+}
+
+.t1 {
+    margin-bottom: -10px;
+    margin-left: -120px;
+}
+
+.t2 {
+    font-size: 25px;
+}
+
+.Social h4 {
+    font-size: 25px;
+    margin-top: 40px;
+    color: #5E443A;
+    margin-left: -300px;
+}
+
+.subscribe-button123 {
+    border: 1px solid;
+    border-color: var(--ast-border-color);
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: #fff;
+    color: #5E443A;
+    margin-left: 40px;
+    margin-top: 13px;
+}
+
+.subscribe-button123:hover {
+    background-color: #5E443A;
+    color: white;
+}
+
+.subscribe-button:hover {
+    border: 1px solid;
+    border-color: var(--ast-border-color);
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    background: #5e443a;
+    color: #fff;
+}
+
+.subscribe123 {
+    display: flex;
+}
+
+.emailff {
+    width: 250px !important;
+    height: 25px !important;
+    margin-left: 100px;
+    background-color: #fafafa;
+    border: 1px solid #dddddd;
+}
+
+/* Add this to your CSS file (e.g., popular-courses.css) */
+.img-language {
+    width: 300px;
+    /* You can adjust the width as needed */
+    height: 300px;
+    /* You can adjust the height as needed */
+}
+
+
+.social-container {
+    margin-top: 60px !important;
+    margin-left: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    margin-left: 0px !important;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 80px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.counter-image {
+    width: 100%;
+
+    background-image: url("../images/counter-bg.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    overflow-y: hidden;
+
+}
+
+.subscribe-button {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.statics-container {
+
+    width: 100%;
+    height: 100%;
+}
+
+.sub-stat-container p {
+    color: white;
+    font-size: x-large;
+}
+
+.icon_stat {
+    width: 70px;
+    height: 70px;
+    color: #5E443A;
+}
+
+.sub-stat-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-image>div {
+    margin: 20px;
+    /* Adjust the margin as needed */
+}
+
+.counter-image button {
+    width: 100%;
+
+    border-radius: 26px;
+
+    border: none;
+    color: white;
+    background-color: #5dcedc;
+    font-size: xx-large;
+}
+
+.sub-stat-container>div {
+    margin: 50px;
+}
+
+.sub-stat-container>div>p {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: xx-large;
+}
+
+.image-section {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #5e443a;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rosybrown;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+hr {
+    background-color: #808285;
+    /* Set the color of the horizontal rule */
+}
+
+.c1 {
+    color: #5E443A;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.aboutme {
+    list-style-type: none;
+    text-align: left;
+}
+
+.offer {
+    list-style-type: none;
+    text-align: left;
+}
+
+.tezbeet {
+    text-align: left;
+    width: 300px;
+    margin-left: 10px;
+}
+
+.c2 {
+    color: #5E443A;
+}
+
+.c3 {
+    color: #5E443A;
+}
+
+.c4 {
+    color: #5E443A;
+}
+
+
+@media(max-width: 864px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -550px;
+    }
+
+    .aboutme {
+        margin-left: -20px;
+    }
+
+    .offer {
+        margin-left: -20px;
+    }
+
+    #social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .final {
+        margin-left: 0px;
+    }
+
+    #dndn {
+        margin-left: -500px;
+    }
+
+    .t1 {
+        font-size: 32px;
+    }
+
+    .footer {
+        font-size: 32px;
+        ;
+
+    }
+
+    .c1 .c2 .c3 .c4 {
+        font-size: 28px;
+    }
+
+    .tezbeet {
+        margin-left: -280px;
+        width: auto;
+        text-align: center;
+    }
+
+    .aboutme {
+        display: flex;
+        justify-content: space-between;
+        /* Distribute items with equal space between them */
+        list-style: none;
+        /* Remove default list styling */
+        padding: 0;
+        width: 800px;
+        height: 30px;
+        margin-left: -280px;
+        justify-content: space-between;
+    }
+
+    .aboutme li {
+        height: 100px;
+        width: auto;
+        padding: 0;
+        flex: 1;
+        /* Make each list item grow equally to fill the available space */
+        text-align: center;
+    }
+
+    .offer {
+        display: flex;
+        /* Distribute items with equal space between them */
+        list-style: none;
+        /* Remove default list styling */
+        margin-left: -310px;
+        justify-content: space-between;
+        padding-left: 30px;
+
+    }
+
+    .offer li {
+        flex: 1;
+        /* Make each list item grow equally to fill the available space */
+        text-align: center;
+    }
+
+    .CI {
+        height: 500px;
+    }
+
+    .CI p {
+        white-space: nowrap;
+        margin-left: -280px;
+        width: auto;
+        text-align: center;
+    }
+
+
+
+
+}
+
+@media (max-width: 400px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -100px;
+    }
+
+    .emailff {
+        width: 380px !important;
+    }
+
+    .sub h2 {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .Social h4 {
+        margin-left: 120px;
+        width: 300px;
+    }
+
+
+    .final {
+        margin-left: 60px;
+        margin-top: -120px;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+
+    .counter-image {
+        flex-direction: column;
+    }
+
+    .sub-stat-container>div {
+        margin: 20px;
+        /* Adjust the margin as needed */
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .icon_stat {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icons {
+        margin-left: 50% !important;
+    }
+
+    .social-icons li {
+
+        display: inline-block;
+        margin-right: 80px !important;
+
+    }
+
+
+    .sub-stat-container p {
+        font-size: x-large;
+        margin: 20px;
+    }
+
+    .image-section {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+
+    .counter-image button {
+        width: 100px;
+        height: 30px;
+        font-size: x-large;
+    }
+
+    .sub-stat-container>div {
+        margin: 20px;
+        /* Adjust the margin as needed */
+    }
+
+    .form {
+        margin-left: 0%;
+    }
+
+    .footer {
+        margin-left: 35%
+    }
+
+    .CI p {
+        width: 300px;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: -250px;
+
+
+    }
+
+    .CI br {
+        display: block;
+    }
+
+    .final {
+        margin-left: 35%;
+    }
+
+    .sub h4 {
+        font-size: 45px;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+
+    .Social h4 {
+        margin-top: 50px;
+        margin-left: 0px;
+        font-size: 29px;
+    }
+
+    .subscribe123 {
+        margin-left: 110px;
+    }
+
+    .titre h3 {
+        margin-left: 70px;
+    }
+
+    .CI h3 {
+        margin-left: -50px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .t1 {
+        width: 380px;
+        margin-left: 100px;
+    }
+
+    .t3 {
+        margin-left: 80px;
+    }
+
+
+
+    .social-icons {
+        display: block;
+        margin-left: 50px !important;
+    }
+
+    .social-icons li {
+
+        display: inline-block;
+        margin-right: 50px !important;
+
+    }
+
+    .social-container {
+        margin-left: 170px !important;
+    }
+
+    .footer {
+        width: 390px;
+    }
+
+    .tezbeet {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .AM {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .aboutme {
+        width: 390px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .MO {
+        width: 380px;
+        height: auto;
+        margin-left: -8px;
+    }
+
+    .offer {
+        width: 390px;
+        height: auto;
+        margin-left: -28px;
+    }
+
+    .CI {
+        width: 390px;
+        margin-left: -5px;
+
+    }
+
+    .CI p {
+        width: 390px;
+        height: 400px;
+        margin-right: 10px;
+        white-space: normal;
+        margin-left: -6px;
+
+
+    }
+
+    .CI br {
+        display: block;
+    }
+
+    #text {
+        width: 390px;
+
+    }
+
+}

@@ -1,0 +1,173 @@
+/* Style for the entire registration page */
+.page-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/loginimage.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.image-goback {
+    margin-left: -40px;
+    margin-bottom: -28px;
+}
+
+.register-title {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 20px 0;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 530px;
+    padding: 20px;
+    border: 3px solid orange;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+}
+
+.field-label {
+    color: #9B6C1B;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    /* Align label text to the left */
+}
+
+.field-input {
+    width: 100%;
+    height: 32px;
+    border-radius: 7px;
+    border: 2px solid #000;
+    background: #FFF;
+    margin: 10px 0;
+}
+
+.dob-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dob-input {
+    width: 30%;
+    height: 32px;
+}
+
+.gender-dropdown {
+    width: 100%;
+    height: 32px;
+    margin: 10px 0;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-label {
+    width: 30%;
+    height: 32px;
+    border-radius: 8%;
+    margin-bottom: 5%;
+}
+
+.register-button {
+    width: 50%;
+    height: 42px;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 32px;
+    text-align: center;
+    justify-content: center;
+    background-color: orange;
+    color: #FFF;
+    /* Initial orange background with white text */
+}
+
+.register-button:hover {
+    background-color: blue;
+    /* Change the background color to blue on hover */
+    color: #FFF;
+    /* Change the text color to white on hover */
+}
+
+/* Media query for a maximum width of 844px */
+@media (min-width:401)and(max-width: 844px) {
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    /* Increase font size for all elements */
+    .register-title {
+        font-size: 36px;
+    }
+
+    .field-label {
+        font-size: 20px;
+    }
+
+    .field-input {
+        font-size: 18px;
+    }
+
+    .dob-input,
+    .gender-dropdown {
+        font-size: 18px;
+    }
+
+    .name-label {
+        font-size: 20px;
+    }
+
+    .register-button {
+        font-size: 28px;
+    }
+
+    .text-label {
+        font-size: 20px;
+    }
+
+    .register-container {
+        margin-left: -35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .register-container {
+        width: 320px !important;
+        margin-left: -40px !important;
+    }
+
+    .register-form {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .register-button {
+        width: 180px;
+    }
+}

@@ -1,0 +1,127 @@
+.li-course {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 45%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-course {
+    position: absolute;
+    top: 358px;
+    right: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30%;
+    z-index: 1;
+    /* Ensure the form-course appears above other content */
+}
+
+.form-course h1 {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Style the modal1 */
+.modal1 {
+    position: absolute;
+    top: -950px !important;
+    /* Adjust the top position as needed */
+    right: 0;
+    z-index: 2;
+    top: -910px;
+    right: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 30.5%;
+    height: 325px;
+    background: #846F63;
+    z-index: 1;
+}
+
+.h2-modal1 {
+    font-size: 26px;
+    color: orange;
+    margin-left: 20px;
+
+}
+
+.select-dropdown {
+    width: 79%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: -40px;
+}
+
+.modal1-body {
+    margin-top: -50px;
+    margin-left: 120px;
+}
+
+.cancel-button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 32px;
+    height: 30px;
+    border-radius: 8px;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: larger;
+    margin-left: 50px;
+
+}
+
+.save-button {
+    margin-left: 70px;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    font-size: larger;
+}
+
+.btn-close {
+    background-color: transparent !important;
+}
+
+.searching-text {
+    width: 25% !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.course-list {
+    color: #FFBF52;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.searching-button-search {
+    margin-right: 35px;
+    border-radius: 8px;
+    background-color: #846F63;
+    width: 80px;
+}
+
+.searching-button-reset {
+    border-radius: 8px;
+    background-color: #FF6B6B;
+    color: white;
+    width: 80px;
+}

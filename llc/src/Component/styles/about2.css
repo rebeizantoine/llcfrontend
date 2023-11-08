@@ -1,0 +1,135 @@
+.header {
+    color: #000;
+    text-align: center;
+    font-family: Fraunces;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.84px;
+    width: 776px;
+    justify-content: center;
+    margin-left: 300px;
+
+
+
+}
+
+.container {
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    justify-content: space-between;
+    margin-left: -6px;
+}
+
+
+
+
+.text1 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.92px;
+    height: auto;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 550px;
+}
+
+.text2 {
+    color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.92px;
+    margin-top: 0;
+}
+
+.imageround {
+    border-radius: 50px !important;
+    background: lightgray 50% / cover no-repeat;
+    width: 70px !important;
+    height: 70px !important;
+    order: 1;
+    margin-top: 10px;
+}
+
+.all1 {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    justify-content: space-between;
+    height: 500px;
+    margin-left: -80px;
+}
+
+.student-about {
+    display: flex;
+    width: 350px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 0px;
+    justify-content: space-between;
+    height: 500px;
+}
+
+@media (max-width: 860px) {
+    .right {
+        margin-left: 40px;
+    }
+
+    .left {
+        margin-left: 6%;
+    }
+
+    .container {
+        margin-left: 0%;
+    }
+
+    .header {
+        margin-left: -20px;
+        margin-right: 320px;
+        color: #000;
+        text-align: center;
+        font-family: Fraunces;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.84px;
+        width: 776px;
+        justify-content: center;
+    }
+
+    .student-about {
+        display: block;
+        gap: 10px;
+    }
+
+    #second {
+        margin-top: -600px;
+    }
+}

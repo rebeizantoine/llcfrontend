@@ -1,0 +1,294 @@
+.about123 {
+    text-align: start;
+    margin-left: 1%;
+    margin-top: 100px;
+    margin-bottom: -100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.aboutus {
+    background-color: #ffffff;
+    padding: 0px;
+    text-align: center;
+}
+
+.big1 {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 0;
+
+}
+
+.h3about {
+    width: 764px;
+    height: 178px;
+    text-align: left;
+    margin-top: 12%;
+}
+
+.h3about h3 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+
+.image-container {
+    justify-content: center;
+    order: 2;
+    margin-bottom: 20px;
+}
+
+.container12 {
+    order: 1;
+}
+
+.container1 {
+    display: flex;
+    margin-bottom: 6%;
+}
+
+.left {
+    order: 1;
+}
+
+
+.images img.image3 {
+    float: left;
+    margin-right: 20px;
+}
+
+
+.aboutustext .text {
+    text-align: left;
+}
+
+.aboutbutton {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    border-radius: 0px;
+    border: 1px solid #5E443A;
+    background: rgba(255, 255, 255, 0.00);
+    width: 310px;
+    height: 72px;
+    flex-shrink: 0;
+    margin-left: 139px;
+    margin-top: 3%;
+}
+
+.aboutbutton:hover {
+    background-color: #5e443a !important;
+    color: white;
+}
+
+.image1 {
+    width: 800px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: lightgray 50% / cover no-repeat;
+    margin-right: 4%;
+    margin-top: 3.5%;
+
+}
+
+.image2 {
+    width: 453px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: lightgray 50% / cover no-repeat;
+    margin-top: 19%;
+    margin-left: 10%;
+}
+
+.section2 {
+    margin-left: 8%;
+    display: flex;
+}
+
+.text1 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4%;
+    width: 690px;
+}
+
+.text2 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text {
+    width: 610px;
+}
+
+.text11 {
+    font-size: 30px;
+}
+
+.text21 {
+    font-size: 30px;
+}
+
+@media (max-width: 864px) {
+    .about123 {
+        margin-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .image1 {
+        width: 280px;
+        height: 100%;
+        margin-top: -30px;
+        margin-left: 20px;
+    }
+
+    .image2 {
+        width: 300px;
+        height: 500px;
+        margin-left: 25% !important;
+        margin-top: 0%;
+    }
+
+    .image3 {
+        width: 273px;
+        height: 300px;
+        margin-top: -340px;
+        margin-left: -40px;
+    }
+
+    .section2 {
+        display: block;
+    }
+
+    .text11 {
+        width: auto;
+        font-size: 26px !important;
+        text-align: center;
+    }
+
+    .text21 {
+        width: auto;
+        margin-left: 0px;
+        font-size: 26px !important;
+        text-align: center;
+    }
+
+    .body {
+        margin: 0% !important;
+        margin-left: 0 !important;
+        padding: 0% !important;
+    }
+
+
+    .container1 {
+        display: block;
+    }
+
+
+    .aboutbutton {
+        margin-left: 140px !important;
+    }
+}
+
+@media (max-width:400px) {
+    .about123 {
+        margin-left: 20px;
+        padding-bottom: 30px;
+    }
+
+    .h3about {
+        width: 380px;
+    }
+
+    .h3about h3 {
+        width: 380px;
+        font-size: 30px;
+        text-align: center;
+        margin-left: -30px;
+    }
+
+    .image2 {
+        display: none;
+    }
+
+    .image3 {
+        width: 273px;
+        height: 300px;
+        margin-top: -320px;
+        margin-left: -10px;
+        display: none;
+    }
+
+    .text {
+        margin-top: 120px;
+    }
+
+    .text11 {
+        width: 390px;
+        margin-left: -50px;
+    }
+
+    .text21 {
+        width: 380px;
+        margin-left: -50px;
+    }
+
+    .section2 {
+        display: block;
+    }
+
+    .text1 {
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .text2 {
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .body {
+        margin: 0% !important;
+        margin-left: 0 !important;
+        padding: 0% !important;
+    }
+
+
+    .container1 {
+        display: block;
+    }
+
+
+    .aboutbutton {
+        margin-left: -15px !important;
+    }
+}
