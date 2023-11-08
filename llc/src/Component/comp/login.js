@@ -30,26 +30,29 @@ const Login = () => {
       );
       if (response.ok) {
         const data = await response.json();
-        // rest```
-      }
 
-      if (data.success) {
-        const user = data.data.find(
-          (userData) =>
-            userData.email === username &&
-            userData.password === password &&
-            userData.active === 1
-        );
+        if (data.success) {
+          const user = data.data.find(
+            (userData) =>
+              userData.email === username &&
+              userData.password === password &&
+              userData.active === 1
+          );
 
-        if (user) {
-          localStorage.setItem("user_id", user.user_id);
-          localStorage.setItem("userrole", user.role);
-          navigate("/dash");
+          if (user) {
+            localStorage.setItem("user_id", user.user_id);
+            localStorage.setItem("userrole", user.role);
+            navigate("/dash");
+          } else {
+            alert("Incorrect email or password. Please try again.");
+          }
         } else {
-          alert("Incorrect email or password. Please try again.");
+          alert("API request failed.");
         }
       } else {
-        alert("API request failed.");
+        const errorData = await response.text();
+        console.error(errorData);
+        alert("An error occurred while processing your request.");
       }
     } catch (error) {
       console.error(error);
