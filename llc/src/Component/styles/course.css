@@ -32,9 +32,10 @@
 /* Style the modal1 */
 .modal1 {
     position: absolute;
-    top: -1150px !important;
+    top: -1200px !important;
     /* Adjust the top position as needed */
     right: 0;
+    left:600px;
     z-index: 2;
     top: -910px;
     right: 50px;
