@@ -29,7 +29,6 @@ function Header() {
               </Link>
             </header>
           </div>
-
           <div className="login">
             <Link to="/login">
               <p>Log in</p>
