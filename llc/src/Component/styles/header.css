@@ -78,7 +78,7 @@ a {
     background: #FFFEFE;
     margin-left: auto;
     margin-top: 23px;
-    margin-left: 60px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
@@ -139,7 +139,7 @@ a {
     background-color: #FFBF52;
     position: absolute;
     z-index: 999;
-    top: 80%;
+    top: 56%;
     left: 5%;
 
 }
@@ -171,7 +171,6 @@ a {
     position: relative;
     border-radius: 8%;
     z-index: 3;
-    margin-left: 30px;
 }
 
 .courses {
@@ -334,11 +333,17 @@ a {
     }
 
     .enroll {
-        margin-left: 90px;
-        width: 210px;
-        height: 40px;
+
+
+        width: 200px;
+        height: 55px;
+        flex-shrink: 0;
         background-color: #FFBF52;
-        margin-top: -200px;
+        position: absolute;
+        z-index: 999;
+        top: 75%;
+        left: 15%;
+
     }
 
     .enroll p {
@@ -360,11 +365,11 @@ a {
     }
 
     .hola {
-        margin-top: -400px;
+        margin-top: -430px;
         padding-top: 10px;
         width: 390px;
-        height: 590px;
-        margin-left: 380px;
+        height: 790px;
+        margin-left: 390px;
         position: relative;
         border-radius: 8%;
     }
@@ -504,7 +509,7 @@ a {
         width: 210px;
         height: 40px;
         background-color: #FFBF52;
-        margin-top: 300px;
+        margin-top: 150px;
     }
 
     .enroll p {
@@ -526,7 +531,7 @@ a {
     }
 
     .hola {
-        margin-top: 20px;
+        margin-top: 100px;
         padding-top: 10px;
         width: 390px;
         height: 390px;
