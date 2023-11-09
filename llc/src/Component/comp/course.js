@@ -239,7 +239,7 @@ const Course = () => {
   return (
     <div>
       <div className="modal-container">
-        <Modal className="modal1" isOpen={modal} toggle={toggle}>
+        <Modal className="modal1" isOpen={modal} centered toggle={toggle}>
           <ModalHeader toggle={toggle}>
             <h2 className="h2-modal1">Assign the Course To a Teacher</h2>
           </ModalHeader>
