@@ -8,6 +8,12 @@ function Main() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    const scrollToCourses = () => {
+        const testimonialsSection = document.getElementById('Courses');
+        if (testimonialsSection) {
+            testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <div id='Home'>
             <div className="main1" >
@@ -24,9 +30,7 @@ function Main() {
                     </div>
                     <div className="buttons">
 
-                        <div className="courses">
-                            <p>View Courses</p>
-                        </div>
+
                     </div>
                 </div>
                 <div className="left-content">
@@ -38,8 +42,8 @@ function Main() {
             </div>
             <div className="enroll">
 
-                <a href="/AllCourses">
-                    <p>ENROLL TODAY</p>
+                <a href="/#Courses">
+                    <p onClick={scrollToCourses}>ENROLL TODAY</p>
                 </a>
 
             </div>
