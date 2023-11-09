@@ -25,6 +25,7 @@ function LanguageTaken() {
       if (data && data.imageUrl) {
         setImage(data.imageUrl);
         setUploadError(null);
+        console.log(data);
       } else {
         setUploadError("Image upload failed.");
       }
@@ -51,13 +52,16 @@ function LanguageTaken() {
     };
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/addNewLanguage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newLanguageData),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/user/addNewLanguage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newLanguageData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -78,7 +82,9 @@ function LanguageTaken() {
 
   const fetchLanguages = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/getAllLanguage`);
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/user/getAllLanguage`
+      );
       if (response.ok) {
         const data = await response.json();
         setLanguages(data.data);
@@ -93,9 +99,12 @@ function LanguageTaken() {
 
   const handleDeleteLanguage = async (id) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/user/deleteLanguage/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/user/deleteLanguage/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
